@@ -24,6 +24,44 @@
   "inLanguage": "en-IN",
   "audience": {"@type": "MedicalAudience", "audienceType": "Physician"}
 }
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is gestational age calculated from LMP?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Gestational age from LMP uses Naegele's Rule — EDD is 280 days from the first day of the last menstrual period assuming a 28-day cycle. Cycle length adjustment is applied for non-standard cycles."}
+    },
+    {
+      "@type": "Question",
+      "name": "Which Hadlock formula is used for EFW in India?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The Hadlock 1985 formula is standard in Indian obstetric practice. The 4-parameter formula (BPD+HC+AC+FL) is used when HC is available, otherwise the 3-parameter (BPD+AC+FL) formula is applied. Results have ±15% variability."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good Bishop score for induction of labour?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A Bishop score ≥9 is highly favourable — direct oxytocin induction is appropriate. Score 6–8 is favourable. Score below 6 requires cervical ripening with prostaglandins or Foley balloon before induction."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the DIPSI protocol for GDM screening in India?",
+      "acceptedAnswer": {"@type": "Answer", "text": "DIPSI recommends a 75g oral glucose challenge (non-fasting). Blood glucose at 2 hours ≥140 mg/dL = GDM. FOGSI recommends universal screening at first ANC visit and again at 24–28 weeks."}
+    },
+    {
+      "@type": "Question",
+      "name": "What are the VBAC criteria in India?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Per FOGSI: single previous low transverse scar, cephalic presentation, scar thickness ≥3.5mm, no recurring indication, interpregnancy interval ≥18 months. Requires facility with emergency CS access."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is a normal Apgar score?",
+      "acceptedAnswer": {"@type": "Answer", "text": "7–10 is normal (routine care). 4–6 is moderately depressed (stimulation + oxygen). 0–3 is severely depressed (immediate resuscitation including PPV)."}
+    }
+  ]
+}
+</script>
 </script>
 
 <style>
@@ -612,7 +650,55 @@ input:focus,select:focus{border-color:#3182ce}
     <a href="index.html" style="color:#3182ce">All Calculators</a> ·
     <a href="https://thezerowhisper.github.io/rabies-scheduler/" style="color:#3182ce">Rabies Scheduler</a>
   </footer>
+<!-- SEO CONTENT SECTION -->
+<div style="background:white;border-radius:16px;padding:28px 32px;box-shadow:0 4px 24px rgba(0,0,0,0.05);margin-bottom:24px">
 
+  <h2 style="font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:10px">ObsCalc India — Free Obstetric Calculator Suite</h2>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:10px">This free obstetric calculator suite provides Indian obstetricians and gynaecologists with all the clinical tools needed at the bedside — gestational age calculation, expected fetal weight using the Hadlock formula, Bishop score for induction of labour, Apgar score for newborn assessment, GDM screening dates as per DIPSI/FOGSI protocol, VBAC eligibility assessment and PPH risk scoring.</p>
+
+  <h2 style="font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:8px;margin-top:20px">Calculators Included</h2>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px"><strong>Gestational Age by LMP:</strong> Uses Naegele's Rule — adds 280 days to LMP with cycle length adjustment. Gives current GA, EDD, trimester and approximate conception date.</p>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px"><strong>Gestational Age by Scan:</strong> Back-calculates EDD from ultrasound gestational age. Most accurate method in first trimester using CRL measurement.</p>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px"><strong>Expected Fetal Weight (Hadlock):</strong> Uses Hadlock 1985 formula — the standard EFW formula used in India. Supports both 3-parameter (BPD+AC+FL) and 4-parameter (BPD+HC+AC+FL) versions.</p>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px"><strong>Bishop Score:</strong> Assesses cervical favourability for induction of labour — dilation, effacement, station, consistency and position. Gives induction recommendation based on FOGSI guidelines.</p>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px"><strong>Apgar Score:</strong> Calculates 1-minute and 5-minute Apgar scores with resuscitation guidance based on NRP protocol.</p>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px"><strong>GDM Screening Dates:</strong> Follows DIPSI protocol (FOGSI India) — generates all screening dates with calendar reminders. Differentiates high-risk from universal screening.</p>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px"><strong>VBAC Eligibility:</strong> 8-point checklist per FOGSI/ACOG guidelines covering scar type, number of previous CS, presentation, EFW, scar thickness and interpregnancy interval.</p>
+  <p style="font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:10px"><strong>PPH Risk:</strong> 15 weighted risk factors giving Low/Moderate/High/Very High risk classification with specific management protocols per RCOG/FOGSI guidelines.</p>
+
+  <h2 style="font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:10px;margin-top:20px">Frequently Asked Questions</h2>
+
+  <div style="margin-bottom:16px">
+    <h3 style="font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px">How is gestational age calculated from LMP?</h3>
+    <p style="font-size:0.85rem;color:#4a5568;line-height:1.65">Gestational age from LMP uses Naegele's Rule — the EDD is calculated by adding 280 days (40 weeks) to the first day of the last menstrual period, assuming a 28-day cycle. For cycles other than 28 days, the difference is added or subtracted from the due date.</p>
+  </div>
+
+  <div style="margin-bottom:16px">
+    <h3 style="font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px">Which Hadlock formula is used for EFW in India?</h3>
+    <p style="font-size:0.85rem;color:#4a5568;line-height:1.65">The Hadlock 1985 formula is the standard used in Indian obstetric practice. This calculator uses the 4-parameter formula (BPD+HC+AC+FL) when HC is available, and the 3-parameter formula (BPD+AC+FL) when HC is not measured. Results have ±15% variability.</p>
+  </div>
+
+  <div style="margin-bottom:16px">
+    <h3 style="font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px">What is a good Bishop score for induction of labour?</h3>
+    <p style="font-size:0.85rem;color:#4a5568;line-height:1.65">A Bishop score of 9 or above indicates a highly favourable cervix — induction with oxytocin is appropriate. A score of 6–8 is favourable with reasonable success. A score below 6 requires cervical ripening with prostaglandins or Foley balloon before oxytocin induction.</p>
+  </div>
+
+  <div style="margin-bottom:16px">
+    <h3 style="font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px">What is the DIPSI protocol for GDM screening in India?</h3>
+    <p style="font-size:0.85rem;color:#4a5568;line-height:1.65">DIPSI (Diabetes in Pregnancy Study Group India) recommends a 75g oral glucose challenge in the non-fasting state. Blood glucose is measured at 2 hours — a value ≥ 140 mg/dL is diagnostic of GDM. FOGSI recommends universal screening of all pregnant women in India at the first antenatal visit and again at 24–28 weeks.</p>
+  </div>
+
+  <div style="margin-bottom:16px">
+    <h3 style="font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px">What are the criteria for VBAC in India?</h3>
+    <p style="font-size:0.85rem;color:#4a5568;line-height:1.65">Per FOGSI guidelines, VBAC (Trial of Labour After Caesarean) may be considered in women with a single previous low transverse uterine scar, cephalic presentation, adequate scar thickness (≥3.5mm on USS), no recurring indication, and interpregnancy interval ≥18 months. It must be conducted in a facility with immediate access to emergency CS and blood transfusion.</p>
+  </div>
+
+  <div style="margin-bottom:16px">
+    <h3 style="font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px">What is a normal Apgar score?</h3>
+    <p style="font-size:0.85rem;color:#4a5568;line-height:1.65">A score of 7–10 at 1 minute is normal and requires only routine newborn care. A score of 4–6 indicates moderate depression requiring stimulation and supplemental oxygen. A score of 0–3 indicates severe depression requiring immediate resuscitation including PPV and possibly chest compressions.</p>
+  </div>
+
+</div>
 </main>
 
 <script>
