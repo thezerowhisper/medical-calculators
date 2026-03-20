@@ -37,41 +37,13 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How is gestational age calculated from LMP?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Gestational age from LMP uses Naegele's Rule — the EDD is 280 days (40 weeks) from the first day of the last menstrual period assuming a 28-day cycle. For other cycle lengths the difference is added or subtracted."}
-    },
-    {
-      "@type": "Question",
-      "name": "Which Hadlock formula is used for EFW in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The Hadlock 1985 formula is standard in Indian obstetric practice. This calculator uses the 4-parameter formula (BPD+HC+AC+FL) when HC is available, and the 3-parameter formula (BPD+AC+FL) otherwise. Results have ±15% variability."}
-    },
-    {
-      "@type": "Question",
-      "name": "What is a good Bishop score for induction of labour in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "A Bishop score of 9 or above indicates a highly favourable cervix — direct oxytocin induction is appropriate. Score 6–8 is favourable. Below 6 requires cervical ripening with prostaglandins or Foley balloon before induction."}
-    },
-    {
-      "@type": "Question",
-      "name": "What is the DIPSI protocol for GDM screening in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "DIPSI recommends a 75g oral glucose challenge in the non-fasting state. Blood glucose at 2 hours ≥140 mg/dL is diagnostic of GDM. FOGSI recommends universal screening of all pregnant women in India at the first ANC visit and again at 24–28 weeks."}
-    },
-    {
-      "@type": "Question",
-      "name": "What are the VBAC eligibility criteria in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Per FOGSI: single previous low transverse LSCS, cephalic presentation, adequate scar thickness (≥3.5mm on USS), no recurring indication, and interpregnancy interval ≥18 months. Requires facility with immediate access to emergency CS and blood transfusion."}
-    },
-    {
-      "@type": "Question",
-      "name": "What is a normal Apgar score?",
-      "acceptedAnswer": {"@type": "Answer", "text": "7–10 is normal (routine newborn care). 4–6 indicates moderate depression (stimulation + oxygen). 0–3 indicates severe depression requiring immediate resuscitation including PPV and possibly chest compressions."}
-    },
-    {
-      "@type": "Question",
-      "name": "What causes postpartum haemorrhage?",
-      "acceptedAnswer": {"@type": "Answer", "text": "PPH is most commonly caused by uterine atony (the 4 Ts — Tone, Trauma, Tissue, Thrombin). Risk factors include previous PPH, multiple pregnancy, placenta praevia, grand multiparity, prolonged labour, and coagulopathy. Defined as blood loss ≥500ml after vaginal delivery or ≥1000ml after CS."}
-    }
+    {"@type":"Question","name":"How is gestational age calculated from LMP?","acceptedAnswer":{"@type":"Answer","text":"Gestational age from LMP uses Naegele's Rule — EDD is 280 days from the first day of the LMP assuming a 28-day cycle. The difference from 28 days is added or subtracted for other cycle lengths."}},
+    {"@type":"Question","name":"Which Hadlock formula is used for EFW in India?","acceptedAnswer":{"@type":"Answer","text":"The Hadlock 1985 formula is standard in Indian practice. 4-parameter (BPD+HC+AC+FL) is preferred; 3-parameter (BPD+AC+FL) used when HC is unavailable. Results have ±15% variability."}},
+    {"@type":"Question","name":"What is a good Bishop score for induction of labour?","acceptedAnswer":{"@type":"Answer","text":"Score ≥9 is highly favourable — direct oxytocin induction appropriate. Score 6–8 is favourable. Below 6 requires cervical ripening with prostaglandins or Foley balloon."}},
+    {"@type":"Question","name":"What is the DIPSI protocol for GDM in India?","acceptedAnswer":{"@type":"Answer","text":"75g oral glucose (non-fasting). Blood glucose at 2 hours ≥140 mg/dL = GDM. FOGSI recommends universal screening at first ANC visit and at 24–28 weeks for all Indian women."}},
+    {"@type":"Question","name":"What are the VBAC criteria per FOGSI?","acceptedAnswer":{"@type":"Answer","text":"Single previous low transverse LSCS, cephalic presentation, scar thickness ≥3.5mm, no recurring indication, interpregnancy interval ≥18 months. Requires emergency CS access."}},
+    {"@type":"Question","name":"What is a normal Apgar score?","acceptedAnswer":{"@type":"Answer","text":"7–10 is normal (routine care). 4–6 is moderately depressed (oxygen + stimulation). 0–3 is severely depressed (immediate resuscitation — PPV)."}},
+    {"@type":"Question","name":"What causes postpartum haemorrhage?","acceptedAnswer":{"@type":"Answer","text":"PPH is most commonly caused by uterine atony (4 Ts — Tone, Trauma, Tissue, Thrombin). Defined as blood loss ≥500ml after vaginal delivery or ≥1000ml after CS."}}
   ]
 }
 </script>
@@ -85,7 +57,7 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .back-link:hover{text-decoration:underline}
 
 /* ── HEADER ── */
-.obs-header{background:linear-gradient(135deg,#1a365d,#2b6cb0);border-radius:16px;padding:24px 28px;margin-bottom:20px;color:white}
+.obs-header{background:linear-gradient(135deg,#1a365d,#2b6cb0);border-radius:16px;padding:24px 28px;margin-bottom:24px;color:white}
 .obs-header-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
 .obs-logo{font-size:2rem}
 .obs-title{font-size:1.4rem;font-weight:800;color:white}
@@ -93,23 +65,60 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .obs-chips{display:flex;flex-wrap:wrap;gap:6px}
 .obs-chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#ebf8ff;font-size:0.7rem;font-weight:600;padding:3px 10px;border-radius:20px}
 
-/* ── SELECTOR ── */
-.selector-wrap{background:white;border-radius:14px;padding:18px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);margin-bottom:20px}
-.selector-label{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
-.calc-selector{width:100%;padding:12px 40px 12px 16px;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;color:#2d3748;outline:none;background:white;font-family:inherit;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23718096' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-.calc-selector:focus{border-color:#3182ce}
+/* ── ACCORDION CATEGORY ── */
+.accordion{margin-bottom:16px;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.07)}
 
-/* ── CATEGORY GROUPS ── */
-.category-group{background:white;border-radius:16px;padding:0;box-shadow:0 4px 20px rgba(0,0,0,0.08);margin-bottom:20px;overflow:hidden;display:none}
-.category-group.active{display:block}
-.category-header{padding:16px 22px;border-bottom:2px solid #f0f4f8;display:flex;align-items:center;gap:10px}
-.category-icon{font-size:1.4rem}
-.category-title{font-size:1rem;font-weight:700;color:#1a202c}
-.category-desc{font-size:0.8rem;color:#718096;margin-top:1px}
+.accordion-header{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;transition:background 0.2s;border-radius:16px}
+.accordion-header:hover{filter:brightness(0.97)}
+.accordion.open .accordion-header{border-radius:16px 16px 0 0}
 
-/* ── CALC PANEL ── */
-.calc-panel{padding:22px;border-bottom:1px solid #f0f4f8;display:none}
-.calc-panel:last-child{border-bottom:none}
+/* colour themes per category */
+.acc-ga    .accordion-header{background:#ebf8ff;border-bottom:2px solid #bee3f8}
+.acc-fetal .accordion-header{background:#f0fff4;border-bottom:2px solid #9ae6b4}
+.acc-score .accordion-header{background:#faf5ff;border-bottom:2px solid #d6bcfa}
+.acc-screen.accordion-header{background:#fffaf0;border-bottom:2px solid #fbd38d}
+.acc-screen .accordion-header{background:#fffaf0;border-bottom:2px solid #fbd38d}
+
+.acc-icon{font-size:1.6rem;flex-shrink:0}
+.acc-text{flex:1}
+.acc-title{font-size:1rem;font-weight:700}
+.acc-ga     .acc-title{color:#2b6cb0}
+.acc-fetal  .acc-title{color:#276749}
+.acc-score  .acc-title{color:#553c9a}
+.acc-screen .acc-title{color:#c05621}
+
+.acc-desc{font-size:0.78rem;margin-top:2px}
+.acc-ga     .acc-desc{color:#4a90d9}
+.acc-fetal  .acc-desc{color:#4a9e6b}
+.acc-score  .acc-desc{color:#7c5cbf}
+.acc-screen .acc-desc{color:#c97a2a}
+
+.acc-chevron{font-size:1.1rem;transition:transform 0.3s;color:#a0aec0;flex-shrink:0}
+.accordion.open .acc-chevron{transform:rotate(180deg)}
+
+.acc-count{font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:20px;flex-shrink:0}
+.acc-ga     .acc-count{background:#bee3f8;color:#2b6cb0}
+.acc-fetal  .acc-count{background:#9ae6b4;color:#276749}
+.acc-score  .acc-count{background:#d6bcfa;color:#553c9a}
+.acc-screen .acc-count{background:#fbd38d;color:#c05621}
+
+/* ── ACCORDION BODY ── */
+.accordion-body{display:none;background:white}
+.accordion.open .accordion-body{display:block}
+
+/* ── SUB-CALC SELECTOR ── */
+.sub-selector-wrap{padding:14px 22px;border-bottom:1px solid #f0f4f8;background:#fafafa}
+.sub-selector-label{font-size:0.72rem;font-weight:700;color:#a0aec0;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:7px}
+.sub-tabs{display:flex;flex-wrap:wrap;gap:7px}
+.sub-tab{padding:6px 14px;border:2px solid #e2e8f0;border-radius:20px;font-size:0.8rem;font-weight:600;cursor:pointer;background:white;color:#718096;transition:all 0.15s}
+.sub-tab:hover{border-color:#cbd5e0}
+.sub-tab.active-ga{border-color:#3182ce;background:#ebf8ff;color:#2b6cb0}
+.sub-tab.active-fetal{border-color:#38a169;background:#f0fff4;color:#276749}
+.sub-tab.active-score{border-color:#805ad5;background:#faf5ff;color:#553c9a}
+.sub-tab.active-screen{border-color:#dd6b20;background:#fffaf0;color:#c05621}
+
+/* ── CALC PANELS ── */
+.calc-panel{display:none;padding:22px}
 .calc-panel.active{display:block}
 .panel-title{font-size:0.95rem;font-weight:700;color:#1a202c;margin-bottom:3px}
 .panel-desc{font-size:0.8rem;color:#718096;margin-bottom:16px;line-height:1.5}
@@ -118,11 +127,12 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .form-row{margin-bottom:12px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .form-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
-@media(max-width:480px){
+@media(max-width:520px){
   .form-grid,.form-grid-3{grid-template-columns:1fr}
   .obs-header{padding:18px 16px}
   .calc-panel{padding:18px 16px}
-  .category-header{padding:14px 16px}
+  .sub-selector-wrap{padding:12px 16px}
+  .accordion-header{padding:14px 16px}
 }
 
 label{display:block;font-weight:600;font-size:0.85rem;margin-bottom:5px;color:#2d3748}
@@ -138,47 +148,31 @@ input:focus,select:focus{border-color:#3182ce}
 .score-btn.selected{border-color:#3182ce;background:#ebf8ff;color:#2b6cb0}
 .score-btn:hover:not(.selected){border-color:#cbd5e0}
 
-/* ── BUTTONS ── */
+/* ── ACTION BUTTONS ── */
 .btn-row{display:flex;gap:8px;margin-top:4px}
 .calc-btn{flex:1;padding:11px;background:#3182ce;color:white;border:none;border-radius:9px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:background 0.2s}
 .calc-btn:hover{background:#2b6cb0}
 .clear-btn{padding:11px 16px;background:white;color:#718096;border:2px solid #e2e8f0;border-radius:9px;font-weight:600;font-size:0.85rem;cursor:pointer}
 .clear-btn:hover{background:#f7fafc}
 
+/* colour-themed calc buttons per category */
+.acc-ga    .calc-btn{background:#3182ce} .acc-ga    .calc-btn:hover{background:#2b6cb0}
+.acc-fetal .calc-btn{background:#38a169} .acc-fetal .calc-btn:hover{background:#2f855a}
+.acc-score .calc-btn{background:#805ad5} .acc-score .calc-btn:hover{background:#6b46c1}
+.acc-screen.calc-btn{background:#dd6b20} .acc-screen .calc-btn{background:#dd6b20} .acc-screen .calc-btn:hover{background:#c05621}
+
 /* ── RESULTS ── */
 .result-box{display:none;margin-top:18px;padding-top:16px;border-top:2px solid #f0f4f8}
-
 .result-hero{text-align:center;padding:18px 16px;border-radius:12px;margin-bottom:14px;border:2px solid}
 .rh-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px}
 .rh-value{font-size:2rem;font-weight:800;line-height:1}
 .rh-sub{font-size:0.83rem;margin-top:5px}
+.rh-blue{background:#ebf8ff;border-color:#bee3f8}.rh-blue .rh-label{color:#2b6cb0}.rh-blue .rh-value{color:#2b6cb0}.rh-blue .rh-sub{color:#4a5568}
+.rh-green{background:#f0fff4;border-color:#9ae6b4}.rh-green .rh-label{color:#276749}.rh-green .rh-value{color:#276749}.rh-green .rh-sub{color:#4a5568}
+.rh-orange{background:#fffaf0;border-color:#fbd38d}.rh-orange .rh-label{color:#c05621}.rh-orange .rh-value{color:#c05621}.rh-orange .rh-sub{color:#744210}
+.rh-red{background:#fff5f5;border-color:#fed7d7}.rh-red .rh-label{color:#c53030}.rh-red .rh-value{color:#c53030}.rh-red .rh-sub{color:#9b2c2c}
+.rh-purple{background:#faf5ff;border-color:#d6bcfa}.rh-purple .rh-label{color:#553c9a}.rh-purple .rh-value{color:#553c9a}.rh-purple .rh-sub{color:#4a5568}
 
-.rh-blue{background:#ebf8ff;border-color:#bee3f8}
-.rh-blue .rh-label{color:#2b6cb0}
-.rh-blue .rh-value{color:#2b6cb0}
-.rh-blue .rh-sub{color:#4a5568}
-
-.rh-green{background:#f0fff4;border-color:#9ae6b4}
-.rh-green .rh-label{color:#276749}
-.rh-green .rh-value{color:#276749}
-.rh-green .rh-sub{color:#4a5568}
-
-.rh-orange{background:#fffaf0;border-color:#fbd38d}
-.rh-orange .rh-label{color:#c05621}
-.rh-orange .rh-value{color:#c05621}
-.rh-orange .rh-sub{color:#744210}
-
-.rh-red{background:#fff5f5;border-color:#fed7d7}
-.rh-red .rh-label{color:#c53030}
-.rh-red .rh-value{color:#c53030}
-.rh-red .rh-sub{color:#9b2c2c}
-
-.rh-purple{background:#faf5ff;border-color:#d6bcfa}
-.rh-purple .rh-label{color:#553c9a}
-.rh-purple .rh-value{color:#553c9a}
-.rh-purple .rh-sub{color:#4a5568}
-
-/* result grid */
 .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
 .result-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
 @media(max-width:400px){.result-grid,.result-grid-3{grid-template-columns:1fr}}
@@ -187,60 +181,47 @@ input:focus,select:focus{border-color:#3182ce}
 .rc-value{font-size:0.95rem;font-weight:800;color:#2d3748}
 .rc-sub{font-size:0.7rem;color:#718096;margin-top:2px}
 
-/* info / warn / danger */
 .info-box{background:#ebf8ff;border:1px solid #bee3f8;border-radius:9px;padding:11px 13px;font-size:0.8rem;color:#2c5282;margin-bottom:10px;line-height:1.55}
 .warn-box{background:#fffaf0;border:1px solid #fbd38d;border-radius:9px;padding:11px 13px;font-size:0.8rem;color:#744210;margin-bottom:10px;line-height:1.55}
 .danger-box{background:#fff5f5;border:1px solid #fed7d7;border-radius:9px;padding:11px 13px;font-size:0.8rem;color:#c53030;margin-bottom:10px;line-height:1.55}
 
-/* checklist */
 .checklist-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #f0f4f8;font-size:0.85rem}
 .checklist-item:last-child{border-bottom:none}
 .ci-icon{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;margin-top:1px}
-.ci-yes{background:#c6f6d5;color:#276749}
-.ci-no{background:#fed7d7;color:#9b2c2c}
-.ci-warn{background:#fefcbf;color:#744210}
-.ci-label{font-weight:600;color:#2d3748}
-.ci-sub{font-size:0.72rem;color:#718096;margin-top:2px;font-weight:400}
+.ci-yes{background:#c6f6d5;color:#276749}.ci-no{background:#fed7d7;color:#9b2c2c}.ci-warn{background:#fefcbf;color:#744210}
+.ci-label{font-weight:600;color:#2d3748}.ci-sub{font-size:0.72rem;color:#718096;margin-top:2px;font-weight:400}
 
-/* cal link */
 .cal-link{font-size:0.75rem;color:#3182ce;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:5px;padding:3px 9px;background:#ebf8ff;border:1px solid #bee3f8;border-radius:5px}
 .cal-link:hover{background:#bee3f8}
 
-/* share */
 .share-bar{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 .share-btn{flex:1;min-width:80px;padding:9px 10px;border:none;border-radius:8px;font-size:0.8rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;transition:opacity 0.2s}
 .share-btn:hover{opacity:0.85}
-.btn-whatsapp{background:#25D366;color:white}
-.btn-copy{background:#edf2f7;color:#2d3748}
-.btn-print{background:#667eea;color:white}
-.btn-save{background:#ed8936;color:white}
+.btn-whatsapp{background:#25D366;color:white}.btn-copy{background:#edf2f7;color:#2d3748}
+.btn-print{background:#667eea;color:white}.btn-save{background:#ed8936;color:white}
 .copy-confirm{text-align:center;font-size:0.76rem;color:#38a169;margin-top:5px;height:14px}
 
-/* ── SEO CONTENT ── */
+/* ── SEO ── */
 .seo-section{background:white;border-radius:16px;padding:28px 32px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin-bottom:20px}
 .seo-section h2{font-size:1rem;font-weight:700;color:#1a202c;margin-top:20px;margin-bottom:8px}
 .seo-section h2:first-child{margin-top:0}
-.seo-section h3{font-size:0.92rem;font-weight:700;color:#2d3748;margin-bottom:5px;margin-top:16px}
-.seo-section p{font-size:0.86rem;color:#4a5568;line-height:1.7;margin-bottom:6px}
+.seo-section h3{font-size:0.9rem;font-weight:700;color:#2d3748;margin-bottom:4px;margin-top:14px}
+.seo-section p{font-size:0.85rem;color:#4a5568;line-height:1.7;margin-bottom:6px}
 
 .disclaimer{background:white;border-radius:12px;padding:16px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin-bottom:20px;font-size:0.8rem;color:#718096;line-height:1.6}
-
 footer{text-align:center;padding-bottom:20px;font-size:0.78rem;color:#a0aec0}
 footer a{color:#3182ce}
 
-/* ── DESKTOP ── */
 @media(min-width:900px){
   body{padding:32px 40px}
-  .page-wrapper{max-width:800px}
-  .form-grid-3{grid-template-columns:repeat(3,1fr)}
-  .result-grid-3{grid-template-columns:repeat(3,1fr)}
+  .page-wrapper{max-width:760px}
 }
 
 @media print{
-  .back-link,.obs-header,.selector-wrap,.calc-btn,
-  .clear-btn,.share-bar,input,select,label,
+  .back-link,.obs-header,.acc-chevron,.sub-selector-wrap,
+  .calc-btn,.clear-btn,.share-bar,input,select,label,
   .score-btn,.btn-row,footer,.seo-section,.disclaimer{display:none!important}
-  .category-group{display:block!important;box-shadow:none}
+  .accordion-body{display:block!important}
   .calc-panel{display:block!important}
   .result-box{display:block!important}
 }
@@ -271,1007 +252,734 @@ footer a{color:#3182ce}
     </div>
   </div>
 
-  <!-- SELECTOR -->
-  <div class="selector-wrap">
-    <div class="selector-label">Select Calculator</div>
-    <select class="calc-selector" id="main-selector" onchange="switchCalc(this.value)">
-      <option value="">— Choose a calculator —</option>
-      <optgroup label="📅 Gestational Age Calculators">
-        <option value="ga-lmp">GA by LMP (Naegele's Rule)</option>
-        <option value="ga-scan">GA by Ultrasound Scan</option>
-        <option value="ga-date">GA on Any Given Date</option>
-        <option value="lmp-from-edd">LMP from EDD (Reverse)</option>
-      </optgroup>
-      <optgroup label="👶 Fetal Assessment">
-        <option value="efw">Expected Fetal Weight (Hadlock)</option>
-        <option value="apgar">Apgar Score</option>
-      </optgroup>
-      <optgroup label="🏥 Obstetric Scoring">
-        <option value="bishop">Bishop Score</option>
-        <option value="vbac">VBAC Eligibility Checklist</option>
-        <option value="pph">PPH Risk Assessment</option>
-      </optgroup>
-      <optgroup label="🧪 Screening">
-        <option value="gdm">GDM Screening Dates (DIPSI)</option>
-      </optgroup>
-    </select>
-  </div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- GROUP A: GESTATIONAL AGE               -->
-  <!-- ═══════════════════════════════════════ -->
-  <div class="category-group" id="group-ga">
-    <div class="category-header">
-      <div class="category-icon">📅</div>
-      <div>
-        <div class="category-title">Gestational Age Calculators</div>
-        <div class="category-desc">Calculate GA from LMP, scan, or any given date · EDD · Trimester</div>
+  <!-- ═══════════════════════════════════ -->
+  <!-- ACCORDION 1: GESTATIONAL AGE       -->
+  <!-- ═══════════════════════════════════ -->
+  <div class="accordion acc-ga" id="acc-ga">
+    <div class="accordion-header" onclick="toggleAcc('ga')">
+      <div class="acc-icon">📅</div>
+      <div class="acc-text">
+        <div class="acc-title">Gestational Age Calculators</div>
+        <div class="acc-desc">GA by LMP · GA by Scan · GA on Any Date · LMP from EDD</div>
       </div>
+      <span class="acc-count">4 tools</span>
+      <span class="acc-chevron">▾</span>
     </div>
-
-    <!-- GA BY LMP -->
-    <div class="calc-panel" id="panel-ga-lmp">
-      <div class="panel-title">Gestational Age by LMP</div>
-      <div class="panel-desc">Uses Naegele's Rule — EDD = LMP + 280 days, adjusted for cycle length.</div>
-      <div class="form-grid">
-        <div><label>Last Menstrual Period (LMP)</label><input type="date" id="lmp1-date" max=""/></div>
-        <div>
-          <label>Cycle Length <span class="label-hint">(days)</span></label>
-          <select id="lmp1-cycle">
-            <option value="21">21</option><option value="22">22</option><option value="23">23</option>
-            <option value="24">24</option><option value="25">25</option><option value="26">26</option>
-            <option value="27">27</option><option value="28" selected>28 (average)</option>
-            <option value="29">29</option><option value="30">30</option><option value="31">31</option>
-            <option value="32">32</option><option value="33">33</option><option value="34">34</option>
-            <option value="35">35</option>
-          </select>
+    <div class="accordion-body">
+      <!-- SUB-TABS -->
+      <div class="sub-selector-wrap">
+        <div class="sub-selector-label">Select calculator</div>
+        <div class="sub-tabs">
+          <button class="sub-tab" onclick="switchSub('ga','lmp',this)">GA by LMP</button>
+          <button class="sub-tab" onclick="switchSub('ga','scan',this)">GA by Scan</button>
+          <button class="sub-tab" onclick="switchSub('ga','date',this)">GA on Given Date</button>
+          <button class="sub-tab" onclick="switchSub('ga','reverse',this)">LMP from EDD</button>
         </div>
       </div>
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcGaLmp()">Calculate</button>
-        <button class="clear-btn" onclick="clearResult('ga-lmp')">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-ga-lmp"></div>
-    </div>
 
-    <!-- GA BY SCAN -->
-    <div class="calc-panel" id="panel-ga-scan">
-      <div class="panel-title">Gestational Age by Ultrasound Scan</div>
-      <div class="panel-desc">Back-calculates EDD from scan date and GA reported by sonologist. Most accurate in first trimester.</div>
-      <div class="form-grid-3">
-        <div><label>Date of Ultrasound</label><input type="date" id="scan-date" max=""/></div>
-        <div><label>GA at Scan — Weeks</label><input type="number" id="scan-weeks" placeholder="e.g. 8" min="4" max="42" step="1"/></div>
-        <div><label>GA at Scan — Days</label><input type="number" id="scan-days" placeholder="0–6" min="0" max="6" step="1"/></div>
-      </div>
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcGaScan()">Calculate</button>
-        <button class="clear-btn" onclick="clearResult('ga-scan')">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-ga-scan"></div>
-    </div>
-
-    <!-- GA ON GIVEN DATE -->
-    <div class="calc-panel" id="panel-ga-date">
-      <div class="panel-title">Gestational Age on Any Given Date</div>
-      <div class="panel-desc">Find the exact GA on a specific date — useful for documenting GA at admission, procedure, or operation.</div>
-      <div class="form-grid-3">
-        <div><label>LMP Date</label><input type="date" id="gad-lmp" max=""/></div>
-        <div><label>Calculate GA on</label><input type="date" id="gad-target"/></div>
-        <div>
-          <label>Cycle Length</label>
-          <select id="gad-cycle">
-            <option value="21">21</option><option value="22">22</option><option value="23">23</option>
-            <option value="24">24</option><option value="25">25</option><option value="26">26</option>
-            <option value="27">27</option><option value="28" selected>28</option>
-            <option value="29">29</option><option value="30">30</option><option value="31">31</option>
-            <option value="32">32</option><option value="33">33</option><option value="34">34</option>
-            <option value="35">35</option>
-          </select>
+      <!-- GA BY LMP -->
+      <div class="calc-panel" id="sub-ga-lmp">
+        <div class="panel-title">Gestational Age by LMP</div>
+        <div class="panel-desc">Naegele's Rule — EDD = LMP + 280 days, adjusted for cycle length.</div>
+        <div class="form-grid">
+          <div><label>Last Menstrual Period (LMP)</label><input type="date" id="lmp-date" max=""/></div>
+          <div><label>Cycle Length <span class="label-hint">(days)</span></label>
+            <select id="lmp-cycle">
+              <option value="21">21</option><option value="22">22</option><option value="23">23</option>
+              <option value="24">24</option><option value="25">25</option><option value="26">26</option>
+              <option value="27">27</option><option value="28" selected>28 (average)</option>
+              <option value="29">29</option><option value="30">30</option><option value="31">31</option>
+              <option value="32">32</option><option value="33">33</option><option value="34">34</option>
+              <option value="35">35</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcGaDate()">Calculate</button>
-        <button class="clear-btn" onclick="clearResult('ga-date')">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-ga-date"></div>
-    </div>
-
-    <!-- LMP FROM EDD -->
-    <div class="calc-panel" id="panel-lmp-from-edd">
-      <div class="panel-title">LMP from EDD (Reverse Calculator)</div>
-      <div class="panel-desc">Calculate the LMP date when only the estimated due date is known.</div>
-      <div class="form-grid">
-        <div><label>Estimated Due Date (EDD)</label><input type="date" id="edd-input"/></div>
-        <div>
-          <label>Cycle Length</label>
-          <select id="edd-cycle">
-            <option value="21">21</option><option value="22">22</option><option value="23">23</option>
-            <option value="24">24</option><option value="25">25</option><option value="26">26</option>
-            <option value="27">27</option><option value="28" selected>28</option>
-            <option value="29">29</option><option value="30">30</option><option value="31">31</option>
-            <option value="32">32</option><option value="33">33</option><option value="34">34</option>
-            <option value="35">35</option>
-          </select>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcGaLmp()">Calculate</button>
+          <button class="clear-btn" onclick="clearBox('ga-lmp')">✕ Clear</button>
         </div>
+        <div class="result-box" id="res-ga-lmp"></div>
       </div>
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcLmpFromEdd()">Calculate</button>
-        <button class="clear-btn" onclick="clearResult('lmp-from-edd')">✕ Clear</button>
+
+      <!-- GA BY SCAN -->
+      <div class="calc-panel" id="sub-ga-scan">
+        <div class="panel-title">Gestational Age by Ultrasound Scan</div>
+        <div class="panel-desc">Back-calculates EDD from scan date and GA at scan. Most accurate in first trimester.</div>
+        <div class="form-grid-3">
+          <div><label>Scan Date</label><input type="date" id="scan-date" max=""/></div>
+          <div><label>GA at Scan — Weeks</label><input type="number" id="scan-wks" placeholder="e.g. 8" min="4" max="42" step="1"/></div>
+          <div><label>GA at Scan — Days</label><input type="number" id="scan-dys" placeholder="0–6" min="0" max="6" step="1"/></div>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcGaScan()">Calculate</button>
+          <button class="clear-btn" onclick="clearBox('ga-scan')">✕ Clear</button>
+        </div>
+        <div class="result-box" id="res-ga-scan"></div>
       </div>
-      <div class="result-box" id="res-lmp-from-edd"></div>
+
+      <!-- GA ON DATE -->
+      <div class="calc-panel" id="sub-ga-date">
+        <div class="panel-title">Gestational Age on Any Given Date</div>
+        <div class="panel-desc">Find exact GA on a specific date — for operation notes, admission documents or referral letters.</div>
+        <div class="form-grid-3">
+          <div><label>LMP Date</label><input type="date" id="gad-lmp" max=""/></div>
+          <div><label>Calculate GA on</label><input type="date" id="gad-target"/></div>
+          <div><label>Cycle Length</label>
+            <select id="gad-cycle">
+              <option value="21">21</option><option value="22">22</option><option value="23">23</option>
+              <option value="24">24</option><option value="25">25</option><option value="26">26</option>
+              <option value="27">27</option><option value="28" selected>28</option>
+              <option value="29">29</option><option value="30">30</option><option value="31">31</option>
+              <option value="32">32</option><option value="33">33</option><option value="34">34</option>
+              <option value="35">35</option>
+            </select>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcGaDate()">Calculate</button>
+          <button class="clear-btn" onclick="clearBox('ga-date')">✕ Clear</button>
+        </div>
+        <div class="result-box" id="res-ga-date"></div>
+      </div>
+
+      <!-- LMP FROM EDD -->
+      <div class="calc-panel" id="sub-ga-reverse">
+        <div class="panel-title">LMP from EDD (Reverse Calculator)</div>
+        <div class="panel-desc">Calculate LMP when only the estimated due date is known.</div>
+        <div class="form-grid">
+          <div><label>Estimated Due Date (EDD)</label><input type="date" id="rev-edd"/></div>
+          <div><label>Cycle Length</label>
+            <select id="rev-cycle">
+              <option value="21">21</option><option value="22">22</option><option value="23">23</option>
+              <option value="24">24</option><option value="25">25</option><option value="26">26</option>
+              <option value="27">27</option><option value="28" selected>28</option>
+              <option value="29">29</option><option value="30">30</option><option value="31">31</option>
+              <option value="32">32</option><option value="33">33</option><option value="34">34</option>
+              <option value="35">35</option>
+            </select>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcReverse()">Calculate</button>
+          <button class="clear-btn" onclick="clearBox('ga-reverse')">✕ Clear</button>
+        </div>
+        <div class="result-box" id="res-ga-reverse"></div>
+      </div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!-- GROUP B: FETAL ASSESSMENT              -->
-  <!-- ═══════════════════════════════════════ -->
-  <div class="category-group" id="group-fetal">
-    <div class="category-header">
-      <div class="category-icon">👶</div>
-      <div>
-        <div class="category-title">Fetal Assessment</div>
-        <div class="category-desc">Expected fetal weight (Hadlock) · Apgar score calculator</div>
+  <!-- ═══════════════════════════════════ -->
+  <!-- ACCORDION 2: FETAL ASSESSMENT      -->
+  <!-- ═══════════════════════════════════ -->
+  <div class="accordion acc-fetal" id="acc-fetal">
+    <div class="accordion-header" onclick="toggleAcc('fetal')">
+      <div class="acc-icon">👶</div>
+      <div class="acc-text">
+        <div class="acc-title">Fetal Assessment</div>
+        <div class="acc-desc">Expected Fetal Weight (Hadlock) · Apgar Score</div>
       </div>
+      <span class="acc-count">2 tools</span>
+      <span class="acc-chevron">▾</span>
     </div>
-
-    <!-- EFW -->
-    <div class="calc-panel" id="panel-efw">
-      <div class="panel-title">Expected Fetal Weight — Hadlock Formula</div>
-      <div class="panel-desc">Hadlock 1985 formula — standard in Indian obstetric practice. Uses BPD+HC+AC+FL (4-param) or BPD+AC+FL (3-param if HC unavailable).</div>
-      <div class="form-grid-3">
-        <div><label>BPD <span class="label-hint">(mm)</span></label><input type="number" id="efw-bpd" placeholder="e.g. 72" min="10" max="120" step="0.1"/></div>
-        <div><label>HC <span class="label-hint">(mm, optional)</span></label><input type="number" id="efw-hc" placeholder="e.g. 260" min="50" max="400" step="0.1"/></div>
-        <div><label>AC <span class="label-hint">(mm)</span></label><input type="number" id="efw-ac" placeholder="e.g. 245" min="50" max="450" step="0.1"/></div>
-        <div><label>FL <span class="label-hint">(mm)</span></label><input type="number" id="efw-fl" placeholder="e.g. 52" min="10" max="100" step="0.1"/></div>
-        <div><label>GA at Scan <span class="label-hint">(weeks)</span></label><input type="number" id="efw-ga" placeholder="e.g. 28" min="14" max="42" step="0.5"/></div>
-      </div>
-      <div class="info-box">💡 Enter measurements in millimetres as reported by the sonologist. All results have ±15% variability.</div>
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcEfw()">Calculate EFW</button>
-        <button class="clear-btn" onclick="clearResult('efw')">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-efw"></div>
-    </div>
-
-    <!-- APGAR -->
-    <div class="calc-panel" id="panel-apgar">
-      <div class="panel-title">Apgar Score Calculator</div>
-      <div class="panel-desc">Score all 5 criteria from 0–2. Used at 1 minute and 5 minutes after birth.</div>
-
-      <div class="score-group">
-        <div class="score-group-label">A — Appearance (Colour)</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setApgar('appearance',0,this)">0 — Blue/pale all over</button>
-          <button class="score-btn" onclick="setApgar('appearance',1,this)">1 — Blue extremities, pink body</button>
-          <button class="score-btn" onclick="setApgar('appearance',2,this)">2 — Pink all over</button>
-        </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">P — Pulse (Heart Rate)</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setApgar('pulse',0,this)">0 — Absent</button>
-          <button class="score-btn" onclick="setApgar('pulse',1,this)">1 — &lt; 100 bpm</button>
-          <button class="score-btn" onclick="setApgar('pulse',2,this)">2 — ≥ 100 bpm</button>
-        </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">G — Grimace (Reflex Irritability)</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setApgar('grimace',0,this)">0 — No response</button>
-          <button class="score-btn" onclick="setApgar('grimace',1,this)">1 — Grimace only</button>
-          <button class="score-btn" onclick="setApgar('grimace',2,this)">2 — Cry / cough / sneeze</button>
-        </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">A — Activity (Muscle Tone)</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setApgar('activity',0,this)">0 — Limp / flaccid</button>
-          <button class="score-btn" onclick="setApgar('activity',1,this)">1 — Some flexion</button>
-          <button class="score-btn" onclick="setApgar('activity',2,this)">2 — Active motion</button>
-        </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">R — Respiration</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setApgar('respiration',0,this)">0 — Absent</button>
-          <button class="score-btn" onclick="setApgar('respiration',1,this)">1 — Weak / irregular</button>
-          <button class="score-btn" onclick="setApgar('respiration',2,this)">2 — Strong cry</button>
+    <div class="accordion-body">
+      <div class="sub-selector-wrap">
+        <div class="sub-selector-label">Select calculator</div>
+        <div class="sub-tabs">
+          <button class="sub-tab" onclick="switchSub('fetal','efw',this)">EFW — Hadlock Formula</button>
+          <button class="sub-tab" onclick="switchSub('fetal','apgar',this)">Apgar Score</button>
         </div>
       </div>
 
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcApgar()">Calculate Apgar</button>
-        <button class="clear-btn" onclick="clearApgar()">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-apgar"></div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- GROUP C: OBSTETRIC SCORING             -->
-  <!-- ═══════════════════════════════════════ -->
-  <div class="category-group" id="group-scoring">
-    <div class="category-header">
-      <div class="category-icon">🏥</div>
-      <div>
-        <div class="category-title">Obstetric Scoring</div>
-        <div class="category-desc">Bishop score · VBAC eligibility · PPH risk assessment</div>
-      </div>
-    </div>
-
-    <!-- BISHOP -->
-    <div class="calc-panel" id="panel-bishop">
-      <div class="panel-title">Bishop Score — Cervical Assessment</div>
-      <div class="panel-desc">Assess cervical favourability for induction of labour. Score all 5 parameters.</div>
-
-      <div class="score-group">
-        <div class="score-group-label">Dilation (cm)</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setBishop('dilation',0,this)">0 — Closed</button>
-          <button class="score-btn" onclick="setBishop('dilation',1,this)">1 — 1–2 cm</button>
-          <button class="score-btn" onclick="setBishop('dilation',2,this)">2 — 3–4 cm</button>
-          <button class="score-btn" onclick="setBishop('dilation',3,this)">3 — ≥ 5 cm</button>
+      <!-- EFW -->
+      <div class="calc-panel" id="sub-fetal-efw">
+        <div class="panel-title">Expected Fetal Weight — Hadlock Formula</div>
+        <div class="panel-desc">Hadlock 1985 — standard in Indian practice. BPD+HC+AC+FL (4-param) or BPD+AC+FL (3-param if HC unavailable). Measurements in mm.</div>
+        <div class="form-grid-3">
+          <div><label>BPD <span class="label-hint">(mm)</span></label><input type="number" id="efw-bpd" placeholder="e.g. 72" min="10" max="120" step="0.1"/></div>
+          <div><label>HC <span class="label-hint">(mm, optional)</span></label><input type="number" id="efw-hc" placeholder="e.g. 260" min="50" max="400" step="0.1"/></div>
+          <div><label>AC <span class="label-hint">(mm)</span></label><input type="number" id="efw-ac" placeholder="e.g. 245" min="50" max="450" step="0.1"/></div>
+          <div><label>FL <span class="label-hint">(mm)</span></label><input type="number" id="efw-fl" placeholder="e.g. 52" min="10" max="100" step="0.1"/></div>
+          <div><label>GA at Scan <span class="label-hint">(weeks)</span></label><input type="number" id="efw-ga" placeholder="e.g. 28" min="14" max="42" step="0.5"/></div>
         </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Effacement (%)</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setBishop('effacement',0,this)">0 — 0–30%</button>
-          <button class="score-btn" onclick="setBishop('effacement',1,this)">1 — 40–50%</button>
-          <button class="score-btn" onclick="setBishop('effacement',2,this)">2 — 60–70%</button>
-          <button class="score-btn" onclick="setBishop('effacement',3,this)">3 — ≥ 80%</button>
+        <div class="info-box">💡 HC is optional. If not available, the 3-parameter formula (BPD+AC+FL) will be used automatically. All EFW results have ±15% variability.</div>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcEfw()">Calculate EFW</button>
+          <button class="clear-btn" onclick="clearBox('fetal-efw')">✕ Clear</button>
         </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Station (fetal head)</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setBishop('station',0,this)">0 — −3</button>
-          <button class="score-btn" onclick="setBishop('station',1,this)">1 — −2</button>
-          <button class="score-btn" onclick="setBishop('station',2,this)">2 — −1 / 0</button>
-          <button class="score-btn" onclick="setBishop('station',3,this)">3 — +1 / +2</button>
-        </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Consistency</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setBishop('consistency',0,this)">0 — Firm</button>
-          <button class="score-btn" onclick="setBishop('consistency',1,this)">1 — Medium</button>
-          <button class="score-btn" onclick="setBishop('consistency',2,this)">2 — Soft</button>
-        </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Cervical Position</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setBishop('position',0,this)">0 — Posterior</button>
-          <button class="score-btn" onclick="setBishop('position',1,this)">1 — Mid</button>
-          <button class="score-btn" onclick="setBishop('position',2,this)">2 — Anterior</button>
-        </div>
+        <div class="result-box" id="res-fetal-efw"></div>
       </div>
 
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcBishop()">Calculate Bishop Score</button>
-        <button class="clear-btn" onclick="clearBishop()">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-bishop"></div>
-    </div>
-
-    <!-- VBAC -->
-    <div class="calc-panel" id="panel-vbac">
-      <div class="panel-title">VBAC Eligibility Checklist</div>
-      <div class="panel-desc">Assess suitability for Trial of Labour After Caesarean (TOLAC/VBAC) per FOGSI and ACOG guidelines.</div>
-
-      <div class="score-group">
-        <div class="score-group-label">Uterine scar type</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('scar','lscs',this)">Low transverse LSCS</button>
-          <button class="score-btn" onclick="setVbac('scar','classical',this)">Classical / inverted-T</button>
-          <button class="score-btn" onclick="setVbac('scar','unknown',this)">Unknown scar type</button>
+      <!-- APGAR -->
+      <div class="calc-panel" id="sub-fetal-apgar">
+        <div class="panel-title">Apgar Score Calculator</div>
+        <div class="panel-desc">Score all 5 criteria (A-P-G-A-R) from 0–2. Used at 1 minute and 5 minutes after birth.</div>
+        <div class="score-group"><div class="score-group-label">A — Appearance (Colour)</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('apgar','appearance',0,this)">0 — Blue/pale all over</button>
+            <button class="score-btn" onclick="setS('apgar','appearance',1,this)">1 — Blue extremities, pink body</button>
+            <button class="score-btn" onclick="setS('apgar','appearance',2,this)">2 — Pink all over</button>
+          </div>
         </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Number of previous caesareans</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('num','1',this)">1 previous CS</button>
-          <button class="score-btn" onclick="setVbac('num','2',this)">2 previous CS</button>
-          <button class="score-btn" onclick="setVbac('num','3plus',this)">≥ 3 previous CS</button>
+        <div class="score-group"><div class="score-group-label">P — Pulse (Heart Rate)</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('apgar','pulse',0,this)">0 — Absent</button>
+            <button class="score-btn" onclick="setS('apgar','pulse',1,this)">1 — &lt; 100 bpm</button>
+            <button class="score-btn" onclick="setS('apgar','pulse',2,this)">2 — ≥ 100 bpm</button>
+          </div>
         </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Previous vaginal delivery</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('vagdel','yes',this)">Yes — previous SVD</button>
-          <button class="score-btn" onclick="setVbac('vagdel','no',this)">No previous vaginal delivery</button>
+        <div class="score-group"><div class="score-group-label">G — Grimace (Reflex)</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('apgar','grimace',0,this)">0 — No response</button>
+            <button class="score-btn" onclick="setS('apgar','grimace',1,this)">1 — Grimace only</button>
+            <button class="score-btn" onclick="setS('apgar','grimace',2,this)">2 — Cry / cough / sneeze</button>
+          </div>
         </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Indication of previous CS</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('indication','nonrecurring',this)">Non-recurring (breech, PP)</button>
-          <button class="score-btn" onclick="setVbac('indication','recurring',this)">Recurring (CPD, FD)</button>
+        <div class="score-group"><div class="score-group-label">A — Activity (Muscle Tone)</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('apgar','activity',0,this)">0 — Limp / flaccid</button>
+            <button class="score-btn" onclick="setS('apgar','activity',1,this)">1 — Some flexion</button>
+            <button class="score-btn" onclick="setS('apgar','activity',2,this)">2 — Active motion</button>
+          </div>
         </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Interpregnancy interval</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('interval','over18',this)">≥ 18 months</button>
-          <button class="score-btn" onclick="setVbac('interval','under18',this)">&lt; 18 months</button>
+        <div class="score-group"><div class="score-group-label">R — Respiration</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('apgar','respiration',0,this)">0 — Absent</button>
+            <button class="score-btn" onclick="setS('apgar','respiration',1,this)">1 — Weak / irregular</button>
+            <button class="score-btn" onclick="setS('apgar','respiration',2,this)">2 — Strong cry</button>
+          </div>
         </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Current presentation</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('presentation','cephalic',this)">Cephalic</button>
-          <button class="score-btn" onclick="setVbac('presentation','other',this)">Breech / transverse</button>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcApgar()">Calculate Apgar</button>
+          <button class="clear-btn" onclick="clearScorer('apgar','fetal-apgar')">✕ Clear</button>
         </div>
+        <div class="result-box" id="res-fetal-apgar"></div>
       </div>
-      <div class="score-group">
-        <div class="score-group-label">Estimated fetal weight</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('efw','normal',this)">&lt; 4 kg</button>
-          <button class="score-btn" onclick="setVbac('efw','macro',this)">≥ 4 kg (macrosomia)</button>
-        </div>
-      </div>
-      <div class="score-group">
-        <div class="score-group-label">Uterine scar thickness on USS</div>
-        <div class="score-options">
-          <button class="score-btn" onclick="setVbac('scar_thick','adequate',this)">≥ 3.5 mm (adequate)</button>
-          <button class="score-btn" onclick="setVbac('scar_thick','thin',this)">&lt; 3.5 mm (thin scar)</button>
-          <button class="score-btn" onclick="setVbac('scar_thick','unknown',this)">Not measured</button>
-        </div>
-      </div>
-
-      <div class="btn-row">
-        <button class="calc-btn" onclick="calcVbac()">Assess VBAC Eligibility</button>
-        <button class="clear-btn" onclick="clearVbac()">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-vbac"></div>
-    </div>
-
-    <!-- PPH -->
-    <div class="calc-panel" id="panel-pph">
-      <div class="panel-title">PPH Risk Assessment</div>
-      <div class="panel-desc">Identify women at high risk of postpartum haemorrhage before delivery. Based on RCOG and FOGSI guidelines. Select all risk factors present.</div>
-      <div id="pph-factors"></div>
-      <div class="btn-row" style="margin-top:14px">
-        <button class="calc-btn" onclick="calcPph()">Assess PPH Risk</button>
-        <button class="clear-btn" onclick="clearPph()">✕ Clear</button>
-      </div>
-      <div class="result-box" id="res-pph"></div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!-- GROUP D: SCREENING                     -->
-  <!-- ═══════════════════════════════════════ -->
-  <div class="category-group" id="group-screening">
-    <div class="category-header">
-      <div class="category-icon">🧪</div>
-      <div>
-        <div class="category-title">Screening</div>
-        <div class="category-desc">GDM screening dates — DIPSI / FOGSI protocol</div>
+  <!-- ═══════════════════════════════════ -->
+  <!-- ACCORDION 3: OBSTETRIC SCORING     -->
+  <!-- ═══════════════════════════════════ -->
+  <div class="accordion acc-score" id="acc-score">
+    <div class="accordion-header" onclick="toggleAcc('score')">
+      <div class="acc-icon">🏥</div>
+      <div class="acc-text">
+        <div class="acc-title">Obstetric Scoring</div>
+        <div class="acc-desc">Bishop Score · VBAC Eligibility · PPH Risk Assessment</div>
+      </div>
+      <span class="acc-count">3 tools</span>
+      <span class="acc-chevron">▾</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sub-selector-wrap">
+        <div class="sub-selector-label">Select calculator</div>
+        <div class="sub-tabs">
+          <button class="sub-tab" onclick="switchSub('score','bishop',this)">Bishop Score</button>
+          <button class="sub-tab" onclick="switchSub('score','vbac',this)">VBAC Eligibility</button>
+          <button class="sub-tab" onclick="switchSub('score','pph',this)">PPH Risk</button>
+        </div>
+      </div>
+
+      <!-- BISHOP -->
+      <div class="calc-panel" id="sub-score-bishop">
+        <div class="panel-title">Bishop Score — Cervical Assessment for Induction</div>
+        <div class="panel-desc">Assesses cervical favourability before induction of labour. Score all 5 parameters.</div>
+        <div class="score-group"><div class="score-group-label">Dilation (cm)</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('bishop','dilation',0,this)">0 — Closed</button>
+            <button class="score-btn" onclick="setS('bishop','dilation',1,this)">1 — 1–2 cm</button>
+            <button class="score-btn" onclick="setS('bishop','dilation',2,this)">2 — 3–4 cm</button>
+            <button class="score-btn" onclick="setS('bishop','dilation',3,this)">3 — ≥ 5 cm</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Effacement (%)</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('bishop','effacement',0,this)">0 — 0–30%</button>
+            <button class="score-btn" onclick="setS('bishop','effacement',1,this)">1 — 40–50%</button>
+            <button class="score-btn" onclick="setS('bishop','effacement',2,this)">2 — 60–70%</button>
+            <button class="score-btn" onclick="setS('bishop','effacement',3,this)">3 — ≥ 80%</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Station (fetal head)</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('bishop','station',0,this)">0 — −3</button>
+            <button class="score-btn" onclick="setS('bishop','station',1,this)">1 — −2</button>
+            <button class="score-btn" onclick="setS('bishop','station',2,this)">2 — −1 / 0</button>
+            <button class="score-btn" onclick="setS('bishop','station',3,this)">3 — +1 / +2</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Consistency</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('bishop','consistency',0,this)">0 — Firm</button>
+            <button class="score-btn" onclick="setS('bishop','consistency',1,this)">1 — Medium</button>
+            <button class="score-btn" onclick="setS('bishop','consistency',2,this)">2 — Soft</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Cervical Position</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('bishop','position',0,this)">0 — Posterior</button>
+            <button class="score-btn" onclick="setS('bishop','position',1,this)">1 — Mid</button>
+            <button class="score-btn" onclick="setS('bishop','position',2,this)">2 — Anterior</button>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcBishop()">Calculate Bishop Score</button>
+          <button class="clear-btn" onclick="clearScorer('bishop','score-bishop')">✕ Clear</button>
+        </div>
+        <div class="result-box" id="res-score-bishop"></div>
+      </div>
+
+      <!-- VBAC -->
+      <div class="calc-panel" id="sub-score-vbac">
+        <div class="panel-title">VBAC Eligibility Checklist</div>
+        <div class="panel-desc">TOLAC/VBAC assessment per FOGSI and ACOG guidelines. Answer all 8 questions.</div>
+        <div class="score-group"><div class="score-group-label">Uterine scar type</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','scar','lscs',this)">Low transverse LSCS</button>
+            <button class="score-btn" onclick="setS('vbac','scar','classical',this)">Classical / inverted-T</button>
+            <button class="score-btn" onclick="setS('vbac','scar','unknown',this)">Unknown scar type</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Number of previous CS</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','num','1',this)">1 previous CS</button>
+            <button class="score-btn" onclick="setS('vbac','num','2',this)">2 previous CS</button>
+            <button class="score-btn" onclick="setS('vbac','num','3plus',this)">≥ 3 previous CS</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Previous vaginal delivery</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','vagdel','yes',this)">Yes — previous SVD</button>
+            <button class="score-btn" onclick="setS('vbac','vagdel','no',this)">No previous vaginal delivery</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Indication of previous CS</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','indication','nonrecurring',this)">Non-recurring (breech, PP)</button>
+            <button class="score-btn" onclick="setS('vbac','indication','recurring',this)">Recurring (CPD, FD)</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Interpregnancy interval</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','interval','over18',this)">≥ 18 months</button>
+            <button class="score-btn" onclick="setS('vbac','interval','under18',this)">&lt; 18 months</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Current presentation</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','presentation','cephalic',this)">Cephalic</button>
+            <button class="score-btn" onclick="setS('vbac','presentation','other',this)">Breech / transverse</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Estimated fetal weight</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','efw','normal',this)">&lt; 4 kg</button>
+            <button class="score-btn" onclick="setS('vbac','efw','macro',this)">≥ 4 kg (macrosomia)</button>
+          </div>
+        </div>
+        <div class="score-group"><div class="score-group-label">Scar thickness on USS</div>
+          <div class="score-options">
+            <button class="score-btn" onclick="setS('vbac','scar_thick','adequate',this)">≥ 3.5 mm (adequate)</button>
+            <button class="score-btn" onclick="setS('vbac','scar_thick','thin',this)">&lt; 3.5 mm (thin)</button>
+            <button class="score-btn" onclick="setS('vbac','scar_thick','unknown',this)">Not measured</button>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="calcVbac()">Assess VBAC Eligibility</button>
+          <button class="clear-btn" onclick="clearScorer('vbac','score-vbac')">✕ Clear</button>
+        </div>
+        <div class="result-box" id="res-score-vbac"></div>
+      </div>
+
+      <!-- PPH -->
+      <div class="calc-panel" id="sub-score-pph">
+        <div class="panel-title">PPH Risk Assessment</div>
+        <div class="panel-desc">Select all risk factors present. Based on RCOG and FOGSI guidelines.</div>
+        <div id="pph-factors"></div>
+        <div class="btn-row" style="margin-top:14px">
+          <button class="calc-btn" onclick="calcPph()">Assess PPH Risk</button>
+          <button class="clear-btn" onclick="clearPph()">✕ Clear</button>
+        </div>
+        <div class="result-box" id="res-score-pph"></div>
       </div>
     </div>
+  </div>
 
-    <!-- GDM -->
-    <div class="calc-panel" id="panel-gdm">
-      <div class="panel-title">GDM Screening Dates Calculator</div>
-      <div class="panel-desc">Calculate gestational diabetes screening dates per DIPSI/FOGSI guidelines. High-risk women get early and more frequent screening.</div>
-      <div class="form-row">
-        <label>LMP Date</label>
-        <input type="date" id="gdm-lmp" max="" style="max-width:220px"/>
+  <!-- ═══════════════════════════════════ -->
+  <!-- ACCORDION 4: SCREENING             -->
+  <!-- ═══════════════════════════════════ -->
+  <div class="accordion acc-screen" id="acc-screen">
+    <div class="accordion-header" onclick="toggleAcc('screen')">
+      <div class="acc-icon">🧪</div>
+      <div class="acc-text">
+        <div class="acc-title">Screening</div>
+        <div class="acc-desc">GDM Screening Dates — DIPSI / FOGSI Protocol</div>
       </div>
-      <div style="font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">Risk Factors (select all that apply)</div>
-      <div id="gdm-risks"></div>
-      <div class="btn-row" style="margin-top:14px">
-        <button class="calc-btn" onclick="calcGdm()">Calculate GDM Dates</button>
-        <button class="clear-btn" onclick="clearGdm()">✕ Clear</button>
+      <span class="acc-count">1 tool</span>
+      <span class="acc-chevron">▾</span>
+    </div>
+    <div class="accordion-body">
+      <div class="calc-panel active" id="sub-screen-gdm" style="display:block">
+        <div class="panel-title">GDM Screening Dates — DIPSI / FOGSI</div>
+        <div class="panel-desc">Calculate gestational diabetes screening dates. High-risk women receive early and more frequent screening.</div>
+        <div class="form-row">
+          <label>LMP Date</label>
+          <input type="date" id="gdm-lmp" max="" style="max-width:220px"/>
+        </div>
+        <div style="font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">Risk Factors — select all that apply</div>
+        <div id="gdm-risks"></div>
+        <div class="btn-row" style="margin-top:14px">
+          <button class="calc-btn" style="background:#dd6b20" onclick="calcGdm()">Calculate GDM Dates</button>
+          <button class="clear-btn" onclick="clearGdm()">✕ Clear</button>
+        </div>
+        <div class="result-box" id="res-screen-gdm"></div>
       </div>
-      <div class="result-box" id="res-gdm"></div>
     </div>
   </div>
 
   <!-- SEO CONTENT -->
   <div class="seo-section">
-    <h2>ObsCalc India — Free Obstetric Calculator Suite</h2>
-    <p>This free obstetric calculator suite provides Indian obstetricians and gynaecologists with all the clinical tools needed at the bedside. All calculators follow FOGSI, ACOG, RCOG and WHO guidelines adapted for Indian clinical practice.</p>
+    <h2>ObsCalc India — Free Obstetric Calculator Suite for Doctors</h2>
+    <p>This free obstetric calculator suite covers all common bedside calculations for Indian obstetricians — gestational age, fetal weight, cervical scoring, newborn assessment, GDM screening, VBAC eligibility and PPH risk. All calculators follow FOGSI, ACOG, RCOG and WHO guidelines.</p>
 
     <h2>Gestational Age Calculators</h2>
-    <p><strong>GA by LMP:</strong> Uses Naegele's Rule — EDD = LMP + 280 days, adjusted for cycle length. Shows current GA, trimester, and EDD.</p>
-    <p><strong>GA by Scan:</strong> Back-calculates EDD from ultrasound GA. Most accurate method in the first trimester using CRL. Enter the scan date and GA as reported by the sonologist.</p>
-    <p><strong>GA on Given Date:</strong> Calculates the exact gestational age on any specified date — useful for documenting GA at admission, operation note, or discharge summary.</p>
-    <p><strong>LMP from EDD:</strong> Reverse calculation — enter a known EDD to find the equivalent LMP and approximate conception date.</p>
+    <p><strong>GA by LMP:</strong> Naegele's Rule — EDD = LMP + 280 days adjusted for cycle length. Shows current GA, trimester and EDD.</p>
+    <p><strong>GA by Scan:</strong> Back-calculates EDD from ultrasound GA. Most accurate in the first trimester using CRL.</p>
+    <p><strong>GA on Any Given Date:</strong> Calculates the exact gestational age on any specified date — for operation notes and discharge summaries.</p>
+    <p><strong>LMP from EDD:</strong> Reverse calculator — enter a known EDD to find the equivalent LMP and approximate conception date.</p>
 
-    <h2>Expected Fetal Weight — Hadlock Formula</h2>
-    <p>The Hadlock 1985 formula is the standard EFW formula used in Indian obstetric practice. This calculator uses the 4-parameter formula (BPD+HC+AC+FL) when HC is available, and the 3-parameter (BPD+AC+FL) otherwise. Results include ±15% variability range and an approximate percentile classification (SGA/AGA/LGA) based on gestational age.</p>
+    <h2>Fetal Assessment</h2>
+    <p><strong>Expected Fetal Weight (Hadlock):</strong> Hadlock 1985 formula — standard in Indian practice. 4-parameter (BPD+HC+AC+FL) preferred, 3-parameter (BPD+AC+FL) used when HC unavailable. Includes ±15% range and approximate SGA/AGA/LGA classification.</p>
+    <p><strong>Apgar Score:</strong> Calculates score from 5 criteria — Appearance, Pulse, Grimace, Activity, Respiration. 7–10 normal. 4–6 requires intervention. 0–3 requires immediate resuscitation.</p>
 
-    <h2>Apgar Score</h2>
-    <p>Calculates Apgar score from the 5 criteria — Appearance, Pulse, Grimace, Activity and Respiration. Each scored 0–2. Total of 7–10 is normal; 4–6 requires intervention; 0–3 requires immediate resuscitation.</p>
-
-    <h2>Bishop Score for Induction of Labour</h2>
-    <p>The Bishop score assesses cervical favourability before induction of labour. Scores all 5 parameters — dilation, effacement, station, consistency and position. Score ≥9 indicates a highly favourable cervix suitable for direct oxytocin induction. Score &lt;6 requires cervical ripening.</p>
-
-    <h2>VBAC Eligibility</h2>
-    <p>8-point checklist for Trial of Labour After Caesarean (TOLAC/VBAC) per FOGSI and ACOG guidelines. Covers scar type, number of previous CS, presentation, fetal weight, scar thickness, interpregnancy interval, previous vaginal delivery and CS indication.</p>
-
-    <h2>PPH Risk Assessment</h2>
-    <p>15 weighted risk factors for postpartum haemorrhage giving Low/Moderate/High/Very High risk classification with specific management recommendations per RCOG and FOGSI guidelines.</p>
+    <h2>Obstetric Scoring</h2>
+    <p><strong>Bishop Score:</strong> Assesses cervical favourability for induction of labour — dilation, effacement, station, consistency and position. Score ≥9 favourable for direct oxytocin. Score &lt;6 requires ripening.</p>
+    <p><strong>VBAC Eligibility:</strong> 8-point checklist per FOGSI/ACOG — scar type, number of CS, presentation, fetal weight, scar thickness, interval, previous SVD and CS indication.</p>
+    <p><strong>PPH Risk:</strong> 15 weighted risk factors giving Low/Moderate/High/Very High risk with specific management protocols per RCOG/FOGSI.</p>
 
     <h2>GDM Screening — DIPSI Protocol</h2>
-    <p>DIPSI (Diabetes in Pregnancy Study Group India) recommends a 75g oral glucose challenge in the non-fasting state. Blood glucose ≥140 mg/dL at 2 hours is diagnostic. FOGSI recommends universal screening of all Indian pregnant women at first ANC visit and again at 24–28 weeks. High-risk women receive an additional screen at 32–34 weeks.</p>
+    <p>DIPSI recommends 75g oral glucose (non-fasting). Blood glucose ≥140 mg/dL at 2 hours = GDM. FOGSI recommends universal screening at first ANC and 24–28 weeks. High-risk women get an additional screen at 32–34 weeks.</p>
 
     <h2>Frequently Asked Questions</h2>
-
-    <h3>How is gestational age calculated from LMP in India?</h3>
-    <p>Using Naegele's Rule — add 280 days to the first day of the LMP assuming a 28-day cycle. For other cycle lengths, the difference from 28 days is added or subtracted. This gives the estimated due date (EDD).</p>
-
-    <h3>Which Hadlock formula is used for EFW in India?</h3>
-    <p>The Hadlock 1985 formula is standard in Indian practice. The 4-parameter formula (BPD+HC+AC+FL) is preferred when all measurements are available. Results have ±15% variability and should be interpreted alongside clinical findings.</p>
-
-    <h3>What is a good Bishop score for induction of labour?</h3>
-    <p>Score ≥9 is highly favourable — direct oxytocin induction appropriate. Score 6–8 is favourable with reasonable success. Score &lt;6 requires cervical ripening with prostaglandins or Foley balloon before oxytocin.</p>
-
-    <h3>What is the DIPSI protocol for GDM in India?</h3>
-    <p>75g oral glucose (non-fasting). Blood glucose at 2 hours ≥140 mg/dL = GDM. FOGSI recommends universal screening at first ANC visit and at 24–28 weeks for all Indian women.</p>
-
-    <h3>What are the VBAC criteria per FOGSI?</h3>
-    <p>Single previous low transverse LSCS, cephalic presentation, scar thickness ≥3.5mm, no recurring indication, interpregnancy interval ≥18 months. Must be conducted in a facility with immediate access to emergency CS and blood transfusion.</p>
-
-    <h3>What is a normal Apgar score?</h3>
-    <p>7–10 is normal — routine newborn care. 4–6 is moderately depressed — stimulation and supplemental oxygen. 0–3 is severely depressed — immediate resuscitation including positive pressure ventilation.</p>
+    <h3>How is gestational age calculated from LMP?</h3>
+    <p>Using Naegele's Rule — add 280 days to the LMP assuming 28-day cycles. Adjust by adding or subtracting the difference from 28 days for non-standard cycles.</p>
+    <h3>Which Hadlock formula is used for EFW?</h3>
+    <p>Hadlock 1985 is standard in India. The 4-parameter formula (BPD+HC+AC+FL) is most accurate. Results have ±15% variability and should be combined with clinical findings.</p>
+    <h3>What is a good Bishop score for induction?</h3>
+    <p>Score ≥9 highly favourable — direct oxytocin appropriate. Score 6–8 favourable. Score &lt;6 requires cervical ripening.</p>
+    <h3>What is DIPSI GDM screening?</h3>
+    <p>75g glucose non-fasting test — blood glucose ≥140 mg/dL at 2 hours is diagnostic. Recommended universally for all Indian pregnant women by FOGSI.</p>
+    <h3>What are VBAC criteria in India?</h3>
+    <p>Single low transverse LSCS, cephalic presentation, scar ≥3.5mm, no recurring indication, interval ≥18 months. Requires emergency CS access and continuous CTG.</p>
   </div>
 
   <div class="disclaimer">
-    ⚕️ <strong style="color:#2d3748">For clinical use by qualified healthcare professionals only.</strong> All calculators follow standard obstetric formulas and FOGSI/ACOG/RCOG/WHO guidelines. Results are clinical aids — always apply clinical judgement and refer to current guidelines for individual patient decisions.
+    ⚕️ <strong style="color:#2d3748">For clinical use by qualified healthcare professionals only.</strong> Results are clinical aids — always apply clinical judgement and refer to current FOGSI/ACOG/WHO guidelines for individual patient decisions.
   </div>
 
   <footer>
-    For clinical use only · FOGSI · ACOG · WHO guidelines ·
+    Clinical use only · FOGSI · ACOG · WHO guidelines ·
     <a href="index.html">All Calculators</a> ·
     <a href="https://thezerowhisper.github.io/rabies-scheduler/">Rabies Scheduler</a>
   </footer>
 
 </main>
-
 <script>
 // ── HELPERS ───────────────────────────────────────────────────────
-const months   = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-function fmtDate(d)  { return d?`${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()} (${dayNames[d.getDay()]})`:""; }
-function fmtShort(d) { return d?`${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`:""; }
-function addDays(d,n){ const r=new Date(d); r.setDate(r.getDate()+n); return r; }
-function daysBetween(a,b){ return Math.round((b-a)/86400000); }
-function rc(label,value,sub=""){ return `<div class="rc"><div class="rc-label">${label}</div><div class="rc-value">${value}</div>${sub?`<div class="rc-sub">${sub}</div>`:""}</div>`; }
-function calLink(title, date) {
-  const fmt=d=>d.toISOString().split("T")[0].replace(/-/g,"");
-  const n=new Date(date); n.setDate(n.getDate()+1);
-  return `<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${fmt(date)}/${fmt(n)}" target="_blank" rel="noopener" class="cal-link"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Add to Calendar</a>`;
+const M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const D=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt=d=>`${d.getDate()} ${M[d.getMonth()]} ${d.getFullYear()} (${D[d.getDay()]})`;
+const fmtS=d=>`${d.getDate()} ${M[d.getMonth()]} ${d.getFullYear()}`;
+const addD=(d,n)=>{const r=new Date(d);r.setDate(r.getDate()+n);return r;};
+const diff=(a,b)=>Math.round((b-a)/86400000);
+const rc=(l,v,s="")=>`<div class="rc"><div class="rc-label">${l}</div><div class="rc-value">${v}</div>${s?`<div class="rc-sub">${s}</div>`:""}</div>`;
+const calL=(t,d)=>{const f=x=>x.toISOString().split("T")[0].replace(/-/g,"");const n=addD(d,1);return `<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(t)}&dates=${f(d)}/${f(n)}" target="_blank" rel="noopener" class="cal-link"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Add to Calendar</a>`;};
+
+const shareTexts={};
+const sb=id=>`<div class="share-bar">
+  <button class="share-btn btn-whatsapp" onclick="doWa('${id}')"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</button>
+  <button class="share-btn btn-copy" onclick="doCopy('${id}')"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copy</button>
+  <button class="share-btn btn-print" onclick="window.print()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Print</button>
+  <button class="share-btn btn-save" onclick="doSave('${id}')"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Save</button>
+</div><div class="copy-confirm" id="cc-${id}"></div>`;
+
+function doWa(id){const t=shareTexts[id];if(t)window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank","noopener");}
+function doCopy(id){const t=shareTexts[id];if(!t)return;navigator.clipboard.writeText(t);const e=document.getElementById("cc-"+id);if(e){e.textContent="✓ Copied!";setTimeout(()=>e.textContent="",2500);}}
+function doSave(id){
+  const box=document.getElementById("res-"+id);if(!box)return;
+  const go=()=>html2canvas(box,{backgroundColor:"#fff",scale:2,useCORS:true}).then(c=>{const a=document.createElement("a");a.download=`obscalc-${id}.png`;a.href=c.toDataURL("image/png");a.click();});
+  window.html2canvas?go():(()=>{const s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";s.onload=go;document.head.appendChild(s);})();
+}
+function show(id,html,text){const b=document.getElementById("res-"+id);b.innerHTML=html;b.style.display="block";shareTexts[id]=text;}
+function clearBox(id){
+  const p=document.getElementById("sub-"+id.replace("ga-","ga-").replace("fetal-","fetal-").replace("score-","score-").replace("screen-","screen-"));
+  if(p){p.querySelectorAll("input").forEach(i=>i.value="");}
+  const b=document.getElementById("res-"+id);if(b){b.style.display="none";b.innerHTML="";}
 }
 
-// share text store
-const shareTexts = {};
-
-function shareBar(id) {
-  return `<div class="share-bar">
-    <button class="share-btn btn-whatsapp" onclick="doWa('${id}')"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</button>
-    <button class="share-btn btn-copy" onclick="doCopy('${id}')"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copy</button>
-    <button class="share-btn btn-print" onclick="window.print()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Print</button>
-    <button class="share-btn btn-save" onclick="doSave('${id}')"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Save</button>
-  </div><div class="copy-confirm" id="cc-${id}"></div>`;
+// ── ACCORDION ─────────────────────────────────────────────────────
+function toggleAcc(id){
+  const el=document.getElementById("acc-"+id);
+  el.classList.toggle("open");
 }
 
-function doWa(id) { const t=shareTexts[id]; if(t) window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank","noopener"); }
-function doCopy(id) {
-  const t=shareTexts[id]; if(!t) return;
-  navigator.clipboard.writeText(t);
-  const el=document.getElementById("cc-"+id);
-  if(el){el.textContent="✓ Copied!"; setTimeout(()=>el.textContent="",2500);}
-}
-function doSave(id) {
-  const box=document.getElementById("res-"+id); if(!box) return;
-  function go() {
-    html2canvas(box,{backgroundColor:"#ffffff",scale:2,useCORS:true}).then(c=>{
-      const a=document.createElement("a"); a.download=`obscalc-${id}.png`;
-      a.href=c.toDataURL("image/png"); a.click();
-    });
-  }
-  if(window.html2canvas){go();}else{
-    const s=document.createElement("script");
-    s.src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
-    s.onload=go; document.head.appendChild(s);
-  }
+// ── SUB-TAB SWITCHER ──────────────────────────────────────────────
+function switchSub(group, sub, btn) {
+  const category = group==="ga"?"ga":group==="fetal"?"fetal":group==="score"?"score":"screen";
+  // Deactivate all sub-tabs in this group
+  btn.closest(".sub-tabs").querySelectorAll(".sub-tab").forEach(t=>{
+    t.classList.remove(`active-ga`,`active-fetal`,`active-score`,`active-screen`);
+  });
+  btn.classList.add(`active-${category}`);
+  // Hide all panels in this accordion body
+  btn.closest(".accordion-body").querySelectorAll(".calc-panel").forEach(p=>p.classList.remove("active"));
+  // Show selected
+  const panel=document.getElementById(`sub-${group}-${sub}`);
+  if(panel) panel.classList.add("active");
 }
 
-function showResult(id, html, text) {
-  const box=document.getElementById("res-"+id);
-  box.innerHTML=html; box.style.display="block";
-  shareTexts[id]=text;
-}
-
-function clearResult(id) {
-  const panel=document.getElementById("panel-"+id);
-  if(panel){ panel.querySelectorAll("input").forEach(i=>i.value=""); }
-  const box=document.getElementById("res-"+id);
-  if(box){box.style.display="none"; box.innerHTML="";}
-}
-
-// ── PANEL SWITCHER ────────────────────────────────────────────────
-const groupMap = {
-  "ga-lmp":"ga","ga-scan":"ga","ga-date":"ga","lmp-from-edd":"ga",
-  "efw":"fetal","apgar":"fetal",
-  "bishop":"scoring","vbac":"scoring","pph":"scoring",
-  "gdm":"screening"
-};
-
-function switchCalc(val) {
-  // Hide all groups
-  document.querySelectorAll(".category-group").forEach(g=>g.classList.remove("active"));
-  // Hide all panels
-  document.querySelectorAll(".calc-panel").forEach(p=>p.classList.remove("active"));
-  if (!val) return;
-
-  const group = groupMap[val];
-  const groupEl = document.getElementById("group-"+group);
-  const panelEl = document.getElementById("panel-"+val);
-  if (groupEl) groupEl.classList.add("active");
-  if (panelEl) {
-    panelEl.classList.add("active");
-    setTimeout(()=>groupEl.scrollIntoView({behavior:"smooth",block:"start"}),100);
-  }
+// ── SCORE STORES ──────────────────────────────────────────────────
+const scores={apgar:{},bishop:{},vbac:{}};
+function setS(store,key,val,btn){
+  scores[store][key]=val;
+  btn.closest(".score-options").querySelectorAll(".score-btn").forEach(b=>b.classList.remove("selected"));
+  btn.classList.add("selected");
 }
 
 // ── GA BY LMP ─────────────────────────────────────────────────────
-function calcGaLmp() {
-  const v=document.getElementById("lmp1-date").value;
+function calcGaLmp(){
+  const v=document.getElementById("lmp-date").value;
   if(!v){alert("Please enter LMP date.");return;}
-  const lmp=new Date(v+"T00:00:00");
-  const today=new Date(); today.setHours(0,0,0,0);
-  const cycle=parseInt(document.getElementById("lmp1-cycle").value);
-  const adj=cycle-28;
-  const edd=addDays(lmp,280+adj);
-  const dp=daysBetween(lmp,today);
-  const wks=Math.floor(dp/7), dys=dp%7;
-  const left=daysBetween(today,edd);
-  const tri=wks<14?"First":wks<28?"Second":"Third";
-
-  const html=`
-    <div class="result-hero rh-blue">
-      <div class="rh-label">Current Gestational Age</div>
-      <div class="rh-value">${wks}w ${dys}d</div>
-      <div class="rh-sub">${tri} Trimester · ${left>0?left+" days to EDD":"Past EDD by "+Math.abs(left)+" days"}</div>
-    </div>
-    <div class="result-grid">
-      ${rc("EDD",fmtShort(edd),"Naegele's Rule")}
-      ${rc("LMP",fmtShort(lmp),"Entered")}
-      ${rc("Days Pregnant",dp+" days","From LMP")}
-      ${rc("Trimester",tri,wks<14?"Wks 1–13":wks<28?"Wks 14–27":"Wks 28–40")}
-      ${rc("Conception (approx)",fmtShort(addDays(lmp,14+adj)),"LMP + 14 days")}
-      ${rc("Cycle Adjustment",adj>0?"+"+adj+"d":adj<0?adj+"d":"None","From 28-day standard")}
-    </div>
-    ${calLink("EDD — Estimated Due Date", edd)}
-    ${shareBar("ga-lmp")}`;
-  showResult("ga-lmp",html,`🏥 GA by LMP\nLMP: ${fmtShort(lmp)} · Cycle: ${cycle}d\nGA Today: ${wks}w ${dys}d\nEDD: ${fmtShort(edd)}\nTrimester: ${tri}\n${window.location.href}`);
+  const lmp=new Date(v+"T00:00:00"),today=new Date();today.setHours(0,0,0,0);
+  const cycle=parseInt(document.getElementById("lmp-cycle").value),adj=cycle-28;
+  const edd=addD(lmp,280+adj),dp=diff(lmp,today);
+  const wk=Math.floor(dp/7),dy=dp%7,left=diff(today,edd);
+  const tri=wk<14?"First":wk<28?"Second":"Third";
+  const html=`<div class="result-hero rh-blue"><div class="rh-label">Current Gestational Age</div><div class="rh-value">${wk}w ${dy}d</div><div class="rh-sub">${tri} Trimester · ${left>0?left+" days to EDD":"Past EDD by "+Math.abs(left)+" days"}</div></div>
+    <div class="result-grid">${rc("EDD",fmtS(edd),"Naegele's Rule")}${rc("LMP",fmtS(lmp),"Entered")}${rc("Days Pregnant",dp+" days","From LMP")}${rc("Trimester",tri,wk<14?"Wks 1–13":wk<28?"Wks 14–27":"Wks 28–40")}${rc("Conception (approx)",fmtS(addD(lmp,14+adj)),"LMP + 14 days")}${rc("Cycle Adj.",adj>0?"+"+adj+"d":adj<0?adj+"d":"None","From 28-day std")}</div>
+    ${calL("EDD — Estimated Due Date",edd)}${sb("ga-lmp")}`;
+  show("ga-lmp",html,`🏥 GA by LMP\nLMP: ${fmtS(lmp)} · Cycle: ${cycle}d\nGA Today: ${wk}w ${dy}d\nEDD: ${fmtS(edd)}\nTrimester: ${tri}\n${window.location.href}`);
 }
 
 // ── GA BY SCAN ────────────────────────────────────────────────────
-function calcGaScan() {
-  const v=document.getElementById("scan-date").value;
-  const w=parseInt(document.getElementById("scan-weeks").value);
-  const d=parseInt(document.getElementById("scan-days").value)||0;
+function calcGaScan(){
+  const v=document.getElementById("scan-date").value,w=parseInt(document.getElementById("scan-wks").value),d=parseInt(document.getElementById("scan-dys").value)||0;
   if(!v||isNaN(w)){alert("Please enter scan date and gestational age.");return;}
-  const sd=new Date(v+"T00:00:00");
-  const today=new Date(); today.setHours(0,0,0,0);
-  const gaD=w*7+d;
-  const lmp=addDays(sd,-gaD);
-  const edd=addDays(lmp,280);
-  const cur=gaD+daysBetween(sd,today);
-  const cw=Math.floor(cur/7), cd=cur%7;
-  const left=daysBetween(today,edd);
+  const sd=new Date(v+"T00:00:00"),today=new Date();today.setHours(0,0,0,0);
+  const gaD=w*7+d,lmp=addD(sd,-gaD),edd=addD(lmp,280);
+  const cur=gaD+diff(sd,today),cw=Math.floor(cur/7),cd=cur%7,left=diff(today,edd);
   const tri=cw<14?"First":cw<28?"Second":"Third";
-
-  const html=`
-    <div class="result-hero rh-green">
-      <div class="rh-label">Current GA (by Scan)</div>
-      <div class="rh-value">${cw}w ${cd}d</div>
-      <div class="rh-sub">${tri} Trimester · ${left>0?left+" days to EDD":"Past EDD by "+Math.abs(left)+" days"}</div>
-    </div>
-    <div class="result-grid">
-      ${rc("EDD (by scan)",fmtShort(edd),"Most accurate")}
-      ${rc("GA at Scan",w+"w "+d+"d",fmtShort(sd))}
-      ${rc("Equivalent LMP",fmtShort(lmp),"Back-calculated")}
-      ${rc("Trimester",tri,"")}
-    </div>
-    ${calLink("EDD (by Scan) — Estimated Due Date", edd)}
-    ${shareBar("ga-scan")}`;
-  showResult("ga-scan",html,`🏥 GA by Scan\nScan: ${fmtShort(sd)} · GA: ${w}w${d}d\nCurrent GA: ${cw}w ${cd}d\nEDD: ${fmtShort(edd)}\n${window.location.href}`);
+  const html=`<div class="result-hero rh-green"><div class="rh-label">Current GA (by Scan)</div><div class="rh-value">${cw}w ${cd}d</div><div class="rh-sub">${tri} Trimester · ${left>0?left+" days to EDD":"Past EDD by "+Math.abs(left)+" days"}</div></div>
+    <div class="result-grid">${rc("EDD (by scan)",fmtS(edd),"Most accurate")}${rc("GA at Scan",w+"w "+d+"d",fmtS(sd))}${rc("Equivalent LMP",fmtS(lmp),"Back-calculated")}${rc("Trimester",tri,"")}</div>
+    ${calL("EDD (Scan) — Estimated Due Date",edd)}${sb("ga-scan")}`;
+  show("ga-scan",html,`🏥 GA by Scan\nScan: ${fmtS(sd)} · GA: ${w}w${d}d\nCurrent GA: ${cw}w ${cd}d\nEDD: ${fmtS(edd)}\n${window.location.href}`);
 }
 
 // ── GA ON DATE ────────────────────────────────────────────────────
-function calcGaDate() {
-  const lv=document.getElementById("gad-lmp").value;
-  const tv=document.getElementById("gad-target").value;
+function calcGaDate(){
+  const lv=document.getElementById("gad-lmp").value,tv=document.getElementById("gad-target").value;
   if(!lv||!tv){alert("Please enter both LMP and target date.");return;}
-  const lmp=new Date(lv+"T00:00:00");
-  const tgt=new Date(tv+"T00:00:00");
-  const cycle=parseInt(document.getElementById("gad-cycle").value);
-  const adj=cycle-28;
-  const edd=addDays(lmp,280+adj);
-  const dp=daysBetween(lmp,tgt);
-  const wks=Math.floor(dp/7), dys=dp%7;
-  const tri=wks<14?"First":wks<28?"Second":"Third";
-
-  const html=`
-    <div class="result-hero rh-purple">
-      <div class="rh-label">GA on ${fmtShort(tgt)}</div>
-      <div class="rh-value">${wks}w ${dys}d</div>
-      <div class="rh-sub">${tri} Trimester</div>
-    </div>
-    <div class="result-grid">
-      ${rc("GA on Target Date",wks+"w "+dys+"d",fmtShort(tgt))}
-      ${rc("LMP",fmtShort(lmp),"Entered")}
-      ${rc("EDD",fmtShort(edd),"")}
-      ${rc("Trimester",tri,"")}
-    </div>
-    ${shareBar("ga-date")}`;
-  showResult("ga-date",html,`🏥 GA on Given Date\nLMP: ${fmtShort(lmp)}\nGA on ${fmtShort(tgt)}: ${wks}w ${dys}d\nEDD: ${fmtShort(edd)}\n${window.location.href}`);
+  const lmp=new Date(lv+"T00:00:00"),tgt=new Date(tv+"T00:00:00");
+  const cycle=parseInt(document.getElementById("gad-cycle").value),adj=cycle-28;
+  const edd=addD(lmp,280+adj),dp=diff(lmp,tgt);
+  const wk=Math.floor(dp/7),dy=dp%7,tri=wk<14?"First":wk<28?"Second":"Third";
+  const html=`<div class="result-hero rh-purple"><div class="rh-label">GA on ${fmtS(tgt)}</div><div class="rh-value">${wk}w ${dy}d</div><div class="rh-sub">${tri} Trimester</div></div>
+    <div class="result-grid">${rc("GA on Target",wk+"w "+dy+"d",fmtS(tgt))}${rc("LMP",fmtS(lmp),"Entered")}${rc("EDD",fmtS(edd),"")}${rc("Trimester",tri,"")}</div>${sb("ga-date")}`;
+  show("ga-date",html,`🏥 GA on Given Date\nLMP: ${fmtS(lmp)}\nGA on ${fmtS(tgt)}: ${wk}w ${dy}d\nEDD: ${fmtS(edd)}\n${window.location.href}`);
 }
 
-// ── LMP FROM EDD ──────────────────────────────────────────────────
-function calcLmpFromEdd() {
-  const v=document.getElementById("edd-input").value;
-  if(!v){alert("Please enter the EDD.");return;}
-  const edd=new Date(v+"T00:00:00");
-  const cycle=parseInt(document.getElementById("edd-cycle").value);
-  const adj=cycle-28;
-  const lmp=addDays(edd,-(280+adj));
-  const today=new Date(); today.setHours(0,0,0,0);
-  const dp=daysBetween(lmp,today);
-  const wks=Math.floor(Math.max(0,dp)/7), dys=Math.max(0,dp)%7;
-  const conception=addDays(lmp,14+adj);
-
-  const html=`
-    <div class="result-hero rh-blue">
-      <div class="rh-label">Calculated LMP</div>
-      <div class="rh-value" style="font-size:1.4rem">${fmtShort(lmp)}</div>
-      <div class="rh-sub">From EDD ${fmtShort(edd)} · Cycle ${cycle} days</div>
-    </div>
-    <div class="result-grid">
-      ${rc("LMP Date",fmtShort(lmp),"Back-calculated")}
-      ${rc("EDD",fmtShort(edd),"Entered")}
-      ${rc("Conception (approx)",fmtShort(conception),"LMP + 14 days")}
-      ${rc("Current GA",wks+"w "+dys+"d","If pregnant from this LMP")}
-    </div>
-    ${shareBar("lmp-from-edd")}`;
-  showResult("lmp-from-edd",html,`🏥 LMP from EDD\nEDD: ${fmtShort(edd)}\nLMP: ${fmtShort(lmp)}\nConception: ${fmtShort(conception)}\n${window.location.href}`);
+// ── REVERSE ───────────────────────────────────────────────────────
+function calcReverse(){
+  const v=document.getElementById("rev-edd").value;if(!v){alert("Please enter the EDD.");return;}
+  const edd=new Date(v+"T00:00:00"),cycle=parseInt(document.getElementById("rev-cycle").value),adj=cycle-28;
+  const lmp=addD(edd,-(280+adj)),today=new Date();today.setHours(0,0,0,0);
+  const dp=diff(lmp,today),wk=Math.floor(Math.max(0,dp)/7),dy=Math.max(0,dp)%7;
+  const con=addD(lmp,14+adj);
+  const html=`<div class="result-hero rh-blue"><div class="rh-label">Calculated LMP</div><div class="rh-value" style="font-size:1.4rem">${fmtS(lmp)}</div><div class="rh-sub">From EDD ${fmtS(edd)} · Cycle ${cycle}d</div></div>
+    <div class="result-grid">${rc("LMP Date",fmtS(lmp),"Back-calculated")}${rc("EDD",fmtS(edd),"Entered")}${rc("Conception (approx)",fmtS(con),"LMP + 14 days")}${rc("Current GA",wk+"w "+dy+"d","If pregnant from this LMP")}</div>${sb("ga-reverse")}`;
+  show("ga-reverse",html,`🏥 LMP from EDD\nEDD: ${fmtS(edd)}\nLMP: ${fmtS(lmp)}\nConception: ${fmtS(con)}\n${window.location.href}`);
 }
 
 // ── EFW HADLOCK ───────────────────────────────────────────────────
-function calcEfw() {
-  const bpd=parseFloat(document.getElementById("efw-bpd").value);
-  const hc =parseFloat(document.getElementById("efw-hc").value);
-  const ac =parseFloat(document.getElementById("efw-ac").value);
-  const fl =parseFloat(document.getElementById("efw-fl").value);
-  const ga =parseFloat(document.getElementById("efw-ga").value);
+function calcEfw(){
+  const bpd=parseFloat(document.getElementById("efw-bpd").value),hc=parseFloat(document.getElementById("efw-hc").value);
+  const ac=parseFloat(document.getElementById("efw-ac").value),fl=parseFloat(document.getElementById("efw-fl").value);
+  const ga=parseFloat(document.getElementById("efw-ga").value);
   if(!bpd||!ac||!fl){alert("Please enter BPD, AC and FL.");return;}
-  const ac10=ac/10, fl10=fl/10, bpd10=bpd/10;
-  let logEfw, formula;
-  if(hc){
-    logEfw=1.3598+0.051*ac10+0.1844*fl10-0.0037*ac10*fl10+0.0816*bpd10;
-    formula="Hadlock 4-param (BPD+HC+AC+FL)";
-  } else {
-    logEfw=1.335-0.0034*ac10*fl10+0.0316*bpd10+0.0457*ac10+0.1623*fl10;
-    formula="Hadlock 3-param (BPD+AC+FL)";
-  }
-  const efwG=Math.round(Math.pow(10,logEfw));
-  const efwKg=(efwG/1000).toFixed(2);
-  const lo=Math.round(efwG*0.85), hi=Math.round(efwG*1.15);
-  let perNote="";
-  if(ga){
-    const meanW={14:93,16:146,18:217,20:300,22:430,24:600,26:760,28:1005,30:1319,32:1702,34:2146,36:2622,38:3083,40:3462};
-    const keys=Object.keys(meanW).map(Number);
-    const nr=keys.reduce((a,b)=>Math.abs(b-ga)<Math.abs(a-ga)?b:a);
-    const ratio=efwG/meanW[nr];
-    perNote=ratio<0.9?"⚠️ Below 10th percentile — consider SGA / IUGR":ratio>1.1?"⚠️ Above 90th percentile — consider LGA / macrosomia":"✅ Appropriate for gestational age (AGA)";
-  }
-
-  const html=`
-    <div class="result-hero rh-green">
-      <div class="rh-label">Expected Fetal Weight</div>
-      <div class="rh-value">${efwG} g</div>
-      <div class="rh-sub">${efwKg} kg · ${formula}</div>
-    </div>
-    <div class="result-grid">
-      ${rc("EFW",efwG+" g / "+efwKg+" kg",formula)}
-      ${rc("±15% Range",lo+"g – "+hi+"g","Normal variability")}
-      ${ga?rc("GA at Scan",ga+"w",""):""}
-      ${rc("Measurements",`${bpd10.toFixed(1)}/${hc?(hc/10).toFixed(1)+"/":""}${ac10.toFixed(1)}/${fl10.toFixed(1)} cm`,"BPD/HC/AC/FL")}
-    </div>
-    ${perNote?`<div class="${perNote.startsWith("⚠️")?"warn-box":"info-box"}">${perNote}</div>`:""}
-    <div class="warn-box">⚠️ EFW has ±15% variability. Use for trend monitoring — single measurement alone should not guide clinical decisions without clinical context.</div>
-    ${shareBar("efw")}`;
-  showResult("efw",html,`🏥 EFW (Hadlock)\nBPD:${bpd}mm AC:${ac}mm FL:${fl}mm${hc?" HC:"+hc+"mm":""}\nEFW: ${efwG}g (${efwKg}kg)\nRange: ${lo}g–${hi}g\n${perNote}\n${window.location.href}`);
+  const a=ac/10,f=fl/10,b=bpd/10;
+  let logE,formula;
+  if(hc){logE=1.3598+0.051*a+0.1844*f-0.0037*a*f+0.0816*b;formula="Hadlock 4-param (BPD+HC+AC+FL)";}
+  else{logE=1.335-0.0034*a*f+0.0316*b+0.0457*a+0.1623*f;formula="Hadlock 3-param (BPD+AC+FL)";}
+  const g=Math.round(Math.pow(10,logE)),kg=(g/1000).toFixed(2),lo=Math.round(g*0.85),hi=Math.round(g*1.15);
+  let per="";
+  if(ga){const mw={14:93,16:146,18:217,20:300,22:430,24:600,26:760,28:1005,30:1319,32:1702,34:2146,36:2622,38:3083,40:3462};
+    const keys=Object.keys(mw).map(Number),nr=keys.reduce((x,y)=>Math.abs(y-ga)<Math.abs(x-ga)?y:x);
+    const r=g/mw[nr];per=r<0.9?"⚠️ Below 10th percentile — consider SGA/IUGR":r>1.1?"⚠️ Above 90th percentile — consider LGA/macrosomia":"✅ Appropriate for gestational age (AGA)";}
+  const html=`<div class="result-hero rh-green"><div class="rh-label">Expected Fetal Weight</div><div class="rh-value">${g} g</div><div class="rh-sub">${kg} kg · ${formula}</div></div>
+    <div class="result-grid">${rc("EFW",g+"g / "+kg+"kg",formula)}${rc("±15% Range",lo+"g – "+hi+"g","Normal variability")}${ga?rc("GA at Scan",ga+"w",""):""}${rc("Measurements",`${b.toFixed(1)}/${hc?(hc/10).toFixed(1)+"/":""}${a.toFixed(1)}/${f.toFixed(1)} cm`,"BPD/HC/AC/FL")}</div>
+    ${per?`<div class="${per.startsWith("⚠️")?"warn-box":"info-box"}">${per}</div>`:""}
+    <div class="warn-box">⚠️ EFW ±15% variability. Use for trend monitoring — not standalone clinical decisions.</div>${sb("fetal-efw")}`;
+  show("fetal-efw",html,`🏥 EFW (Hadlock)\nBPD:${bpd}mm AC:${ac}mm FL:${fl}mm${hc?" HC:"+hc+"mm":""}\nEFW: ${g}g (${kg}kg)\nRange: ${lo}g–${hi}g\n${per}\n${window.location.href}`);
 }
 
 // ── APGAR ─────────────────────────────────────────────────────────
-const apgarVals={};
-function setApgar(k,v,btn){
-  apgarVals[k]=v;
-  btn.closest(".score-options").querySelectorAll(".score-btn").forEach(b=>b.classList.remove("selected"));
-  btn.classList.add("selected");
-}
 function calcApgar(){
   const keys=["appearance","pulse","grimace","activity","respiration"];
-  for(const k of keys){if(apgarVals[k]===undefined){alert("Please score all 5 criteria.");return;}}
-  const total=keys.reduce((s,k)=>s+apgarVals[k],0);
+  for(const k of keys){if(scores.apgar[k]===undefined){alert("Please score all 5 criteria.");return;}}
+  const total=keys.reduce((s,k)=>s+scores.apgar[k],0);
   let color,interp,action;
   if(total>=7){color="rh-green";interp="Normal (7–10)";action="Routine newborn care — dry, warm, stimulate.";}
-  else if(total>=4){color="rh-orange";interp="Moderately Depressed (4–6)";action="Stimulation, supplemental oxygen, consider bag-mask ventilation. Monitor closely.";}
-  else{color="rh-red";interp="Severely Depressed (0–3)";action="Immediate resuscitation — PPV, call for help, consider intubation and chest compressions.";}
+  else if(total>=4){color="rh-orange";interp="Moderately Depressed (4–6)";action="Stimulation, supplemental oxygen, consider bag-mask ventilation.";}
+  else{color="rh-red";interp="Severely Depressed (0–3)";action="Immediate resuscitation — PPV, call for help, intubation if needed.";}
   const labels={appearance:"Appearance",pulse:"Pulse",grimace:"Grimace",activity:"Activity",respiration:"Respiration"};
-
-  const html=`
-    <div class="result-hero ${color}">
-      <div class="rh-label">Apgar Score</div>
-      <div class="rh-value">${total} / 10</div>
-      <div class="rh-sub">${interp}</div>
-    </div>
-    <div class="result-grid-3">
-      ${keys.map(k=>rc(labels[k],apgarVals[k]+"/2","")).join("")}
-    </div>
-    <div class="${total>=7?"info-box":total>=4?"warn-box":"danger-box"}"><strong>Action:</strong> ${action}</div>
-    ${shareBar("apgar")}`;
-  showResult("apgar",html,`🏥 Apgar Score: ${total}/10 — ${interp}\nA:${apgarVals.appearance} P:${apgarVals.pulse} G:${apgarVals.grimace} A:${apgarVals.activity} R:${apgarVals.respiration}\nAction: ${action}\n${window.location.href}`);
+  const html=`<div class="result-hero ${color}"><div class="rh-label">Apgar Score</div><div class="rh-value">${total} / 10</div><div class="rh-sub">${interp}</div></div>
+    <div class="result-grid-3">${keys.map(k=>rc(labels[k],scores.apgar[k]+"/2","")).join("")}</div>
+    <div class="${total>=7?"info-box":total>=4?"warn-box":"danger-box"}"><strong>Action:</strong> ${action}</div>${sb("fetal-apgar")}`;
+  show("fetal-apgar",html,`🏥 Apgar: ${total}/10 — ${interp}\nA:${scores.apgar.appearance} P:${scores.apgar.pulse} G:${scores.apgar.grimace} A:${scores.apgar.activity} R:${scores.apgar.respiration}\nAction: ${action}\n${window.location.href}`);
 }
-function clearApgar(){
-  Object.keys(apgarVals).forEach(k=>delete apgarVals[k]);
-  document.querySelectorAll("#panel-apgar .score-btn").forEach(b=>b.classList.remove("selected"));
-  clearResult("apgar");
-}
+function clearScorer(store,id){Object.keys(scores[store]).forEach(k=>delete scores[store][k]);document.querySelectorAll(`#sub-${id} .score-btn`).forEach(b=>b.classList.remove("selected"));clearBox(id);}
 
 // ── BISHOP ────────────────────────────────────────────────────────
-const bishopVals={};
-function setBishop(k,v,btn){
-  bishopVals[k]=v;
-  btn.closest(".score-options").querySelectorAll(".score-btn").forEach(b=>b.classList.remove("selected"));
-  btn.classList.add("selected");
-}
 function calcBishop(){
   const keys=["dilation","effacement","station","consistency","position"];
-  for(const k of keys){if(bishopVals[k]===undefined){alert("Please score all 5 parameters.");return;}}
-  const total=keys.reduce((s,k)=>s+parseInt(bishopVals[k]),0);
+  for(const k of keys){if(scores.bishop[k]===undefined){alert("Please score all 5 parameters.");return;}}
+  const total=keys.reduce((s,k)=>s+parseInt(scores.bishop[k]),0);
   let color,interp,action;
-  if(total>=9){color="rh-green";interp="Highly Favourable";action="Cervix is ripe. Oxytocin induction appropriate.";}
-  else if(total>=6){color="rh-blue";interp="Favourable";action="Reasonable success expected. May proceed with induction with caution.";}
-  else if(total>=4){color="rh-orange";interp="Borderline";action="Cervical ripening recommended — consider PGE2 gel or Foley balloon before oxytocin.";}
-  else{color="rh-red";interp="Unfavourable";action="Cervix unfavourable. Cervical ripening required before induction. Direct oxytocin not recommended.";}
-
-  const html=`
-    <div class="result-hero ${color}">
-      <div class="rh-label">Bishop Score</div>
-      <div class="rh-value">${total} / 13</div>
-      <div class="rh-sub">${interp}</div>
-    </div>
-    <div class="result-grid-3">
-      ${rc("Dilation",bishopVals.dilation,"")}
-      ${rc("Effacement",bishopVals.effacement,"")}
-      ${rc("Station",bishopVals.station,"")}
-      ${rc("Consistency",bishopVals.consistency,"")}
-      ${rc("Position",bishopVals.position,"")}
-      ${rc("Total Score",total+"/13",interp)}
-    </div>
-    <div class="${total>=6?"info-box":total>=4?"warn-box":"danger-box"}"><strong>Recommendation:</strong> ${action}</div>
-    ${shareBar("bishop")}`;
-  showResult("bishop",html,`🏥 Bishop Score: ${total}/13 — ${interp}\nDilation:${bishopVals.dilation} Effacement:${bishopVals.effacement} Station:${bishopVals.station} Consistency:${bishopVals.consistency} Position:${bishopVals.position}\nRecommendation: ${action}\n${window.location.href}`);
-}
-function clearBishop(){
-  Object.keys(bishopVals).forEach(k=>delete bishopVals[k]);
-  document.querySelectorAll("#panel-bishop .score-btn").forEach(b=>b.classList.remove("selected"));
-  clearResult("bishop");
+  if(total>=9){color="rh-green";interp="Highly Favourable";action="Direct oxytocin induction appropriate.";}
+  else if(total>=6){color="rh-blue";interp="Favourable";action="Induction likely successful. Proceed with caution.";}
+  else if(total>=4){color="rh-orange";interp="Borderline";action="Cervical ripening recommended — PGE2 or Foley balloon before oxytocin.";}
+  else{color="rh-red";interp="Unfavourable";action="Cervical ripening required. Direct oxytocin not recommended.";}
+  const html=`<div class="result-hero ${color}"><div class="rh-label">Bishop Score</div><div class="rh-value">${total} / 13</div><div class="rh-sub">${interp}</div></div>
+    <div class="result-grid-3">${keys.map(k=>rc(k.charAt(0).toUpperCase()+k.slice(1),scores.bishop[k],"")).join("")}${rc("Total Score",total+"/13",interp)}</div>
+    <div class="${total>=6?"info-box":total>=4?"warn-box":"danger-box"}"><strong>Recommendation:</strong> ${action}</div>${sb("score-bishop")}`;
+  show("score-bishop",html,`🏥 Bishop Score: ${total}/13 — ${interp}\n${keys.map(k=>`${k}: ${scores.bishop[k]}`).join(" · ")}\nRecommendation: ${action}\n${window.location.href}`);
 }
 
 // ── VBAC ──────────────────────────────────────────────────────────
-const vbacVals={};
-function setVbac(k,v,btn){
-  vbacVals[k]=v;
-  btn.closest(".score-options").querySelectorAll(".score-btn").forEach(b=>b.classList.remove("selected"));
-  btn.classList.add("selected");
-}
 function calcVbac(){
   const req=["scar","num","vagdel","indication","interval","presentation","efw","scar_thick"];
-  for(const k of req){if(!vbacVals[k]){alert("Please answer all questions.");return;}}
-  const factors=[];
-  let eligible=true, caution=false;
-  if(vbacVals.scar==="classical"){eligible=false;factors.push({ok:false,label:"Classical/inverted-T scar",sub:"Absolute contraindication — very high rupture risk"});}
-  else if(vbacVals.scar==="unknown"){caution=true;factors.push({ok:"warn",label:"Unknown scar type",sub:"Cannot confirm suitability — proceed with caution"});}
-  else{factors.push({ok:true,label:"Low transverse scar",sub:"Eligible scar type"});}
-  if(vbacVals.num==="3plus"){eligible=false;factors.push({ok:false,label:"≥3 previous CS",sub:"Absolute contraindication per FOGSI"});}
-  else if(vbacVals.num==="2"){caution=true;factors.push({ok:"warn",label:"2 previous CS",sub:"Relative contraindication — senior decision required"});}
-  else{factors.push({ok:true,label:"1 previous CS",sub:"Favourable"});}
-  if(vbacVals.presentation==="other"){eligible=false;factors.push({ok:false,label:"Non-cephalic presentation",sub:"VBAC not appropriate"});}
-  else{factors.push({ok:true,label:"Cephalic presentation",sub:"Favourable"});}
-  if(vbacVals.efw==="macro"){caution=true;factors.push({ok:"warn",label:"Macrosomia ≥4kg",sub:"Increased risk of CPD and scar dehiscence"});}
-  else{factors.push({ok:true,label:"EFW < 4kg",sub:"Favourable"});}
-  if(vbacVals.scar_thick==="thin"){eligible=false;factors.push({ok:false,label:"Thin scar < 3.5mm",sub:"High risk of uterine rupture"});}
-  else if(vbacVals.scar_thick==="unknown"){caution=true;factors.push({ok:"warn",label:"Scar thickness not measured",sub:"Consider USS before proceeding"});}
-  else{factors.push({ok:true,label:"Adequate scar ≥3.5mm",sub:"Favourable"});}
-  if(vbacVals.interval==="under18"){caution=true;factors.push({ok:"warn",label:"Interval < 18 months",sub:"Incomplete scar healing risk"});}
-  else{factors.push({ok:true,label:"Adequate interval ≥18m",sub:"Favourable"});}
-  if(vbacVals.vagdel==="yes"){factors.push({ok:true,label:"Previous vaginal delivery",sub:"Significantly improves success rate"});}
-  else{caution=true;factors.push({ok:"warn",label:"No previous vaginal delivery",sub:"Reduces success probability"});}
-  if(vbacVals.indication==="nonrecurring"){factors.push({ok:true,label:"Non-recurring indication",sub:"Favourable"});}
-  else{caution=true;factors.push({ok:"warn",label:"Recurring indication",sub:"Consider if indication will recur"});}
-
-  const heroColor=!eligible?"rh-red":caution?"rh-orange":"rh-green";
-  const verdict=!eligible?"NOT Eligible for VBAC":caution?"Proceed with Caution":"Eligible for VBAC (TOLAC)";
-  const verdictSub=!eligible?"Absolute contraindication(s) present":caution?"Relative risk factors present — senior obstetrician decision":"No contraindications identified";
-
-  const checklistHtml=factors.map(f=>`
-    <div class="checklist-item">
-      <div class="ci-icon ${f.ok===true?"ci-yes":f.ok===false?"ci-no":"ci-warn"}">${f.ok===true?"✓":f.ok===false?"✗":"!"}</div>
-      <div><div class="ci-label">${f.label}</div><div class="ci-sub">${f.sub}</div></div>
-    </div>`).join("");
-
-  const html=`
-    <div class="result-hero ${heroColor}">
-      <div class="rh-label">VBAC Eligibility</div>
-      <div class="rh-value" style="font-size:1.3rem">${verdict}</div>
-      <div class="rh-sub">${verdictSub}</div>
-    </div>
-    <div style="margin-bottom:12px">${checklistHtml}</div>
-    <div class="warn-box">⚠️ VBAC must be conducted in a facility with immediate access to emergency CS, blood transfusion and neonatal resuscitation. Continuous CTG monitoring is mandatory. Obtain written informed consent.</div>
-    ${shareBar("vbac")}`;
-  showResult("vbac",html,`🏥 VBAC: ${verdict}\n${factors.map(f=>`${f.ok===true?"✓":f.ok===false?"✗":"!"} ${f.label}`).join("\n")}\n${window.location.href}`);
-}
-function clearVbac(){
-  Object.keys(vbacVals).forEach(k=>delete vbacVals[k]);
-  document.querySelectorAll("#panel-vbac .score-btn").forEach(b=>b.classList.remove("selected"));
-  clearResult("vbac");
+  for(const k of req){if(!scores.vbac[k]){alert("Please answer all questions.");return;}}
+  const f=[],v=scores.vbac;let ok=true,caut=false;
+  if(v.scar==="classical"){ok=false;f.push({s:false,l:"Classical/inverted-T scar",sub:"Absolute contraindication"});}
+  else if(v.scar==="unknown"){caut=true;f.push({s:"w",l:"Unknown scar type",sub:"Cannot confirm suitability"});}
+  else f.push({s:true,l:"Low transverse scar",sub:"Eligible scar type"});
+  if(v.num==="3plus"){ok=false;f.push({s:false,l:"≥3 previous CS",sub:"Absolute contraindication — FOGSI"});}
+  else if(v.num==="2"){caut=true;f.push({s:"w",l:"2 previous CS",sub:"Relative contraindication"});}
+  else f.push({s:true,l:"1 previous CS",sub:"Favourable"});
+  if(v.presentation==="other"){ok=false;f.push({s:false,l:"Non-cephalic presentation",sub:"VBAC not appropriate"});}
+  else f.push({s:true,l:"Cephalic presentation",sub:"Favourable"});
+  if(v.efw==="macro"){caut=true;f.push({s:"w",l:"Macrosomia ≥4kg",sub:"Increased CPD/dehiscence risk"});}
+  else f.push({s:true,l:"EFW < 4kg",sub:"Favourable"});
+  if(v.scar_thick==="thin"){ok=false;f.push({s:false,l:"Thin scar < 3.5mm",sub:"High rupture risk"});}
+  else if(v.scar_thick==="unknown"){caut=true;f.push({s:"w",l:"Scar thickness not measured",sub:"Consider USS first"});}
+  else f.push({s:true,l:"Adequate scar ≥3.5mm",sub:"Favourable"});
+  if(v.interval==="under18"){caut=true;f.push({s:"w",l:"Interval < 18 months",sub:"Incomplete healing risk"});}
+  else f.push({s:true,l:"Adequate interval ≥18m",sub:"Favourable"});
+  if(v.vagdel==="yes") f.push({s:true,l:"Previous vaginal delivery",sub:"Improves success rate"});
+  else{caut=true;f.push({s:"w",l:"No previous vaginal delivery",sub:"Reduces success rate"});}
+  if(v.indication==="nonrecurring") f.push({s:true,l:"Non-recurring indication",sub:"Favourable"});
+  else{caut=true;f.push({s:"w",l:"Recurring indication",sub:"Consider recurrence"});}
+  const hc=!ok?"rh-red":caut?"rh-orange":"rh-green";
+  const verdict=!ok?"NOT Eligible for VBAC":caut?"Proceed with Caution":"Eligible for VBAC (TOLAC)";
+  const vsub=!ok?"Absolute contraindication(s) present":caut?"Relative risk factors — senior decision":"No contraindications identified";
+  const cl=f.map(x=>`<div class="checklist-item"><div class="ci-icon ${x.s===true?"ci-yes":x.s===false?"ci-no":"ci-warn"}">${x.s===true?"✓":x.s===false?"✗":"!"}</div><div><div class="ci-label">${x.l}</div><div class="ci-sub">${x.sub}</div></div></div>`).join("");
+  const html=`<div class="result-hero ${hc}"><div class="rh-label">VBAC Eligibility</div><div class="rh-value" style="font-size:1.3rem">${verdict}</div><div class="rh-sub">${vsub}</div></div>
+    <div style="margin-bottom:12px">${cl}</div>
+    <div class="warn-box">⚠️ VBAC requires emergency CS access, blood transfusion and continuous CTG. Obtain written informed consent.</div>${sb("score-vbac")}`;
+  show("score-vbac",html,`🏥 VBAC: ${verdict}\n${f.map(x=>`${x.s===true?"✓":x.s===false?"✗":"!"} ${x.l}`).join("\n")}\n${window.location.href}`);
 }
 
 // ── PPH ───────────────────────────────────────────────────────────
-const PPH_FACTORS=[
-  {id:"pf1",label:"Previous PPH",points:2,sub:"Strongest predictor"},
-  {id:"pf2",label:"Placenta praevia / abruption",points:2,sub:"Major risk factor"},
-  {id:"pf3",label:"Multiple pregnancy",points:2,sub:"Uterine overdistension"},
-  {id:"pf4",label:"Polyhydramnios",points:1,sub:"Uterine overdistension"},
-  {id:"pf5",label:"Macrosomia (> 4 kg)",points:1,sub:"Uterine overdistension"},
-  {id:"pf6",label:"Grand multipara (≥5 deliveries)",points:2,sub:"Uterine atony risk"},
-  {id:"pf7",label:"Previous LSCS / uterine surgery",points:1,sub:"Scar risk"},
-  {id:"pf8",label:"Uterine fibroids",points:1,sub:"Abnormal placentation"},
-  {id:"pf9",label:"Anaemia (Hb < 8 g/dL)",points:1,sub:"Reduced blood loss tolerance"},
-  {id:"pf10",label:"Coagulopathy / anticoagulants",points:2,sub:"Impaired clotting"},
-  {id:"pf11",label:"Prolonged labour (> 12 hours)",points:1,sub:"Uterine exhaustion"},
-  {id:"pf12",label:"Augmented / induced labour",points:1,sub:"Oxytocin use"},
-  {id:"pf13",label:"Instrumental delivery",points:1,sub:"Operative vaginal delivery"},
-  {id:"pf14",label:"Retained placenta",points:2,sub:"Incomplete third stage"},
-  {id:"pf15",label:"Chorioamnionitis / maternal fever",points:1,sub:"Uterine atony risk"}
+const PF=[
+  {id:"pf1",l:"Previous PPH",p:2,s:"Strongest predictor"},
+  {id:"pf2",l:"Placenta praevia / abruption",p:2,s:"Major risk"},
+  {id:"pf3",l:"Multiple pregnancy",p:2,s:"Uterine overdistension"},
+  {id:"pf4",l:"Polyhydramnios",p:1,s:"Uterine overdistension"},
+  {id:"pf5",l:"Macrosomia (> 4 kg)",p:1,s:"Uterine overdistension"},
+  {id:"pf6",l:"Grand multipara (≥5 deliveries)",p:2,s:"Uterine atony risk"},
+  {id:"pf7",l:"Previous LSCS / uterine surgery",p:1,s:"Scar risk"},
+  {id:"pf8",l:"Uterine fibroids",p:1,s:"Placentation risk"},
+  {id:"pf9",l:"Anaemia (Hb < 8 g/dL)",p:1,s:"Reduced tolerance"},
+  {id:"pf10",l:"Coagulopathy / anticoagulants",p:2,s:"Impaired clotting"},
+  {id:"pf11",l:"Prolonged labour (> 12 hrs)",p:1,s:"Uterine exhaustion"},
+  {id:"pf12",l:"Augmented / induced labour",p:1,s:"Oxytocin use"},
+  {id:"pf13",l:"Instrumental delivery",p:1,s:"Operative vaginal"},
+  {id:"pf14",l:"Retained placenta",p:2,s:"Incomplete 3rd stage"},
+  {id:"pf15",l:"Chorioamnionitis / fever",p:1,s:"Atony risk"}
 ];
-
 function buildPph(){
-  document.getElementById("pph-factors").innerHTML=PPH_FACTORS.map(f=>`
-    <div style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #f0f4f8;cursor:pointer" onclick="togglePph('${f.id}',this)" id="pphrow-${f.id}">
-      <input type="checkbox" id="${f.id}" onclick="event.stopPropagation();togglePph('${f.id}',this.closest('div'))" style="width:18px;height:18px;margin-top:2px;cursor:pointer;flex-shrink:0"/>
-      <div>
-        <div style="font-weight:600;font-size:0.85rem;color:#2d3748">${f.label} <span style="background:#faf5ff;color:#553c9a;font-size:0.65rem;font-weight:700;padding:1px 6px;border-radius:20px;margin-left:4px">+${f.points}</span></div>
-        <div style="font-size:0.72rem;color:#718096;margin-top:1px">${f.sub}</div>
-      </div>
+  document.getElementById("pph-factors").innerHTML=PF.map(f=>`
+    <div style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #f0f4f8;cursor:pointer" onclick="tPph('${f.id}',this)" id="pr-${f.id}">
+      <input type="checkbox" id="${f.id}" onclick="event.stopPropagation();tPph('${f.id}',this.closest('div'))" style="width:17px;height:17px;margin-top:2px;cursor:pointer;flex-shrink:0"/>
+      <div><div style="font-weight:600;font-size:0.84rem;color:#2d3748">${f.l} <span style="background:#faf5ff;color:#553c9a;font-size:0.64rem;font-weight:700;padding:1px 6px;border-radius:20px;margin-left:4px">+${f.p}</span></div><div style="font-size:0.72rem;color:#718096;margin-top:1px">${f.s}</div></div>
     </div>`).join("");
 }
-function togglePph(id,row){
-  const chk=document.getElementById(id);
-  if(row.tagName!=="INPUT") chk.checked=!chk.checked;
-  row.style.background=chk.checked?"#faf5ff":"";
-}
+function tPph(id,row){const c=document.getElementById(id);if(row.tagName!=="INPUT")c.checked=!c.checked;row.style.background=c.checked?"#faf5ff":"";}
 function calcPph(){
-  const sel=PPH_FACTORS.filter(f=>document.getElementById(f.id)?.checked);
-  const total=sel.reduce((s,f)=>s+f.points,0);
+  const sel=PF.filter(f=>document.getElementById(f.id)?.checked),total=sel.reduce((s,f)=>s+f.p,0);
   let color,risk,action;
-  if(total===0){color="rh-green";risk="Low Risk";action="Standard AMTSL. IV access, oxytocin 10 IU IM at delivery of anterior shoulder.";}
-  else if(total<=2){color="rh-blue";risk="Moderate Risk";action="Double IV access, crossmatch blood, have oxytocin infusion ready, involve senior midwife.";}
-  else if(total<=4){color="rh-orange";risk="High Risk";action="IV access × 2, FBC + crossmatch + coagulation screen, inform consultant obstetrician and anaesthetist, consider delivery in OT.";}
-  else{color="rh-red";risk="Very High Risk";action="MDT alert — consultant obstetrician, anaesthetist, haematologist. Deliver in OT. Cell salvage if available. Consent for possible hysterectomy.";}
-
-  const html=`
-    <div class="result-hero ${color}">
-      <div class="rh-label">PPH Risk Score</div>
-      <div class="rh-value">${total}</div>
-      <div class="rh-sub">${risk} · ${sel.length} risk factor${sel.length!==1?"s":""} identified</div>
-    </div>
-    ${sel.length?`<div style="margin-bottom:10px">${sel.map(f=>`<div style="font-size:0.82rem;padding:5px 0;border-bottom:1px solid #f0f4f8;color:#2d3748">⚠️ ${f.label} <strong>(+${f.points})</strong></div>`).join("")}</div>`:`<div class="info-box">No risk factors selected — low risk.</div>`}
+  if(total===0){color="rh-green";risk="Low Risk";action="Standard AMTSL — oxytocin 10 IU IM at delivery of anterior shoulder.";}
+  else if(total<=2){color="rh-blue";risk="Moderate Risk";action="Double IV access, crossmatch blood, have oxytocin infusion ready.";}
+  else if(total<=4){color="rh-orange";risk="High Risk";action="IV × 2, FBC + crossmatch + coag screen, consultant obstetrician + anaesthetist informed, consider OT delivery.";}
+  else{color="rh-red";risk="Very High Risk";action="MDT alert — consultant, anaesthetist, haematologist. Deliver in OT. Cell salvage. Consent for hysterectomy.";}
+  const html=`<div class="result-hero ${color}"><div class="rh-label">PPH Risk Score</div><div class="rh-value">${total}</div><div class="rh-sub">${risk} · ${sel.length} risk factor${sel.length!==1?"s":""} identified</div></div>
+    ${sel.length?`<div style="margin-bottom:10px">${sel.map(f=>`<div style="font-size:0.82rem;padding:5px 0;border-bottom:1px solid #f0f4f8">⚠️ ${f.l} <strong>(+${f.p})</strong></div>`).join("")}</div>`:`<div class="info-box">No risk factors — low risk.</div>`}
     <div class="${total<=2?"info-box":total<=4?"warn-box":"danger-box"}"><strong>Management:</strong> ${action}</div>
-    <div class="warn-box" style="margin-top:8px">⚠️ All women should receive AMTSL regardless of risk score. PPH defined as blood loss ≥500ml (vaginal) or ≥1000ml (CS).</div>
-    ${shareBar("pph")}`;
-  showResult("pph",html,`🏥 PPH Risk: ${risk} (Score:${total})\nFactors: ${sel.map(f=>f.label).join(", ")||"None"}\nManagement: ${action}\n${window.location.href}`);
+    <div class="warn-box" style="margin-top:8px">⚠️ All women receive AMTSL regardless of score. PPH = blood loss ≥500ml (vaginal) or ≥1000ml (CS).</div>${sb("score-pph")}`;
+  show("score-pph",html,`🏥 PPH Risk: ${risk} (Score:${total})\nFactors: ${sel.map(f=>f.l).join(", ")||"None"}\nManagement: ${action}\n${window.location.href}`);
 }
-function clearPph(){
-  PPH_FACTORS.forEach(f=>{
-    const c=document.getElementById(f.id); if(c) c.checked=false;
-    const r=document.getElementById("pphrow-"+f.id); if(r) r.style.background="";
-  });
-  clearResult("pph");
-}
+function clearPph(){PF.forEach(f=>{const c=document.getElementById(f.id);if(c)c.checked=false;const r=document.getElementById("pr-"+f.id);if(r)r.style.background="";});clearBox("score-pph");}
 
 // ── GDM ───────────────────────────────────────────────────────────
-const GDM_RISKS=[
-  {id:"gr1",label:"BMI ≥ 25 kg/m² (Indian cutoff)",high:true},
-  {id:"gr2",label:"Previous GDM or macrosomic baby",high:true},
-  {id:"gr3",label:"First-degree relative with T2DM",high:true},
-  {id:"gr4",label:"Polycystic ovary syndrome (PCOS)",high:false},
-  {id:"gr5",label:"Previous unexplained stillbirth",high:false},
-  {id:"gr6",label:"South Asian ethnicity",high:false},
-  {id:"gr7",label:"Age ≥ 30 years",high:false},
-  {id:"gr8",label:"Glucosuria on urine dipstick",high:false}
+const GR=[
+  {id:"gr1",l:"BMI ≥ 25 kg/m² (Indian cutoff)",h:true},
+  {id:"gr2",l:"Previous GDM or macrosomic baby",h:true},
+  {id:"gr3",l:"First-degree relative with T2DM",h:true},
+  {id:"gr4",l:"Polycystic ovary syndrome (PCOS)",h:false},
+  {id:"gr5",l:"Previous unexplained stillbirth",h:false},
+  {id:"gr6",l:"South Asian ethnicity",h:false},
+  {id:"gr7",l:"Age ≥ 30 years",h:false},
+  {id:"gr8",l:"Glucosuria on urine dipstick",h:false}
 ];
 function buildGdm(){
-  document.getElementById("gdm-risks").innerHTML=GDM_RISKS.map(f=>`
-    <div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #f0f4f8;cursor:pointer" onclick="toggleGdm('${f.id}',this)" id="gdmrow-${f.id}">
-      <input type="checkbox" id="${f.id}" onclick="event.stopPropagation();toggleGdm('${f.id}',this.closest('div'))" style="width:17px;height:17px;cursor:pointer;flex-shrink:0"/>
-      <div>
-        <div style="font-weight:600;font-size:0.83rem;color:#2d3748">${f.label}</div>
-        ${f.high?`<div style="font-size:0.65rem;font-weight:700;color:#c53030;margin-top:1px">HIGH RISK FACTOR</div>`:""}
-      </div>
+  document.getElementById("gdm-risks").innerHTML=GR.map(f=>`
+    <div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #f0f4f8;cursor:pointer" onclick="tGdm('${f.id}',this)" id="gr-${f.id}">
+      <input type="checkbox" id="${f.id}" onclick="event.stopPropagation();tGdm('${f.id}',this.closest('div'))" style="width:17px;height:17px;cursor:pointer;flex-shrink:0"/>
+      <div><div style="font-weight:600;font-size:0.83rem;color:#2d3748">${f.l}</div>${f.h?`<div style="font-size:0.64rem;font-weight:700;color:#c53030;margin-top:1px">HIGH RISK</div>`:""}</div>
     </div>`).join("");
 }
-function toggleGdm(id,row){
-  const chk=document.getElementById(id);
-  if(row.tagName!=="INPUT") chk.checked=!chk.checked;
-  row.style.background=chk.checked?"#fffff0":"";
-}
+function tGdm(id,row){const c=document.getElementById(id);if(row.tagName!=="INPUT")c.checked=!c.checked;row.style.background=c.checked?"#fffff0":"";}
 function calcGdm(){
-  const lv=document.getElementById("gdm-lmp").value;
-  if(!lv){alert("Please enter LMP date.");return;}
-  const lmp=new Date(lv+"T00:00:00");
-  const edd=addDays(lmp,280);
-  const hasHigh=GDM_RISKS.filter(f=>f.high).some(f=>document.getElementById(f.id)?.checked);
-  const selRisks=GDM_RISKS.filter(f=>document.getElementById(f.id)?.checked);
-
-  const dates=hasHigh?[
-    {name:"1st GDM Screen (Booking)",week:"8–10 weeks",date:addDays(lmp,63),note:"DIPSI — 75g glucose non-fasting at first ANC visit"},
-    {name:"2nd GDM Screen",week:"24–28 weeks",date:addDays(lmp,175),note:"Standard GCT/OGTT window"},
-    {name:"3rd GDM Screen (High Risk)",week:"32–34 weeks",date:addDays(lmp,231),note:"Extra screen for high-risk women only"},
-    {name:"Postpartum OGTT",week:"6 weeks postnatal",date:addDays(edd,42),note:"75g OGTT to exclude persistent T2DM"}
+  const lv=document.getElementById("gdm-lmp").value;if(!lv){alert("Please enter LMP date.");return;}
+  const lmp=new Date(lv+"T00:00:00"),edd=addD(lmp,280);
+  const hasH=GR.filter(f=>f.h).some(f=>document.getElementById(f.id)?.checked);
+  const sel=GR.filter(f=>document.getElementById(f.id)?.checked);
+  const dates=hasH?[
+    {n:"1st GDM Screen (Booking)",w:"8–10 weeks",d:addD(lmp,63),note:"DIPSI — 75g glucose non-fasting"},
+    {n:"2nd GDM Screen",w:"24–28 weeks",d:addD(lmp,175),note:"Standard GCT/OGTT window"},
+    {n:"3rd GDM Screen (High Risk)",w:"32–34 weeks",d:addD(lmp,231),note:"Extra screen — high-risk only"},
+    {n:"Postpartum OGTT",w:"6 weeks postnatal",d:addD(edd,42),note:"75g OGTT to exclude T2DM"}
   ]:[
-    {name:"1st GDM Screen (Booking)",week:"~8 weeks",date:addDays(lmp,56),note:"DIPSI — universal screening at first ANC visit"},
-    {name:"Main GDM Screen",week:"24–28 weeks",date:addDays(lmp,175),note:"GCT (50g) or DIPSI (75g non-fasting)"},
-    {name:"Postpartum OGTT",week:"6 weeks postnatal",date:addDays(edd,42),note:"75g OGTT to exclude persistent T2DM"}
+    {n:"1st GDM Screen (Booking)",w:"~8 weeks",d:addD(lmp,56),note:"DIPSI — universal at first ANC"},
+    {n:"Main GDM Screen",w:"24–28 weeks",d:addD(lmp,175),note:"GCT (50g) or DIPSI (75g non-fasting)"},
+    {n:"Postpartum OGTT",w:"6 weeks postnatal",d:addD(edd,42),note:"75g OGTT to exclude T2DM"}
   ];
-
-  const html=`
-    <div class="result-hero ${hasHigh?"rh-orange":selRisks.length?"rh-blue":"rh-green"}">
-      <div class="rh-label">GDM Screening Plan</div>
-      <div class="rh-value" style="font-size:1.2rem">${hasHigh?"High Risk — Enhanced":"Universal Screening"}</div>
-      <div class="rh-sub">LMP: ${fmtShort(lmp)} · EDD: ${fmtShort(edd)}</div>
-    </div>
-    ${selRisks.length?`<div class="warn-box" style="margin-bottom:10px">Risk factors: ${selRisks.map(f=>f.label).join(", ")}</div>`:""}
-    <div style="margin-bottom:12px">
-      ${dates.map(s=>`
-        <div style="padding:11px 13px;background:#f7fafc;border-radius:9px;border:1.5px solid #e2e8f0;margin-bottom:8px">
-          <div style="font-weight:700;font-size:0.88rem;color:#1a202c">${s.name}</div>
-          <div style="font-size:0.75rem;color:#718096;margin-top:1px">${s.week}</div>
-          <div style="font-size:0.85rem;color:#2b6cb0;font-weight:600;margin-top:4px">${fmtDate(s.date)}</div>
-          <div style="font-size:0.72rem;color:#718096;margin-top:2px;font-style:italic">${s.note}</div>
-          ${calLink(s.name, s.date)}
-        </div>`).join("")}
-    </div>
-    <div class="info-box">💡 <strong>DIPSI:</strong> 75g glucose (non-fasting). Blood glucose at 2 hours ≥140 mg/dL = GDM. Recommended by FOGSI for universal screening in India.</div>
-    ${shareBar("gdm")}`;
-  showResult("gdm",html,`🏥 GDM Screening\nLMP: ${fmtShort(lmp)} · EDD: ${fmtShort(edd)}\n${hasHigh?"HIGH RISK":"Standard"} screening\n${dates.map(s=>`${s.name}: ${fmtShort(s.date)} (${s.week})`).join("\n")}\n${window.location.href}`);
+  const html=`<div class="result-hero ${hasH?"rh-orange":sel.length?"rh-blue":"rh-green"}"><div class="rh-label">GDM Screening Plan</div><div class="rh-value" style="font-size:1.2rem">${hasH?"High Risk — Enhanced":"Universal Screening"}</div><div class="rh-sub">LMP: ${fmtS(lmp)} · EDD: ${fmtS(edd)}</div></div>
+    ${sel.length?`<div class="warn-box" style="margin-bottom:10px">Risk factors: ${sel.map(f=>f.l).join(", ")}</div>`:""}
+    <div style="margin-bottom:12px">${dates.map(s=>`<div style="padding:11px 13px;background:#f7fafc;border-radius:9px;border:1.5px solid #e2e8f0;margin-bottom:8px"><div style="font-weight:700;font-size:0.88rem;color:#1a202c">${s.n}</div><div style="font-size:0.75rem;color:#718096;margin-top:1px">${s.w}</div><div style="font-size:0.85rem;color:#c05621;font-weight:600;margin-top:4px">${fmt(s.d)}</div><div style="font-size:0.72rem;color:#718096;margin-top:2px;font-style:italic">${s.note}</div>${calL(s.n,s.d)}</div>`).join("")}</div>
+    <div class="info-box">💡 <strong>DIPSI:</strong> 75g glucose (non-fasting). Blood glucose at 2 hrs ≥140 mg/dL = GDM. Recommended by FOGSI for universal screening in India.</div>${sb("screen-gdm")}`;
+  show("screen-gdm",html,`🏥 GDM Screening\nLMP: ${fmtS(lmp)} · EDD: ${fmtS(edd)}\n${hasH?"HIGH RISK":"Standard"} screening\n${dates.map(s=>`${s.n}: ${fmtS(s.d)} (${s.w})`).join("\n")}\n${window.location.href}`);
 }
 function clearGdm(){
-  GDM_RISKS.forEach(f=>{
-    const c=document.getElementById(f.id); if(c) c.checked=false;
-    const r=document.getElementById("gdmrow-"+f.id); if(r) r.style.background="";
-  });
-  const lmp=document.getElementById("gdm-lmp"); if(lmp) lmp.value="";
-  clearResult("gdm");
+  GR.forEach(f=>{const c=document.getElementById(f.id);if(c)c.checked=false;const r=document.getElementById("gr-"+f.id);if(r)r.style.background="";});
+  document.getElementById("gdm-lmp").value="";
+  clearBox("screen-gdm");
 }
 
 // ── INIT ──────────────────────────────────────────────────────────
-const todayStr=new Date().toISOString().split("T")[0];
-["lmp1-date","scan-date","gad-lmp","gdm-lmp"].forEach(id=>{
-  const el=document.getElementById(id); if(el) el.max=todayStr;
-});
-buildPph();
-buildGdm();
+const ts=new Date().toISOString().split("T")[0];
+["lmp-date","scan-date","gad-lmp","gdm-lmp"].forEach(id=>{const e=document.getElementById(id);if(e)e.max=ts;});
+buildPph(); buildGdm();
 </script>
 </body>
 </html>
