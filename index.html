@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Free Medical Calculators India | Clinical Tools for Doctors & Patients</title>
-<meta name="description" content="Free medical calculators for India — BMI calculator with Indian cutoffs, UIP vaccine schedule tracker, paracetamol dose calculator, rabies ARV schedule, due date calculator and more. Built by a doctor for India."/>
-<meta name="keywords" content="medical calculators India, free clinical tools India, BMI calculator India, vaccine schedule India, drug dose calculator India, rabies vaccine calculator, due date calculator India, doctor tools India"/>
+<title>Free Medical Calculators India | BMI, Vaccine, Obstetric, Drug Dose Tools</title>
+<meta name="description" content="Free medical calculators for India — BMI with Indian cutoffs, UIP vaccine tracker, ObsCalc obstetric suite, paracetamol dose, ORS rehydration, due date calculator, rabies ARV schedule. Built by a doctor for India."/>
+<meta name="keywords" content="medical calculators India, free clinical tools India, BMI calculator India, UIP vaccine schedule India, obstetric calculator India, paracetamol dose calculator India, ORS calculator India, due date calculator India, rabies vaccine calculator India, drug dose calculator India, ObsCalc India, doctor tools India"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/"/>
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Free Medical Calculators India | Clinical Tools"/>
-<meta property="og:description" content="Free medical calculators built by a doctor for India — BMI, vaccines, drug doses, due dates and more."/>
+<meta property="og:title" content="Free Medical Calculators India | BMI, Vaccine, Obstetric, Drug Dose Tools"/>
+<meta property="og:description" content="Free medical calculators built by a doctor for India — BMI, UIP vaccines, obstetric suite, drug doses, ORS, due dates, rabies ARV schedule and more."/>
 <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/"/>
 <meta property="og:locale" content="en_IN"/>
 
@@ -20,10 +20,28 @@
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Free Medical Calculators India",
-  "description": "A suite of free clinical calculators for doctors and patients in India including BMI calculator with Indian cutoffs, UIP vaccine tracker, drug dose calculator, and rabies ARV schedule.",
+  "description": "A suite of free clinical calculators for doctors and patients in India including BMI with Indian cutoffs, UIP vaccine tracker, obstetric calculators, drug dose calculator, ORS rehydration, due date calculator and rabies ARV schedule.",
   "url": "https://thezerowhisper.github.io/medical-calculators/",
   "inLanguage": "en-IN",
   "audience": {"@type": "MedicalAudience", "audienceType": "Patient, Physician"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Free Medical Calculators India",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Rabies ARV Vaccine Date Calculator","url":"https://thezerowhisper.github.io/rabies-scheduler/"},
+    {"@type":"ListItem","position":2,"name":"UIP Vaccine Schedule Tracker","url":"https://thezerowhisper.github.io/medical-calculators/uip-vaccine.html"},
+    {"@type":"ListItem","position":3,"name":"BMI Calculator India","url":"https://thezerowhisper.github.io/medical-calculators/bmi.html"},
+    {"@type":"ListItem","position":4,"name":"Drug Dose Calculator","url":"https://thezerowhisper.github.io/medical-calculators/doses.html"},
+    {"@type":"ListItem","position":5,"name":"Pregnancy Due Date Calculator","url":"https://thezerowhisper.github.io/medical-calculators/due-date.html"},
+    {"@type":"ListItem","position":6,"name":"ORS Rehydration Calculator","url":"https://thezerowhisper.github.io/medical-calculators/ors.html"},
+    {"@type":"ListItem","position":7,"name":"Paracetamol Dose Calculator","url":"https://thezerowhisper.github.io/medical-calculators/paracetamol.html"},
+    {"@type":"ListItem","position":8,"name":"ObsCalc Obstetric Calculator Suite","url":"https://thezerowhisper.github.io/medical-calculators/obs-calc.html"}
+  ]
 }
 </script>
 
@@ -32,7 +50,6 @@
 body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d3748;min-height:100vh}
 .page-wrapper{max-width:680px;margin:auto}
 
-/* HERO */
 .hero-section{background:linear-gradient(135deg,#1a365d,#2b6cb0);border-radius:20px;padding:40px 36px;margin-bottom:28px;color:white;text-align:center}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:white;font-size:0.75rem;font-weight:600;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.04em}
 .hero-title{font-size:1.8rem;font-weight:800;color:white;margin-bottom:10px;line-height:1.2}
@@ -40,10 +57,8 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .hero-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .hero-chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#ebf8ff;font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:20px}
 
-/* SECTION LABEL */
 .section-label{font-size:0.75rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;padding-left:4px}
 
-/* TOOL CARDS GRID */
 .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
 @media(max-width:520px){.tools-grid{grid-template-columns:1fr}}
 
@@ -62,18 +77,13 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .tag-orange{background:#fffaf0;color:#c05621;border:1px solid #fbd38d}
 .tag-purple{background:#faf5ff;color:#553c9a;border:1px solid #d6bcfa}
 .tag-red{background:#fff5f5;color:#9b2c2c;border:1px solid #fed7d7}
+.tag-pink{background:#fff0f7;color:#97266d;border:1px solid #f9a8d4}
 
 .tool-card-arrow{position:absolute;bottom:18px;right:18px;color:#bee3f8;font-size:1.1rem;font-weight:700;transition:transform 0.2s}
 .tool-card:hover .tool-card-arrow{transform:translateX(3px);color:#3182ce}
 
 .new-badge{position:absolute;top:14px;right:14px;background:#48bb78;color:white;font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:0.04em}
-.soon-badge{position:absolute;top:14px;right:14px;background:#e2e8f0;color:#718096;font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:0.04em}
 
-/* COMING SOON CARDS */
-.tool-card.coming-soon{opacity:0.6;cursor:default}
-.tool-card.coming-soon:hover{transform:none;box-shadow:0 2px 16px rgba(0,0,0,0.06);border-color:transparent}
-
-/* HIGHLIGHT STRIP */
 .highlight-strip{background:white;border-radius:14px;padding:20px 24px;margin-bottom:28px;box-shadow:0 2px 16px rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;border:2px solid #fbd38d;transition:all 0.2s}
 .highlight-strip:hover{border-color:#ed8936;transform:translateY(-1px)}
 .highlight-icon{font-size:2rem;flex-shrink:0}
@@ -82,21 +92,23 @@ body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .highlight-arrow{margin-left:auto;color:#fbd38d;font-size:1.2rem;flex-shrink:0;transition:transform 0.2s}
 .highlight-strip:hover .highlight-arrow{transform:translateX(3px);color:#ed8936}
 
-/* STATS ROW */
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
 .stat-card{background:white;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
 .stat-number{font-size:1.5rem;font-weight:800;color:#3182ce;line-height:1}
 .stat-label{font-size:0.72rem;color:#718096;margin-top:4px;line-height:1.3}
 
-/* INFO */
 .info-section{background:white;padding:28px 32px;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.05);margin-bottom:24px}
 .info-section h2{font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:8px;margin-top:20px}
 .info-section h2:first-child{margin-top:0}
 .info-section p{font-size:0.88rem;color:#4a5568;line-height:1.7;margin-bottom:6px}
 
-footer{text-align:center;padding:16px;font-size:0.78rem;color:#a0aec0}
-footer a{color:#3182ce;text-decoration:none}
-footer a:hover{text-decoration:underline}
+/* FOOTER */
+footer{background:white;border-radius:16px;padding:24px 28px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
+.footer-title{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px}
+.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.footer-link{font-size:0.82rem;color:#3182ce;text-decoration:none;display:flex;align-items:center;gap:5px;padding:6px 0}
+.footer-link:hover{color:#2b6cb0;text-decoration:underline}
+.footer-bottom{text-align:center;font-size:0.75rem;color:#a0aec0;border-top:1px solid #e2e8f0;padding-top:14px}
 
 @media(max-width:480px){
   .hero-section{padding:28px 20px}
@@ -104,37 +116,18 @@ footer a:hover{text-decoration:underline}
   .stats-row{grid-template-columns:1fr 1fr;gap:10px}
   .info-section{padding:24px 20px}
   .highlight-strip{padding:16px 18px}
+  .footer-links{grid-template-columns:1fr}
 }
-  /* ── DESKTOP LAYOUT ── */
-@media (min-width: 900px) {
-  body {
-    padding: 32px 60px;
-  }
 
-  .page-wrapper {
-    max-width: 1200px;
-  }
-
-  .hero-section {
-    width: 100%;
-  }
-
-  .stats-row {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 100%;
-  }
-
-  .highlight-strip {
-    max-width: 100%;
-  }
-
-  .tools-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .info-section {
-    max-width: 100%;
-  }
+@media(min-width:900px){
+  body{padding:32px 60px}
+  .page-wrapper{max-width:1200px}
+  .hero-section{width:100%}
+  .stats-row{grid-template-columns:repeat(3,1fr);max-width:100%}
+  .highlight-strip{max-width:100%}
+  .tools-grid{grid-template-columns:repeat(3,1fr)}
+  .info-section{max-width:100%}
+  .footer-links{grid-template-columns:repeat(4,1fr)}
 }
 </style>
 </head>
@@ -150,9 +143,9 @@ footer a:hover{text-decoration:underline}
       <span class="hero-chip">Indian BMI Cutoffs</span>
       <span class="hero-chip">UIP Vaccine Schedule</span>
       <span class="hero-chip">ARV / Rabies PEP</span>
+      <span class="hero-chip">ObsCalc · Bishop · Apgar</span>
       <span class="hero-chip">Drug Dose by Weight</span>
-      <span class="hero-chip">WHO Guidelines</span>
-      <span class="hero-chip">NCDC India</span>
+      <span class="hero-chip">FOGSI · WHO · NCDC</span>
     </div>
   </div>
 
@@ -182,11 +175,10 @@ footer a:hover{text-decoration:underline}
     <div class="highlight-arrow">→</div>
   </a>
 
-  <!-- MAIN TOOLS -->
+  <!-- TOOLS GRID -->
   <div class="section-label">All calculators</div>
   <div class="tools-grid">
 
-    <!-- UIP VACCINE -->
     <a class="tool-card featured" href="uip-vaccine.html">
       <span class="tool-card-icon">🧒</span>
       <div class="tool-card-title">UIP Vaccine Tracker</div>
@@ -199,7 +191,6 @@ footer a:hover{text-decoration:underline}
       <div class="tool-card-arrow">→</div>
     </a>
 
-    <!-- BMI -->
     <a class="tool-card" href="bmi.html">
       <span class="tool-card-icon">⚖️</span>
       <div class="tool-card-title">BMI Calculator India</div>
@@ -212,7 +203,6 @@ footer a:hover{text-decoration:underline}
       <div class="tool-card-arrow">→</div>
     </a>
 
-    <!-- DRUG DOSE -->
     <a class="tool-card" href="doses.html">
       <span class="tool-card-icon">💊</span>
       <div class="tool-card-title">Drug Dose Calculator</div>
@@ -225,77 +215,84 @@ footer a:hover{text-decoration:underline}
       <div class="tool-card-arrow">→</div>
     </a>
 
-    <!-- DUE DATE — NOW LIVE -->
-<a class="tool-card" href="due-date.html">
-  <span class="tool-card-icon">🤰</span>
-  <div class="tool-card-title">Due Date Calculator</div>
-  <div class="tool-card-desc">Calculate your pregnancy due date from LMP, IVF transfer or ultrasound. Week-by-week milestones, scan reminders and symptoms guide.</div>
-  <div class="tool-card-tags">
-    <span class="tool-tag tag-purple">LMP · IVF · Ultrasound</span>
-    <span class="tool-tag tag-green">Week by Week</span>
-    <span class="tool-tag tag-orange">Scan Reminders</span>
-  </div>
-  <div class="tool-card-arrow">→</div>
-</a>
+    <a class="tool-card" href="obs-calc.html">
+      <span class="new-badge">New</span>
+      <span class="tool-card-icon">🏥</span>
+      <div class="tool-card-title">ObsCalc — Obstetric Suite</div>
+      <div class="tool-card-desc">10 obstetric tools — gestational age, EFW Hadlock, Bishop score, Apgar, GDM dates, VBAC eligibility and PPH risk.</div>
+      <div class="tool-card-tags">
+        <span class="tool-tag tag-pink">Bishop · Apgar · VBAC</span>
+        <span class="tool-tag tag-blue">EFW Hadlock</span>
+        <span class="tool-tag tag-green">FOGSI · ACOG</span>
+      </div>
+      <div class="tool-card-arrow">→</div>
+    </a>
 
-  <!-- ORS -->
-<a class="tool-card" href="ors.html">
-  <span class="tool-card-icon">💧</span>
-  <div class="tool-card-title">ORS Rehydration Calculator</div>
-  <div class="tool-card-desc">Calculate exact ORS volumes for mild and moderate dehydration by weight. Zinc dose, ORS prep guide and hospital warning signs.</div>
-  <div class="tool-card-tags">
-    <span class="tool-tag tag-green">WHO Plan A &amp; B</span>
-    <span class="tool-tag tag-blue">Zinc IAP guideline</span>
-    <span class="tool-tag tag-orange">Severe referral</span>
-  </div>
-  <div class="tool-card-arrow">→</div>
-</a>
+    <a class="tool-card" href="due-date.html">
+      <span class="tool-card-icon">🤰</span>
+      <div class="tool-card-title">Due Date Calculator</div>
+      <div class="tool-card-desc">Calculate pregnancy due date from LMP, IVF transfer or ultrasound. Week-by-week milestones, scan reminders and symptoms guide.</div>
+      <div class="tool-card-tags">
+        <span class="tool-tag tag-purple">LMP · IVF · Ultrasound</span>
+        <span class="tool-tag tag-green">Week by Week</span>
+        <span class="tool-tag tag-orange">Scan Reminders</span>
+      </div>
+      <div class="tool-card-arrow">→</div>
+    </a>
 
-<!-- PARACETAMOL -->
-<a class="tool-card" href="paracetamol.html">
-  <span class="tool-card-icon">🌡️</span>
-  <div class="tool-card-title">Paracetamol Dose Calculator</div>
-  <div class="tool-card-desc">Exact dose by weight (15mg/kg) or age. Syrup volumes for 125mg and 250mg/5ml, tablet counts, max daily dose and fever warning signs.</div>
-  <div class="tool-card-tags">
-    <span class="tool-tag tag-orange">15 mg/kg dosing</span>
-    <span class="tool-tag tag-blue">Calpol · Dolo · Crocin</span>
-    <span class="tool-tag tag-green">Child + Adult</span>
-  </div>
-  <div class="tool-card-arrow">→</div>
-</a>
-<a class="tool-card" href="obs-calc.html">
-  <span class="new-badge">New</span>
-  <span class="tool-card-icon">🏥</span>
-  <div class="tool-card-title">ObsCalc — Obstetric Calculators</div>
-  <div class="tool-card-desc">10 obstetric tools in one — gestational age, EFW Hadlock, Bishop score, Apgar, GDM dates, VBAC eligibility and PPH risk.</div>
-  <div class="tool-card-tags">
-    <span class="tool-tag tag-purple">Bishop · Apgar · VBAC</span>
-    <span class="tool-tag tag-blue">EFW Hadlock</span>
-    <span class="tool-tag tag-green">FOGSI · ACOG</span>
-  </div>
-  <div class="tool-card-arrow">→</div>
-</a>
+    <a class="tool-card" href="paracetamol.html">
+      <span class="tool-card-icon">🌡️</span>
+      <div class="tool-card-title">Paracetamol Dose Calculator</div>
+      <div class="tool-card-desc">Exact dose by weight (15mg/kg) or age. Syrup volumes for 125mg and 250mg/5ml, tablet counts, max daily dose and fever warning signs.</div>
+      <div class="tool-card-tags">
+        <span class="tool-tag tag-orange">15 mg/kg dosing</span>
+        <span class="tool-tag tag-blue">Calpol · Dolo · Crocin</span>
+        <span class="tool-tag tag-green">Child + Adult</span>
+      </div>
+      <div class="tool-card-arrow">→</div>
+    </a>
+
+    <a class="tool-card" href="ors.html">
+      <span class="tool-card-icon">💧</span>
+      <div class="tool-card-title">ORS Rehydration Calculator</div>
+      <div class="tool-card-desc">Calculate exact ORS volumes for mild and moderate dehydration by weight. Zinc dose, ORS prep guide and hospital warning signs.</div>
+      <div class="tool-card-tags">
+        <span class="tool-tag tag-green">WHO Plan A &amp; B</span>
+        <span class="tool-tag tag-blue">Zinc IAP guideline</span>
+        <span class="tool-tag tag-orange">Severe referral</span>
+      </div>
+      <div class="tool-card-arrow">→</div>
+    </a>
+
   </div>
 
-  <!-- INFO SECTION -->
+  <!-- INFO -->
   <div class="info-section">
     <h2>Why These Calculators Use Indian Guidelines</h2>
-    <p>Many standard medical calculators use Western or WHO cutoffs which are not always appropriate for Indians. For example, Indians develop diabetes and cardiovascular disease at lower BMI values, so Indian guidelines define overweight as BMI ≥ 23 rather than ≥ 25. Similarly, the rabies PEP schedule in India follows the 4-dose Essen regimen (Days 0, 3, 7, 28) which differs from some international schedules. These tools are built specifically to reflect Indian clinical practice.</p>
+    <p>Many standard medical calculators use Western or WHO cutoffs which are not always appropriate for Indians. For example, Indians develop diabetes and cardiovascular disease at lower BMI values, so Indian guidelines define overweight as BMI ≥ 23 rather than ≥ 25. The rabies PEP schedule follows the 4-dose Essen regimen (Days 0, 3, 7, 28). Obstetric tools follow FOGSI and DIPSI protocols specific to Indian practice. These tools reflect Indian clinical guidelines throughout.</p>
     <h2>About These Tools</h2>
-    <p>All tools on this site are built and maintained by a practising doctor in India. They are intended for clinical use by healthcare professionals and for patient education. No data is collected or stored on any server — all calculations happen in your browser. Vaccination records in the UIP tracker are saved only on your own device.</p>
+    <p>All tools are built and maintained by a practising doctor in India. Intended for clinical use by healthcare professionals and for patient education. No data is collected or stored on any server — all calculations happen in your browser. Vaccination records in the UIP tracker are saved only on your own device.</p>
     <h2>Disclaimer</h2>
-    <p>These tools are for informational and clinical reference purposes only. They do not replace clinical judgement or consultation with a qualified healthcare professional. Always verify doses, schedules, and cutoffs against current guidelines for individual patient decisions.</p>
+    <p>For informational and clinical reference purposes only. These tools do not replace clinical judgement or consultation with a qualified healthcare professional. Always verify doses, schedules, and cutoffs against current guidelines for individual patient decisions.</p>
   </div>
 
+  <!-- FOOTER -->
   <footer>
-    <p>Free medical calculators for India · Built by a doctor · Based on NCDC, IAP &amp; WHO guidelines</p>
-    <p style="margin-top:6px">
-      <a href="https://thezerowhisper.github.io/rabies-scheduler/">Rabies ARV Calculator</a> &nbsp;·&nbsp;
-      <a href="uip-vaccine.html">UIP Vaccine Tracker</a> &nbsp;·&nbsp;
-      <a href="bmi.html">BMI Calculator</a> &nbsp;·&nbsp;
-      <a href="doses.html">Drug Doses</a>
-    </p>
-    <p style="margin-top:6px">For informational purposes only · Always consult your physician</p>
+    <div class="footer-title">All Tools</div>
+    <div class="footer-links">
+      <a class="footer-link" href="https://thezerowhisper.github.io/rabies-scheduler/">💉 Rabies ARV Calculator</a>
+      <a class="footer-link" href="uip-vaccine.html">🧒 UIP Vaccine Tracker</a>
+      <a class="footer-link" href="bmi.html">⚖️ BMI Calculator</a>
+      <a class="footer-link" href="doses.html">💊 Drug Dose Calculator</a>
+      <a class="footer-link" href="obs-calc.html">🏥 ObsCalc Suite</a>
+      <a class="footer-link" href="due-date.html">🤰 Due Date Calculator</a>
+      <a class="footer-link" href="paracetamol.html">🌡️ Paracetamol Dose</a>
+      <a class="footer-link" href="ors.html">💧 ORS Calculator</a>
+    </div>
+    <div class="footer-bottom">
+      Free medical calculators for India · Built by a doctor · Based on NCDC, IAP, FOGSI &amp; WHO guidelines<br>
+      <span style="margin-top:4px;display:block">For informational purposes only · Always consult your physician</span>
+    </div>
   </footer>
 
 </main>
