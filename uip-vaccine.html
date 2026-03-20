@@ -4,67 +4,10 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>UIP Vaccine Schedule India | Child Immunisation Tracker | All Vaccines by Age</title>
-<meta name="description" content="Free UIP vaccine schedule tracker for India. Enter your child's date of birth and get all immunisation due dates as per Indian Universal Immunisation Programme and WHO guidelines — BCG, OPV, DPT, Hepatitis B, MMR, and more."/>
+<meta name="description" content="Free UIP vaccine schedule tracker for India. Enter your child's date of birth, track which vaccines are done, and get all immunisation due dates as per Indian UIP and WHO guidelines."/>
 <meta name="keywords" content="UIP vaccine schedule India, child immunisation schedule India, baby vaccine schedule India, BCG vaccine date, DPT vaccine schedule, MMR vaccine India, universal immunisation programme India, vaccination tracker India, IAP immunisation schedule 2024"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/uip-vaccine.html"/>
-
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="UIP Vaccine Schedule Tracker India | Child Immunisation Dates"/>
-<meta property="og:description" content="Enter your child's date of birth and get all UIP vaccination due dates instantly — BCG, OPV, DPT, Hepatitis B, MMR, and all national programme vaccines."/>
-<meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/uip-vaccine.html"/>
-<meta property="og:locale" content="en_IN"/>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "UIP Vaccine Schedule Tracker India",
-  "description": "Free tool to calculate all child immunisation due dates as per India's Universal Immunisation Programme (UIP) and WHO guidelines.",
-  "url": "https://thezerowhisper.github.io/medical-calculators/uip-vaccine.html",
-  "inLanguage": "en-IN",
-  "about": {
-    "@type": "MedicalCondition",
-    "name": "Childhood Immunisation"
-  },
-  "audience": {"@type": "MedicalAudience", "audienceType": "Patient, Physician, Parent"}
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the UIP vaccine schedule in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The Universal Immunisation Programme (UIP) of India provides free vaccines at birth, 6 weeks, 10 weeks, 14 weeks, 9 months, 12 months, 15-18 months, 2 years, 5 years, 10 years and 16 years. Vaccines include BCG, OPV, IPV, DPT, Hepatitis B, Hib, PCV, RVV, Measles, MR, JE, DT, Td and TT."}
-    },
-    {
-      "@type": "Question",
-      "name": "Which vaccines are given at birth in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "At birth, three vaccines are given under UIP India: BCG (Bacillus Calmette-Guérin for tuberculosis), OPV-0 (oral polio vaccine zero dose), and Hepatitis B birth dose (HepB-0)."}
-    },
-    {
-      "@type": "Question",
-      "name": "What vaccines are given at 6 weeks in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "At 6 weeks, the following vaccines are given: OPV-1, DPT-1 (Diphtheria, Pertussis, Tetanus), Hepatitis B-2, IPV-1 (Inactivated Polio Vaccine), Hib-1, PCV-1 (Pneumococcal Conjugate Vaccine), and RVV-1 (Rotavirus Vaccine)."}
-    },
-    {
-      "@type": "Question",
-      "name": "When is the MMR vaccine given in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The MR (Measles-Rubella) vaccine is given at 9 months under UIP India. A second dose of MR is given at 15-18 months along with the DPT booster. MMR (Measles-Mumps-Rubella) is part of the IAP recommended schedule."}
-    },
-    {
-      "@type": "Question",
-      "name": "Is the UIP vaccine schedule free in India?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes. All vaccines under the Universal Immunisation Programme (UIP) are provided free of cost at government health centres, Primary Health Centres (PHC), and Anganwadi centres across India."}
-    }
-  ]
-}
-</script>
-
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',sans-serif;background:#f0f4f8;padding:20px;color:#2d3748}
@@ -82,11 +25,11 @@ h1{font-size:1.4rem;font-weight:700;color:#1a202c;text-align:center;margin-botto
 .keyword-chip{background:#ebf8ff;color:#2b6cb0;font-size:0.72rem;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid #bee3f8}
 
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
-@media(max-width:480px){.form-grid{grid-template-columns:1fr}.card{padding:24px 18px}}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}.card{padding:24px 18px}.info-section{padding:24px 18px}}
 
 label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:6px;color:#2d3748}
-input[type=date],input[type=text],select{width:100%;padding:11px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;color:#2d3748;outline:none;transition:border-color 0.2s;background:white;font-family:inherit}
-input:focus,select:focus{border-color:#4299e1}
+input[type=date],input[type=text]{width:100%;padding:11px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;color:#2d3748;outline:none;transition:border-color 0.2s;background:white;font-family:inherit}
+input:focus{border-color:#4299e1}
 
 .calc-btn{width:100%;padding:13px;background:#3182ce;color:white;border:none;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:background 0.2s;margin-top:4px}
 .calc-btn:hover{background:#2b6cb0}
@@ -94,64 +37,89 @@ input:focus,select:focus{border-color:#4299e1}
 /* RESULTS */
 .results{margin-top:28px;display:none}
 
+/* CHILD SUMMARY */
 .child-summary{background:linear-gradient(135deg,#ebf8ff,#e6fffa);border:2px solid #bee3f8;border-radius:14px;padding:18px 20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .child-name{font-size:1rem;font-weight:700;color:#1a202c}
-.child-age{font-size:0.88rem;color:#4a5568;margin-top:2px}
-.completion-badge{text-align:center}
+.child-age{font-size:0.85rem;color:#4a5568;margin-top:2px}
+.completion-ring{text-align:center}
 .completion-number{font-size:1.8rem;font-weight:800;color:#2b6cb0;line-height:1}
-.completion-label{font-size:0.72rem;color:#718096;margin-top:2px}
+.completion-label{font-size:0.7rem;color:#718096;margin-top:2px}
+
+/* PROGRESS BAR */
+.progress-wrap{margin-bottom:20px}
+.progress-label{display:flex;justify-content:space-between;font-size:0.82rem;font-weight:600;color:#4a5568;margin-bottom:6px}
+.progress-bar{height:10px;background:#e2e8f0;border-radius:10px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#48bb78,#38a169);border-radius:10px;transition:width 0.4s ease}
 
 /* FILTER TABS */
 .filter-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
 .filter-tab{padding:6px 14px;border:2px solid #e2e8f0;border-radius:20px;font-size:0.82rem;font-weight:600;cursor:pointer;background:white;color:#718096;transition:all 0.2s}
 .filter-tab.active{background:#3182ce;border-color:#3182ce;color:white}
 
-/* VACCINE GROUPS */
+/* LEGEND */
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;font-size:0.78rem}
+.legend-item{display:flex;align-items:center;gap:5px;color:#4a5568}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* AGE GROUP */
 .age-group{margin-bottom:20px}
 .age-group-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:10px 14px;background:#f7fafc;border-radius:10px;border-left:4px solid #3182ce}
 .age-group-title{font-weight:700;font-size:0.95rem;color:#2d3748}
-.age-group-date{font-size:0.82rem;color:#718096;margin-top:2px}
-.age-group-status{margin-left:auto;font-size:0.78rem;font-weight:600;padding:3px 10px;border-radius:20px}
-.status-due{background:#fff5f5;color:#c53030}
-.status-today{background:#fed7d7;color:#9b2c2c}
-.status-upcoming{background:#ebf8ff;color:#2b6cb0}
-.status-done{background:#f0fff4;color:#276749}
+.age-group-date{font-size:0.8rem;color:#718096;margin-top:1px}
+.age-group-status{margin-left:auto;font-size:0.75rem;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap}
+.s-overdue{background:#fed7d7;color:#9b2c2c}
+.s-today{background:#feebc8;color:#7b341e}
+.s-upcoming{background:#bee3f8;color:#2c5282}
+.s-done{background:#c6f6d5;color:#22543d}
+.s-partial{background:#fefcbf;color:#744210}
 
 /* VACCINE ROW */
-.vaccine-row{display:flex;align-items:center;gap:12px;padding:12px 14px;background:white;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:8px;transition:border-color 0.2s}
-.vaccine-row:hover{border-color:#bee3f8}
-.vaccine-row.overdue{border-left:3px solid #fc8181;background:#fff5f5}
-.vaccine-row.due-today{border-left:3px solid #f6ad55;background:#fffaf0}
-.vaccine-row.upcoming{border-left:3px solid #63b3ed;background:#ebf8ff}
-.vaccine-row.done{border-left:3px solid #68d391;background:#f0fff4;opacity:0.75}
+.vaccine-row{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:white;border:1.5px solid #e2e8f0;border-radius:10px;margin-bottom:8px;transition:all 0.2s;cursor:pointer}
+.vaccine-row:hover{border-color:#bee3f8;background:#f7fbff}
+.vaccine-row.is-taken{background:#f0fff4;border-color:#9ae6b4;opacity:0.85}
+.vaccine-row.is-overdue{border-left:3px solid #fc8181}
+.vaccine-row.is-today{border-left:3px solid #f6ad55}
+.vaccine-row.is-upcoming{border-left:3px solid #63b3ed}
 
-.vaccine-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.icon-overdue{background:#fff5f5}
-.icon-today{background:#fffaf0}
-.icon-upcoming{background:#ebf8ff}
-.icon-done{background:#f0fff4}
+/* CHECKBOX */
+.vax-checkbox{width:22px;height:22px;border-radius:6px;border:2px solid #cbd5e0;appearance:none;cursor:pointer;flex-shrink:0;margin-top:2px;transition:all 0.2s;position:relative;background:white}
+.vax-checkbox:checked{background:#48bb78;border-color:#48bb78}
+.vax-checkbox:checked::after{content:"✓";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:white;font-size:13px;font-weight:700;line-height:1}
+.vax-checkbox:hover{border-color:#4299e1}
 
 .vaccine-info{flex:1}
 .vaccine-name{font-weight:700;font-size:0.92rem;color:#1a202c}
-.vaccine-fullname{font-size:0.78rem;color:#718096;margin-top:1px}
-.vaccine-date{font-size:0.82rem;color:#4a5568;margin-top:3px;font-weight:500}
-.vaccine-note{font-size:0.75rem;color:#718096;margin-top:2px;font-style:italic}
+.vaccine-fullname{font-size:0.76rem;color:#718096;margin-top:1px;line-height:1.4}
+.vaccine-note{font-size:0.74rem;color:#a0aec0;margin-top:2px;font-style:italic}
+.vaccine-taken-date{font-size:0.76rem;color:#38a169;font-weight:600;margin-top:3px}
 
-.vaccine-status-pill{font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.vaccine-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
+.vaccine-status-pill{font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap}
 .pill-overdue{background:#fed7d7;color:#9b2c2c}
 .pill-today{background:#feebc8;color:#7b341e}
 .pill-upcoming{background:#bee3f8;color:#2c5282}
 .pill-done{background:#c6f6d5;color:#22543d}
 
-.cal-link-small{font-size:0.75rem;color:#3182ce;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:4px;padding:2px 8px;background:#ebf8ff;border:1px solid #bee3f8;border-radius:5px}
+.cal-link-small{font-size:0.72rem;color:#3182ce;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:4px;padding:2px 7px;background:#ebf8ff;border:1px solid #bee3f8;border-radius:5px}
 .cal-link-small:hover{background:#bee3f8}
 
-/* LEGEND */
-.legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;font-size:0.78rem}
-.legend-item{display:flex;align-items:center;gap:5px;color:#4a5568}
-.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+/* DATE PICKER POPUP */
+.date-picker-popup{display:none;position:absolute;background:white;border:2px solid #bee3f8;border-radius:12px;padding:14px;box-shadow:0 8px 24px rgba(0,0,0,0.12);z-index:50;min-width:220px}
+.date-picker-popup.open{display:block}
+.popup-title{font-size:0.82rem;font-weight:700;color:#2d3748;margin-bottom:8px}
+.popup-input{width:100%;padding:8px 10px;border:2px solid #e2e8f0;border-radius:8px;font-size:0.9rem;color:#2d3748;outline:none;font-family:inherit}
+.popup-input:focus{border-color:#4299e1}
+.popup-btns{display:flex;gap:8px;margin-top:10px}
+.popup-save{flex:1;padding:8px;background:#48bb78;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.85rem}
+.popup-save:hover{background:#38a169}
+.popup-cancel{padding:8px 12px;background:#edf2f7;color:#4a5568;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.85rem}
+.popup-clear{padding:8px 12px;background:#fff5f5;color:#c53030;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.85rem}
 
-/* SHARE + PRINT */
+/* CLEAR ALL BTN */
+.clear-all-btn{background:none;border:1px solid #fed7d7;color:#c53030;padding:6px 14px;border-radius:8px;font-size:0.8rem;font-weight:600;cursor:pointer;margin-bottom:16px}
+.clear-all-btn:hover{background:#fff5f5}
+
+/* NOTE + SHARE */
 .note-box{background:#fffaf0;border:1px solid #fbd38d;border-radius:10px;padding:12px 16px;font-size:0.82rem;color:#744210;margin-top:16px}
 .share-bar{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
 .share-btn{flex:1;min-width:100px;padding:10px 12px;border:none;border-radius:10px;font-size:0.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity 0.2s}
@@ -175,8 +143,9 @@ footer{text-align:center;padding-bottom:20px;font-size:0.78rem;color:#a0aec0}
 footer a{color:#3182ce}
 
 @media print{
-  .back-link,.share-bar,.filter-tabs,input,select,label,
-  .subtitle,.keyword-chips,.calc-btn,footer,.cal-link-small{display:none!important}
+  .back-link,.share-bar,.filter-tabs,input,.keyword-chips,
+  .calc-btn,footer,.cal-link-small,.clear-all-btn,
+  .vax-checkbox,.popup-btns,.date-picker-popup{display:none!important}
   .card{box-shadow:none;padding:10px}
   .vaccine-row{break-inside:avoid}
   .results{display:block!important}
@@ -222,24 +191,35 @@ footer a{color:#3182ce}
 
       <div class="child-summary" id="child-summary"></div>
 
+      <!-- PROGRESS BAR -->
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span id="progress-text">Vaccination progress</span>
+          <span id="progress-pct">0%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      </div>
+
+      <button class="clear-all-btn" onclick="clearAllTaken()">🗑 Clear All Marked Vaccines</button>
+
       <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#68d391"></div>Marked done</div>
         <div class="legend-item"><div class="legend-dot" style="background:#fc8181"></div>Overdue</div>
         <div class="legend-item"><div class="legend-dot" style="background:#f6ad55"></div>Due Today</div>
         <div class="legend-item"><div class="legend-dot" style="background:#63b3ed"></div>Upcoming</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#68d391"></div>Completed</div>
       </div>
 
-      <div class="filter-tabs" id="filter-tabs">
-        <button class="filter-tab active" onclick="filterVaccines('all', this)">All</button>
-        <button class="filter-tab" onclick="filterVaccines('overdue', this)">Overdue</button>
-        <button class="filter-tab" onclick="filterVaccines('upcoming', this)">Upcoming</button>
-        <button class="filter-tab" onclick="filterVaccines('done', this)">Completed</button>
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterVaccines('all',this)">All</button>
+        <button class="filter-tab" onclick="filterVaccines('overdue',this)">Overdue</button>
+        <button class="filter-tab" onclick="filterVaccines('upcoming',this)">Upcoming</button>
+        <button class="filter-tab" onclick="filterVaccines('done',this)">✓ Completed</button>
       </div>
 
       <div id="schedule-output"></div>
 
       <div class="note-box">
-        ⚠️ This schedule is based on <strong>India's Universal Immunisation Programme (UIP)</strong> and <strong>IAP guidelines 2024</strong>. Some vaccines (PCV, Rotavirus, Hib) may not be available at all government centres — check with your doctor. Premature babies may need adjusted schedules. Always consult your paediatrician.
+        ⚠️ Tap any vaccine row to mark it as given and record the date. Data is <strong>saved in your browser</strong> and will be here next time you open this page on the same device. This follows <strong>UIP India</strong> and <strong>IAP 2024</strong> guidelines. Always consult your paediatrician.
       </div>
 
       <div class="share-bar">
@@ -261,47 +241,34 @@ footer a{color:#3182ce}
         </button>
       </div>
       <div class="copy-confirm" id="copy-confirm"></div>
-
     </div>
   </div>
 
   <section class="info-section">
     <h2>UIP Vaccine Schedule India — Complete Guide</h2>
-    <p>India's <strong>Universal Immunisation Programme (UIP)</strong> is one of the largest public health programmes in the world. It provides free vaccines to all children from birth through 16 years of age. This tracker automatically calculates all vaccine due dates from your child's date of birth.</p>
-
-    <h2>UIP Vaccines at Each Age</h2>
-    <p><strong>At Birth:</strong> BCG, OPV-0 (Zero Dose), Hepatitis B-0</p>
-    <p><strong>6 Weeks:</strong> OPV-1, DPT-1, Hepatitis B-2, IPV-1, Hib-1, PCV-1, RVV-1</p>
-    <p><strong>10 Weeks:</strong> OPV-2, DPT-2, Hib-2, PCV-2, RVV-2</p>
-    <p><strong>14 Weeks:</strong> OPV-3, DPT-3, Hepatitis B-3, IPV-2, Hib-3, PCV-3, RVV-3</p>
-    <p><strong>9 Months:</strong> MR-1 (Measles-Rubella), OPV Booster, JE-1 (in endemic areas), Vitamin A-1</p>
-    <p><strong>12 Months:</strong> Hepatitis A-1, Typhoid conjugate vaccine (TCV)</p>
-    <p><strong>15–18 Months:</strong> MMR / MR-2, DPT Booster-1, OPV Booster, Hib Booster, PCV Booster, Varicella-1, Hepatitis A-2, JE-2</p>
-    <p><strong>2 Years:</strong> Typhoid booster, Vitamin A (every 6 months till 5 years)</p>
-    <p><strong>4–6 Years:</strong> DPT Booster-2, OPV Booster, Varicella-2, MMR Booster</p>
-    <p><strong>10 Years:</strong> Td (Tetanus-diphtheria)</p>
-    <p><strong>16 Years:</strong> Td booster</p>
-
+    <p>India's <strong>Universal Immunisation Programme (UIP)</strong> provides free vaccines from birth through 16 years. This tracker calculates all due dates and lets you mark each vaccine as given to track your child's immunisation progress.</p>
+    <h2>How to Use This Tracker</h2>
+    <p>Enter your child's date of birth and tap <strong>Generate Vaccine Schedule</strong>. All vaccine due dates are calculated automatically. Tap any vaccine row to mark it as given — you can also record the actual date it was administered. Your data is saved on your device.</p>
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h3>What is the UIP vaccine schedule in India?</h3>
-      <p>The Universal Immunisation Programme (UIP) provides free vaccines from birth to 16 years including BCG, OPV, DPT, Hepatitis B, IPV, Hib, PCV, Rotavirus, MR, JE, and Td vaccines at specified age intervals.</p>
+      <p>UIP provides free vaccines at birth, 6 weeks, 10 weeks, 14 weeks, 9 months, 12 months, 15–18 months, 2 years, 4–6 years, 10 years and 16 years — covering BCG, OPV, DPT, Hepatitis B, IPV, Hib, PCV, Rotavirus, MR, JE, Td and more.</p>
     </div>
     <div class="faq-item">
       <h3>Which vaccines are given at birth in India?</h3>
-      <p>Three vaccines are given at birth under UIP: BCG (for tuberculosis), OPV-0 (zero dose oral polio), and Hepatitis B birth dose (HepB-0). These should be given within 24 hours of birth ideally.</p>
+      <p>BCG, OPV-0 (zero dose), and Hepatitis B birth dose — all within 24 hours of birth ideally.</p>
     </div>
     <div class="faq-item">
       <h3>When is the MMR vaccine given in India?</h3>
-      <p>Under UIP India, MR (Measles-Rubella) vaccine is given at 9 months and again at 15–18 months. MMR (which also covers Mumps) is part of the IAP recommended private schedule given at 12 months and 15–18 months.</p>
+      <p>MR (Measles-Rubella) is given at 9 months and 15–18 months under UIP. MMR (adding Mumps) is given at 12 months and 15–18 months under the IAP private schedule.</p>
     </div>
     <div class="faq-item">
       <h3>Are UIP vaccines free in India?</h3>
-      <p>Yes. All UIP vaccines are provided completely free at government health centres, PHCs, CHCs, and Anganwadi centres across India.</p>
+      <p>Yes — all UIP vaccines are free at government health centres, PHCs, CHCs, and Anganwadi centres across India.</p>
     </div>
     <div class="faq-item">
-      <h3>What is the difference between UIP and IAP vaccine schedule?</h3>
-      <p>UIP is the government-mandated free schedule. IAP (Indian Academy of Pediatrics) recommends additional vaccines like Hepatitis A, Varicella (chickenpox), Typhoid conjugate, and MMR which may be available at private clinics. This tracker includes both.</p>
+      <h3>Will my data be saved?</h3>
+      <p>Yes — all marked vaccines and dates are saved in your browser's local storage. They will still be there the next time you open this page on the same device and browser.</p>
     </div>
   </section>
 
@@ -313,352 +280,414 @@ footer a{color:#3182ce}
 
 </main>
 
+<!-- DATE PICKER POPUP (positioned absolute via JS) -->
+<div class="date-picker-popup" id="date-popup">
+  <div class="popup-title" id="popup-title">Mark vaccine as given</div>
+  <label style="font-size:0.8rem;font-weight:600;color:#4a5568;margin-bottom:4px;display:block">Date administered</label>
+  <input type="date" class="popup-input" id="popup-date-input"/>
+  <div class="popup-btns">
+    <button class="popup-save" onclick="saveVaccineDone()">✓ Save</button>
+    <button class="popup-clear" onclick="clearVaccineDone()">Remove</button>
+    <button class="popup-cancel" onclick="closePopup()">Cancel</button>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
 
-// ── UIP + IAP VACCINE DATABASE ────────────────────────────────────
-// offsetDays = days from birth
-// windowDays = acceptable catch-up window in days (for status calc)
-const VACCINE_SCHEDULE = [
-  // ── BIRTH ──
-  {
-    ageLabel: "At Birth",
-    ageDesc:  "Within 24–72 hours of birth",
-    offsetDays: 0,
-    color: "#553c9a",
-    vaccines: [
-      { name:"BCG",       full:"Bacillus Calmette-Guérin (Tuberculosis)",       note:"Single dose · Left upper arm · UIP",            icon:"💉" },
-      { name:"OPV-0",     full:"Oral Polio Vaccine — Zero Dose",                note:"Zero dose before discharge · UIP",              icon:"💊" },
-      { name:"HepB-0",    full:"Hepatitis B — Birth Dose",                      note:"Within 24 hrs of birth · UIP",                  icon:"💉" }
+// ── VACCINE DATABASE ──────────────────────────────────────────────
+const SCHEDULE = [
+  { ageLabel:"At Birth",     ageDesc:"Within 24–72 hours",  offsetDays:0,    color:"#553c9a",
+    vaccines:[
+      {id:"BCG",       name:"BCG",        full:"Bacillus Calmette-Guérin (TB)",            note:"Single dose · Left upper arm · UIP"},
+      {id:"OPV0",      name:"OPV-0",      full:"Oral Polio Vaccine — Zero Dose",           note:"Before discharge · UIP"},
+      {id:"HepB0",     name:"HepB-0",     full:"Hepatitis B — Birth Dose",                 note:"Within 24 hrs of birth · UIP"}
     ]
   },
-  // ── 6 WEEKS ──
-  {
-    ageLabel: "6 Weeks",
-    ageDesc:  "42 days after birth",
-    offsetDays: 42,
-    color: "#2b6cb0",
-    vaccines: [
-      { name:"OPV-1",     full:"Oral Polio Vaccine — Dose 1",                   note:"UIP",                                           icon:"💊" },
-      { name:"DPT-1",     full:"Diphtheria, Pertussis, Tetanus — Dose 1",       note:"UIP · Anterolateral thigh",                     icon:"💉" },
-      { name:"HepB-1",    full:"Hepatitis B — Dose 1",                          note:"UIP",                                           icon:"💉" },
-      { name:"IPV-1",     full:"Inactivated Polio Vaccine — Dose 1",            note:"UIP · IM injection",                            icon:"💉" },
-      { name:"Hib-1",     full:"Haemophilus influenzae type b — Dose 1",        note:"UIP",                                           icon:"💉" },
-      { name:"PCV-1",     full:"Pneumococcal Conjugate Vaccine — Dose 1",       note:"UIP (select states) · IAP recommended",         icon:"💉" },
-      { name:"RVV-1",     full:"Rotavirus Vaccine — Dose 1",                    note:"UIP · Oral",                                    icon:"💊" }
+  { ageLabel:"6 Weeks",      ageDesc:"42 days after birth", offsetDays:42,   color:"#2b6cb0",
+    vaccines:[
+      {id:"OPV1",      name:"OPV-1",      full:"Oral Polio Vaccine — Dose 1",              note:"UIP"},
+      {id:"DPT1",      name:"DPT-1",      full:"Diphtheria, Pertussis, Tetanus — Dose 1",  note:"UIP · Anterolateral thigh"},
+      {id:"HepB1",     name:"HepB-1",     full:"Hepatitis B — Dose 1",                     note:"UIP"},
+      {id:"IPV1",      name:"IPV-1",      full:"Inactivated Polio Vaccine — Dose 1",       note:"UIP · IM injection"},
+      {id:"Hib1",      name:"Hib-1",      full:"Haemophilus influenzae type b — Dose 1",   note:"UIP"},
+      {id:"PCV1",      name:"PCV-1",      full:"Pneumococcal Conjugate Vaccine — Dose 1",  note:"UIP (select states) · IAP"},
+      {id:"RVV1",      name:"RVV-1",      full:"Rotavirus Vaccine — Dose 1",               note:"UIP · Oral"}
     ]
   },
-  // ── 10 WEEKS ──
-  {
-    ageLabel: "10 Weeks",
-    ageDesc:  "70 days after birth",
-    offsetDays: 70,
-    color: "#2b6cb0",
-    vaccines: [
-      { name:"OPV-2",     full:"Oral Polio Vaccine — Dose 2",                   note:"UIP",                                           icon:"💊" },
-      { name:"DPT-2",     full:"Diphtheria, Pertussis, Tetanus — Dose 2",       note:"UIP",                                           icon:"💉" },
-      { name:"Hib-2",     full:"Haemophilus influenzae type b — Dose 2",        note:"UIP",                                           icon:"💉" },
-      { name:"PCV-2",     full:"Pneumococcal Conjugate Vaccine — Dose 2",       note:"UIP (select states) · IAP recommended",         icon:"💉" },
-      { name:"RVV-2",     full:"Rotavirus Vaccine — Dose 2",                    note:"UIP · Oral",                                    icon:"💊" }
+  { ageLabel:"10 Weeks",     ageDesc:"70 days after birth", offsetDays:70,   color:"#2b6cb0",
+    vaccines:[
+      {id:"OPV2",      name:"OPV-2",      full:"Oral Polio Vaccine — Dose 2",              note:"UIP"},
+      {id:"DPT2",      name:"DPT-2",      full:"Diphtheria, Pertussis, Tetanus — Dose 2",  note:"UIP"},
+      {id:"Hib2",      name:"Hib-2",      full:"Haemophilus influenzae type b — Dose 2",   note:"UIP"},
+      {id:"PCV2",      name:"PCV-2",      full:"Pneumococcal Conjugate Vaccine — Dose 2",  note:"UIP (select states) · IAP"},
+      {id:"RVV2",      name:"RVV-2",      full:"Rotavirus Vaccine — Dose 2",               note:"UIP · Oral"}
     ]
   },
-  // ── 14 WEEKS ──
-  {
-    ageLabel: "14 Weeks",
-    ageDesc:  "98 days after birth",
-    offsetDays: 98,
-    color: "#2b6cb0",
-    vaccines: [
-      { name:"OPV-3",     full:"Oral Polio Vaccine — Dose 3",                   note:"UIP",                                           icon:"💊" },
-      { name:"DPT-3",     full:"Diphtheria, Pertussis, Tetanus — Dose 3",       note:"UIP",                                           icon:"💉" },
-      { name:"HepB-2",    full:"Hepatitis B — Dose 2",                          note:"UIP",                                           icon:"💉" },
-      { name:"IPV-2",     full:"Inactivated Polio Vaccine — Dose 2",            note:"UIP · IM injection",                            icon:"💉" },
-      { name:"Hib-3",     full:"Haemophilus influenzae type b — Dose 3",        note:"UIP",                                           icon:"💉" },
-      { name:"PCV-3",     full:"Pneumococcal Conjugate Vaccine — Dose 3",       note:"UIP (select states) · IAP recommended",         icon:"💉" },
-      { name:"RVV-3",     full:"Rotavirus Vaccine — Dose 3",                    note:"UIP · Oral",                                    icon:"💊" }
+  { ageLabel:"14 Weeks",     ageDesc:"98 days after birth", offsetDays:98,   color:"#2b6cb0",
+    vaccines:[
+      {id:"OPV3",      name:"OPV-3",      full:"Oral Polio Vaccine — Dose 3",              note:"UIP"},
+      {id:"DPT3",      name:"DPT-3",      full:"Diphtheria, Pertussis, Tetanus — Dose 3",  note:"UIP"},
+      {id:"HepB2",     name:"HepB-2",     full:"Hepatitis B — Dose 2",                     note:"UIP"},
+      {id:"IPV2",      name:"IPV-2",      full:"Inactivated Polio Vaccine — Dose 2",       note:"UIP · IM injection"},
+      {id:"Hib3",      name:"Hib-3",      full:"Haemophilus influenzae type b — Dose 3",   note:"UIP"},
+      {id:"PCV3",      name:"PCV-3",      full:"Pneumococcal Conjugate Vaccine — Dose 3",  note:"UIP (select states) · IAP"},
+      {id:"RVV3",      name:"RVV-3",      full:"Rotavirus Vaccine — Dose 3",               note:"UIP · Oral"}
     ]
   },
-  // ── 9 MONTHS ──
-  {
-    ageLabel: "9 Months",
-    ageDesc:  "274 days after birth",
-    offsetDays: 274,
-    color: "#276749",
-    vaccines: [
-      { name:"MR-1",      full:"Measles-Rubella Vaccine — Dose 1",              note:"UIP · Subcutaneous · Right upper arm",          icon:"💉" },
-      { name:"OPV-B1",    full:"Oral Polio Vaccine — Booster 1",                note:"UIP",                                           icon:"💊" },
-      { name:"JE-1",      full:"Japanese Encephalitis — Dose 1",                note:"UIP · Endemic districts only",                  icon:"💉" },
-      { name:"Vit A-1",   full:"Vitamin A Supplementation — Dose 1",            note:"UIP · 1 lakh IU oral",                          icon:"💊" }
+  { ageLabel:"9 Months",     ageDesc:"274 days after birth",offsetDays:274,  color:"#276749",
+    vaccines:[
+      {id:"MR1",       name:"MR-1",       full:"Measles-Rubella Vaccine — Dose 1",         note:"UIP · Subcutaneous · Right upper arm"},
+      {id:"OPVB1",     name:"OPV-B1",     full:"Oral Polio Vaccine — Booster 1",           note:"UIP"},
+      {id:"JE1",       name:"JE-1",       full:"Japanese Encephalitis — Dose 1",           note:"UIP · Endemic districts only"},
+      {id:"VitA1",     name:"Vit A-1",    full:"Vitamin A Supplementation — Dose 1",       note:"UIP · 1 lakh IU oral"}
     ]
   },
-  // ── 12 MONTHS ──
-  {
-    ageLabel: "12 Months",
-    ageDesc:  "365 days after birth",
-    offsetDays: 365,
-    color: "#744210",
-    vaccines: [
-      { name:"HepA-1",    full:"Hepatitis A Vaccine — Dose 1",                  note:"IAP recommended",                               icon:"💉" },
-      { name:"TCV-1",     full:"Typhoid Conjugate Vaccine — Dose 1",            note:"IAP recommended · IM",                          icon:"💉" },
-      { name:"Varicella-1",full:"Varicella (Chickenpox) — Dose 1",              note:"IAP recommended",                               icon:"💉" }
+  { ageLabel:"12 Months",    ageDesc:"365 days after birth",offsetDays:365,  color:"#744210",
+    vaccines:[
+      {id:"HepA1",     name:"HepA-1",     full:"Hepatitis A Vaccine — Dose 1",             note:"IAP recommended"},
+      {id:"TCV1",      name:"TCV-1",      full:"Typhoid Conjugate Vaccine — Dose 1",       note:"IAP recommended · IM"},
+      {id:"Var1",      name:"Varicella-1",full:"Varicella (Chickenpox) — Dose 1",          note:"IAP recommended"}
     ]
   },
-  // ── 15–18 MONTHS ──
-  {
-    ageLabel: "15–18 Months",
-    ageDesc:  "457 days after birth (15 months)",
-    offsetDays: 457,
-    color: "#c05621",
-    vaccines: [
-      { name:"MMR / MR-2",full:"Measles-Mumps-Rubella / MR — Dose 2",          note:"UIP (MR) · IAP (MMR) · Subcutaneous",          icon:"💉" },
-      { name:"DPT-B1",    full:"DPT Booster — Dose 1",                         note:"UIP · Anterolateral thigh",                     icon:"💉" },
-      { name:"OPV-B2",    full:"Oral Polio Vaccine — Booster 2",               note:"UIP",                                           icon:"💊" },
-      { name:"Hib-B",     full:"Haemophilus influenzae type b — Booster",      note:"IAP recommended",                               icon:"💉" },
-      { name:"PCV-B",     full:"Pneumococcal Conjugate Vaccine — Booster",     note:"IAP recommended",                               icon:"💉" },
-      { name:"HepA-2",    full:"Hepatitis A Vaccine — Dose 2",                 note:"IAP recommended · 6 months after dose 1",       icon:"💉" },
-      { name:"JE-2",      full:"Japanese Encephalitis — Dose 2",               note:"UIP · Endemic districts",                       icon:"💉" },
-      { name:"Varicella-2",full:"Varicella (Chickenpox) — Dose 2",             note:"IAP recommended",                               icon:"💉" }
+  { ageLabel:"15–18 Months", ageDesc:"457 days (15 months)",offsetDays:457, color:"#c05621",
+    vaccines:[
+      {id:"MMR2",      name:"MMR/MR-2",   full:"Measles-Mumps-Rubella / MR — Dose 2",     note:"UIP (MR) · IAP (MMR) · Subcutaneous"},
+      {id:"DPTB1",     name:"DPT-B1",     full:"DPT Booster — Dose 1",                    note:"UIP · Anterolateral thigh"},
+      {id:"OPVB2",     name:"OPV-B2",     full:"Oral Polio Vaccine — Booster 2",          note:"UIP"},
+      {id:"HibB",      name:"Hib-B",      full:"Haemophilus influenzae type b — Booster", note:"IAP recommended"},
+      {id:"PCVB",      name:"PCV-B",      full:"Pneumococcal Conjugate Vaccine — Booster",note:"IAP recommended"},
+      {id:"HepA2",     name:"HepA-2",     full:"Hepatitis A Vaccine — Dose 2",            note:"IAP · 6 months after dose 1"},
+      {id:"JE2",       name:"JE-2",       full:"Japanese Encephalitis — Dose 2",          note:"UIP · Endemic districts"},
+      {id:"Var2",      name:"Varicella-2",full:"Varicella (Chickenpox) — Dose 2",         note:"IAP recommended"}
     ]
   },
-  // ── 2 YEARS ──
-  {
-    ageLabel: "2 Years",
-    ageDesc:  "730 days after birth",
-    offsetDays: 730,
-    color: "#744210",
-    vaccines: [
-      { name:"TCV-B",     full:"Typhoid Conjugate Vaccine — Booster",          note:"IAP recommended · Every 3 years",               icon:"💉" },
-      { name:"Vit A-2",   full:"Vitamin A Supplementation — Dose 2",           note:"UIP · 2 lakh IU · Every 6 months till 5 yrs",   icon:"💊" }
+  { ageLabel:"2 Years",      ageDesc:"730 days after birth",offsetDays:730,  color:"#744210",
+    vaccines:[
+      {id:"TCVB",      name:"TCV-B",      full:"Typhoid Conjugate Vaccine — Booster",     note:"IAP · Every 3 years"},
+      {id:"VitA2",     name:"Vit A-2",    full:"Vitamin A — Dose 2",                      note:"UIP · 2 lakh IU · Every 6 months till 5 yrs"}
     ]
   },
-  // ── 4–6 YEARS ──
-  {
-    ageLabel: "4–6 Years",
-    ageDesc:  "1825 days after birth (5 years)",
-    offsetDays: 1825,
-    color: "#553c9a",
-    vaccines: [
-      { name:"DPT-B2",    full:"DPT Booster — Dose 2",                         note:"UIP",                                           icon:"💉" },
-      { name:"OPV-B3",    full:"Oral Polio Vaccine — Booster 3",               note:"UIP",                                           icon:"💊" },
-      { name:"MMR-B",     full:"MMR Booster",                                  note:"IAP recommended",                               icon:"💉" },
-      { name:"Varicella-B",full:"Varicella Booster",                           note:"IAP recommended",                               icon:"💉" }
+  { ageLabel:"4–6 Years",    ageDesc:"1825 days (5 years)", offsetDays:1825, color:"#553c9a",
+    vaccines:[
+      {id:"DPTB2",     name:"DPT-B2",     full:"DPT Booster — Dose 2",                    note:"UIP"},
+      {id:"OPVB3",     name:"OPV-B3",     full:"Oral Polio Vaccine — Booster 3",          note:"UIP"},
+      {id:"MMRB",      name:"MMR-B",      full:"MMR Booster",                             note:"IAP recommended"},
+      {id:"VarB",      name:"Varicella-B",full:"Varicella Booster",                       note:"IAP recommended"}
     ]
   },
-  // ── 10 YEARS ──
-  {
-    ageLabel: "10 Years",
-    ageDesc:  "3650 days after birth",
-    offsetDays: 3650,
-    color: "#2d3748",
-    vaccines: [
-      { name:"Td",        full:"Tetanus-Diphtheria (Td) Vaccine",              note:"UIP · Replaces TT",                             icon:"💉" },
-      { name:"TCV-10",    full:"Typhoid Conjugate Vaccine",                    note:"IAP recommended",                               icon:"💉" },
-      { name:"HPV-1",     full:"Human Papillomavirus — Dose 1",               note:"IAP recommended · Girls primarily",              icon:"💉" }
+  { ageLabel:"10 Years",     ageDesc:"3650 days after birth",offsetDays:3650,color:"#2d3748",
+    vaccines:[
+      {id:"Td10",      name:"Td",         full:"Tetanus-Diphtheria Vaccine",              note:"UIP · Replaces TT"},
+      {id:"TCV10",     name:"TCV-10",     full:"Typhoid Conjugate Vaccine",               note:"IAP recommended"},
+      {id:"HPV1",      name:"HPV-1",      full:"Human Papillomavirus — Dose 1",           note:"IAP recommended · Girls primarily"}
     ]
   },
-  // ── 16 YEARS ──
-  {
-    ageLabel: "16 Years",
-    ageDesc:  "5840 days after birth",
-    offsetDays: 5840,
-    color: "#2d3748",
-    vaccines: [
-      { name:"Td-B",      full:"Tetanus-Diphtheria Booster",                   note:"UIP",                                           icon:"💉" },
-      { name:"HPV-2",     full:"Human Papillomavirus — Dose 2",               note:"IAP recommended · 6 months after dose 1",       icon:"💉" }
+  { ageLabel:"16 Years",     ageDesc:"5840 days after birth",offsetDays:5840,color:"#2d3748",
+    vaccines:[
+      {id:"TdB",       name:"Td-B",       full:"Tetanus-Diphtheria Booster",              note:"UIP"},
+      {id:"HPV2",      name:"HPV-2",      full:"Human Papillomavirus — Dose 2",           note:"IAP · 6 months after dose 1"}
     ]
   }
 ];
 
-// ── GLOBALS ───────────────────────────────────────────────────────
-let allGroups = [];
-let shareLines = [];
+// ── STORAGE KEY ───────────────────────────────────────────────────
+const STORAGE_KEY = "uip_tracker_v1";
 
-const months  = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function loadTaken() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+  catch(e) { return {}; }
+}
+function saveTaken(obj) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }
+  catch(e) {}
+}
+
+// ── GLOBALS ───────────────────────────────────────────────────────
+let allGroups   = [];
+let takenMap    = loadTaken();  // { vaccineId: "YYYY-MM-DD" or true }
+let currentDOB  = null;
+let popupVaxId  = null;
+let activeFilter = "all";
+
+const months   = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-function formatDate(d) {
+function fmtDate(d) {
+  if (!d) return "";
   return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()} (${dayNames[d.getDay()]})`;
 }
-
-function addDays(date, days) {
+function fmtDateShort(d) {
+  if (!d) return "";
+  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+function addDays(date, n) {
   const d = new Date(date);
-  d.setDate(d.getDate() + days);
+  d.setDate(d.getDate() + n);
   return d;
 }
-
-function getAgeString(dob, today) {
-  let years  = today.getFullYear() - dob.getFullYear();
-  let months = today.getMonth() - dob.getMonth();
-  let days   = today.getDate() - dob.getDate();
-  if (days < 0)   { months--; days += 30; }
-  if (months < 0) { years--;  months += 12; }
-  if (years > 0)  return `${years} yr${years>1?"s":""} ${months} mo`;
-  if (months > 0) return `${months} month${months>1?"s":""} ${days} day${days!==1?"s":""}`;
-  return `${days} day${days!==1?"s":""}`;
+function getAgeStr(dob, today) {
+  let y = today.getFullYear()-dob.getFullYear();
+  let m = today.getMonth()-dob.getMonth();
+  let d = today.getDate()-dob.getDate();
+  if (d < 0) { m--; d += 30; }
+  if (m < 0) { y--; m += 12; }
+  if (y > 0) return `${y} yr${y>1?"s":""} ${m} mo`;
+  if (m > 0) return `${m} month${m>1?"s":""} ${d} day${d!==1?"s":""}`;
+  return `${d} day${d!==1?"s":""}`;
 }
 
-function getGroupStatus(dueDate, today) {
-  const diff = Math.ceil((dueDate - today) / 86400000);
-  if (diff < 0)   return "overdue";
-  if (diff === 0) return "today";
-  return "upcoming";
-}
-
-function calLink(vaccineName, dueDate) {
+function calLink(name, dueDate) {
   const fmt = d => d.toISOString().split('T')[0].replace(/-/g,'');
-  const next = new Date(dueDate); next.setDate(dueDate.getDate()+1);
-  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(vaccineName+" Vaccine")}&dates=${fmt(dueDate)}/${fmt(next)}&details=${encodeURIComponent("Scheduled vaccination as per UIP India immunisation programme.")}`;
+  const n = new Date(dueDate); n.setDate(n.getDate()+1);
+  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(name+" Vaccine")}&dates=${fmt(dueDate)}/${fmt(n)}&details=${encodeURIComponent("UIP India vaccination reminder.")}`;
 }
 
 // ── CALCULATE ─────────────────────────────────────────────────────
 function calculate() {
   const dobVal = document.getElementById("dob").value;
   if (!dobVal) { alert("Please enter the child's date of birth."); return; }
-
-  const dob   = new Date(dobVal + "T00:00:00");
+  const dob = new Date(dobVal + "T00:00:00");
   const today = new Date(); today.setHours(0,0,0,0);
-
   if (dob > today) { alert("Date of birth cannot be in the future."); return; }
 
+  currentDOB = dob;
   const name = document.getElementById("child-name").value.trim() || "Your Child";
 
-  // Build all groups
-  allGroups = VACCINE_SCHEDULE.map(group => {
+  allGroups = SCHEDULE.map(group => {
     const dueDate = addDays(dob, group.offsetDays);
     const diff    = Math.ceil((dueDate - today) / 86400000);
-    let status;
-    if (diff < -30)   status = "done";
-    else if (diff < 0) status = "overdue";
-    else if (diff === 0) status = "today";
-    else status = "upcoming";
-    return { ...group, dueDate, diff, status };
+    const allTaken = group.vaccines.every(v => takenMap[v.id]);
+    const someTaken = group.vaccines.some(v => takenMap[v.id]);
+
+    let autoStatus;
+    if (diff < -45) autoStatus = "done";
+    else if (diff < 0) autoStatus = "overdue";
+    else if (diff === 0) autoStatus = "today";
+    else autoStatus = "upcoming";
+
+    const displayStatus = allTaken ? "done" : autoStatus;
+
+    return { ...group, dueDate, diff, autoStatus, displayStatus, allTaken, someTaken };
   });
 
-  // Summary counts
-  const overdueCount  = allGroups.filter(g => g.status === "overdue").length;
-  const upcomingCount = allGroups.filter(g => g.status === "upcoming" || g.status === "today").length;
-  const doneCount     = allGroups.filter(g => g.status === "done").length;
-  const totalVaccines = VACCINE_SCHEDULE.reduce((s,g) => s + g.vaccines.length, 0);
-  const doneVaccines  = allGroups.filter(g=>g.status==="done").reduce((s,g)=>s+g.vaccines.length,0);
+  // Summary
+  const totalV  = SCHEDULE.reduce((s,g) => s + g.vaccines.length, 0);
+  const takenV  = SCHEDULE.reduce((s,g) => s + g.vaccines.filter(v => takenMap[v.id]).length, 0);
+  const pct     = Math.round((takenV / totalV) * 100);
+  const overdueG = allGroups.filter(g => g.displayStatus==="overdue").length;
+  const upcomingG = allGroups.filter(g => g.displayStatus==="upcoming"||g.displayStatus==="today").length;
 
-  // Child summary
   document.getElementById("child-summary").innerHTML = `
     <div>
       <div class="child-name">🧒 ${name}</div>
-      <div class="child-age">Age: ${getAgeString(dob, today)} · DOB: ${formatDate(dob)}</div>
-      <div style="font-size:0.78rem;margin-top:6px;display:flex;gap:10px;flex-wrap:wrap">
-        ${overdueCount  ? `<span style="color:#c53030;font-weight:600">⚠️ ${overdueCount} group${overdueCount>1?"s":""} overdue</span>` : ""}
-        ${upcomingCount ? `<span style="color:#2b6cb0;font-weight:600">📅 ${upcomingCount} upcoming</span>` : ""}
-        <span style="color:#276749;font-weight:600">✅ ${doneCount} completed</span>
+      <div class="child-age">Age: ${getAgeStr(dob,today)} &nbsp;·&nbsp; DOB: ${fmtDateShort(dob)}</div>
+      <div style="font-size:0.78rem;margin-top:8px;display:flex;gap:10px;flex-wrap:wrap">
+        ${overdueG  ? `<span style="color:#c53030;font-weight:600">⚠️ ${overdueG} group${overdueG>1?"s":""} overdue</span>` : ""}
+        ${upcomingG ? `<span style="color:#2b6cb0;font-weight:600">📅 ${upcomingG} upcoming</span>` : ""}
+        <span style="color:#276749;font-weight:600">✅ ${takenV} given</span>
       </div>
     </div>
-    <div class="completion-badge">
-      <div class="completion-number">${doneVaccines}/${totalVaccines}</div>
-      <div class="completion-label">vaccines<br>tracked</div>
+    <div class="completion-ring">
+      <div class="completion-number">${takenV}/${totalV}</div>
+      <div class="completion-label">vaccines<br>given</div>
     </div>`;
 
-  renderGroups(allGroups);
+  document.getElementById("progress-text").textContent = `${takenV} of ${totalV} vaccines given`;
+  document.getElementById("progress-pct").textContent  = pct + "%";
+  document.getElementById("progress-fill").style.width = pct + "%";
 
-  // Build share text
-  shareLines = [`💉 UIP Vaccine Schedule — ${name}\nDOB: ${formatDate(dob)}\n`];
-  allGroups.forEach(g => {
-    shareLines.push(`\n${g.ageLabel} (${formatDate(g.dueDate)}):`);
-    g.vaccines.forEach(v => shareLines.push(`  • ${v.name} — ${v.full}`));
-  });
-  shareLines.push(`\nGenerated at: ${window.location.href}`);
+  renderGroups();
 
   document.getElementById("results").style.display = "block";
   document.getElementById("results").scrollIntoView({ behavior:"smooth", block:"nearest" });
 }
 
-// ── RENDER GROUPS ─────────────────────────────────────────────────
-function renderGroups(groups) {
+// ── RENDER ────────────────────────────────────────────────────────
+function renderGroups() {
   const out = document.getElementById("schedule-output");
   out.innerHTML = "";
 
+  let groups = allGroups;
+  if (activeFilter === "overdue")  groups = allGroups.filter(g => g.displayStatus==="overdue"||g.displayStatus==="today");
+  if (activeFilter === "upcoming") groups = allGroups.filter(g => g.displayStatus==="upcoming");
+  if (activeFilter === "done")     groups = allGroups.filter(g => g.allTaken);
+
   if (!groups.length) {
-    out.innerHTML = `<div style="text-align:center;color:#a0aec0;padding:20px">No vaccines in this category.</div>`;
+    out.innerHTML = `<div style="text-align:center;color:#a0aec0;padding:24px;font-size:0.9rem">No vaccines in this category.</div>`;
     return;
   }
 
   groups.forEach(group => {
-    const statusLabel = {
-      overdue:  "Overdue",
-      today:    "Due Today!",
-      upcoming: group.diff <= 30 ? `In ${group.diff} days` : `In ${Math.round(group.diff/30)} months`,
-      done:     "Completed"
-    }[group.status];
+    const takenInGroup = group.vaccines.filter(v => takenMap[v.id]).length;
+    const totalInGroup = group.vaccines.length;
 
-    const statusClass = {
-      overdue: "status-due", today: "status-today",
-      upcoming: "status-upcoming", done: "status-done"
-    }[group.status];
+    const statusLabel = {
+      overdue:  `Overdue · ${takenInGroup}/${totalInGroup} given`,
+      today:    `Due Today! · ${takenInGroup}/${totalInGroup} given`,
+      upcoming: group.diff <= 30
+        ? `In ${group.diff} day${group.diff!==1?"s":""}· ${takenInGroup}/${totalInGroup} given`
+        : `In ~${Math.round(group.diff/30)} months · ${takenInGroup}/${totalInGroup} given`,
+      done:     `✓ All ${totalInGroup} given`
+    }[group.displayStatus] || "";
+
+    const headerStatusClass = {
+      overdue:"s-overdue", today:"s-today",
+      upcoming: group.someTaken&&!group.allTaken ? "s-partial" : "s-upcoming",
+      done:"s-done"
+    }[group.displayStatus] || "s-upcoming";
 
     const groupEl = document.createElement("div");
     groupEl.className = "age-group";
-    groupEl.setAttribute("data-status", group.status);
+    groupEl.setAttribute("data-status", group.displayStatus);
+
+    const vaccineRowsHTML = group.vaccines.map(v => {
+      const taken     = !!takenMap[v.id];
+      const takenDate = typeof takenMap[v.id] === "string" ? takenMap[v.id] : null;
+      const rowClass  = taken ? "is-taken" : group.autoStatus==="overdue" ? "is-overdue" : group.autoStatus==="today" ? "is-today" : "is-upcoming";
+      const pillClass = taken ? "pill-done" : group.autoStatus==="overdue" ? "pill-overdue" : group.autoStatus==="today" ? "pill-today" : "pill-upcoming";
+      const pillText  = taken ? "✓ Given" : group.autoStatus==="overdue" ? "Overdue" : group.autoStatus==="today" ? "Today!" : "Upcoming";
+      const showCal   = !taken && (group.autoStatus==="upcoming"||group.autoStatus==="today");
+
+      return `
+        <div class="vaccine-row ${rowClass}" onclick="openPopup('${v.id}','${v.name}',event)" title="Tap to mark as given">
+          <input type="checkbox" class="vax-checkbox" ${taken?"checked":""} onclick="event.stopPropagation();toggleVaccine('${v.id}',event)" aria-label="Mark ${v.name} as given"/>
+          <div class="vaccine-info">
+            <div class="vaccine-name">${v.name}</div>
+            <div class="vaccine-fullname">${v.full}</div>
+            <div class="vaccine-note">${v.note}</div>
+            ${takenDate ? `<div class="vaccine-taken-date">✓ Given on ${fmtDateShort(new Date(takenDate+"T00:00:00"))}</div>` : ""}
+            ${showCal ? `<a href="${calLink(v.name, group.dueDate)}" target="_blank" rel="noopener" class="cal-link-small" onclick="event.stopPropagation()">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Add to Calendar
+            </a>` : ""}
+          </div>
+          <div class="vaccine-right">
+            <div class="vaccine-status-pill ${pillClass}">${pillText}</div>
+          </div>
+        </div>`;
+    }).join("");
 
     groupEl.innerHTML = `
       <div class="age-group-header" style="border-left-color:${group.color}">
         <div>
           <div class="age-group-title">${group.ageLabel}</div>
-          <div class="age-group-date">${formatDate(group.dueDate)}</div>
+          <div class="age-group-date">Due: ${fmtDate(group.dueDate)}</div>
         </div>
-        <div class="age-group-status ${statusClass}">${statusLabel}</div>
+        <div class="age-group-status ${headerStatusClass}">${statusLabel}</div>
       </div>
-      ${group.vaccines.map(v => `
-        <div class="vaccine-row ${group.status === "done" ? "done" : group.status === "overdue" ? "overdue" : group.status === "today" ? "due-today" : "upcoming"}">
-          <div class="vaccine-icon icon-${group.status === "done" ? "done" : group.status === "overdue" ? "overdue" : group.status === "today" ? "today" : "upcoming"}">${v.icon}</div>
-          <div class="vaccine-info">
-            <div class="vaccine-name">${v.name}</div>
-            <div class="vaccine-fullname">${v.full}</div>
-            <div class="vaccine-note">${v.note}</div>
-            ${group.status !== "done" ? `<a href="${calLink(v.name, group.dueDate)}" target="_blank" rel="noopener" class="cal-link-small">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Add to Calendar
-            </a>` : ""}
-          </div>
-          <div class="vaccine-status-pill pill-${group.status === "done" ? "done" : group.status === "overdue" ? "overdue" : group.status === "today" ? "today" : "upcoming"}">
-            ${group.status === "done" ? "✓ Done" : group.status === "overdue" ? "Overdue" : group.status === "today" ? "Today!" : `Day ${group.offsetDays}`}
-          </div>
-        </div>`).join("")}`;
+      ${vaccineRowsHTML}`;
 
     out.appendChild(groupEl);
   });
 }
 
+// ── TOGGLE (checkbox click) ───────────────────────────────────────
+function toggleVaccine(id, e) {
+  if (takenMap[id]) {
+    delete takenMap[id];
+  } else {
+    takenMap[id] = new Date().toISOString().split("T")[0];
+  }
+  saveTaken(takenMap);
+  if (currentDOB) calculate();
+}
+
+// ── POPUP (row click — lets user set exact date) ──────────────────
+function openPopup(id, name, e) {
+  popupVaxId = id;
+  const popup = document.getElementById("date-popup");
+  document.getElementById("popup-title").textContent = `Mark "${name}" as given`;
+  document.getElementById("popup-date-input").value = typeof takenMap[id]==="string" ? takenMap[id] : new Date().toISOString().split("T")[0];
+  document.getElementById("popup-date-input").max = new Date().toISOString().split("T")[0];
+
+  // Position near click
+  const rect = e.currentTarget.getBoundingClientRect ? e.currentTarget.getBoundingClientRect() : {top:200,left:20};
+  popup.style.top  = (window.scrollY + rect.bottom + 8) + "px";
+  popup.style.left = Math.min(rect.left, window.innerWidth - 240) + "px";
+  popup.style.position = "absolute";
+  popup.classList.add("open");
+}
+
+function closePopup() {
+  document.getElementById("date-popup").classList.remove("open");
+  popupVaxId = null;
+}
+
+function saveVaccineDone() {
+  if (!popupVaxId) return;
+  const val = document.getElementById("popup-date-input").value;
+  takenMap[popupVaxId] = val || new Date().toISOString().split("T")[0];
+  saveTaken(takenMap);
+  closePopup();
+  if (currentDOB) calculate();
+}
+
+function clearVaccineDone() {
+  if (!popupVaxId) return;
+  delete takenMap[popupVaxId];
+  saveTaken(takenMap);
+  closePopup();
+  if (currentDOB) calculate();
+}
+
+// Close popup on outside click
+document.addEventListener("click", e => {
+  const popup = document.getElementById("date-popup");
+  if (popup.classList.contains("open") && !popup.contains(e.target) && !e.target.closest(".vaccine-row")) {
+    closePopup();
+  }
+});
+
+// ── CLEAR ALL ─────────────────────────────────────────────────────
+function clearAllTaken() {
+  if (!confirm("Clear all marked vaccines? This cannot be undone.")) return;
+  takenMap = {};
+  saveTaken(takenMap);
+  if (currentDOB) calculate();
+}
+
 // ── FILTER ────────────────────────────────────────────────────────
 function filterVaccines(filter, btn) {
+  activeFilter = filter;
   document.querySelectorAll(".filter-tab").forEach(t => t.classList.remove("active"));
   btn.classList.add("active");
-
-  if (filter === "all") { renderGroups(allGroups); return; }
-  if (filter === "overdue")  { renderGroups(allGroups.filter(g => g.status === "overdue" || g.status === "today")); return; }
-  if (filter === "upcoming") { renderGroups(allGroups.filter(g => g.status === "upcoming")); return; }
-  if (filter === "done")     { renderGroups(allGroups.filter(g => g.status === "done")); return; }
+  renderGroups();
 }
 
 // ── SHARE ─────────────────────────────────────────────────────────
+function buildShareText() {
+  const name = document.getElementById("child-name").value.trim() || "Child";
+  const totalV = SCHEDULE.reduce((s,g)=>s+g.vaccines.length,0);
+  const takenV = SCHEDULE.reduce((s,g)=>s+g.vaccines.filter(v=>takenMap[v.id]).length,0);
+  let txt = `💉 UIP Vaccine Tracker — ${name}\n${takenV}/${totalV} vaccines given\n`;
+  allGroups.forEach(g => {
+    txt += `\n${g.ageLabel} (${fmtDateShort(g.dueDate)}):\n`;
+    g.vaccines.forEach(v => {
+      const t = takenMap[v.id];
+      txt += `  ${t?"✓":"○"} ${v.name}${typeof t==="string" ? " — given "+fmtDateShort(new Date(t+"T00:00:00")) : ""}\n`;
+    });
+  });
+  txt += `\nTrack yours: ${window.location.href}`;
+  return txt;
+}
+
 function shareWhatsApp() {
-  if (!shareLines.length) return;
-  window.open("https://wa.me/?text=" + encodeURIComponent(shareLines.join("\n")), "_blank", "noopener");
+  if (!allGroups.length) return;
+  window.open("https://wa.me/?text="+encodeURIComponent(buildShareText()), "_blank", "noopener");
 }
-
 function copySchedule() {
-  if (!shareLines.length) return;
-  navigator.clipboard.writeText(shareLines.join("\n"));
+  if (!allGroups.length) return;
+  navigator.clipboard.writeText(buildShareText());
   const el = document.getElementById("copy-confirm");
-  el.textContent = "✓ Copied to clipboard!";
-  setTimeout(() => el.textContent = "", 2500);
+  el.textContent = "✓ Copied!";
+  setTimeout(()=>el.textContent="", 2500);
 }
-
 function saveImage() {
   if (!allGroups.length) { alert("Please generate a schedule first."); return; }
   const btn = event.target.closest("button"), orig = btn.innerHTML;
   btn.textContent = "Saving..."; btn.disabled = true;
-  html2canvas(document.getElementById("results"), {
-    backgroundColor:"#ffffff", scale:2, useCORS:true
-  }).then(canvas => {
+  html2canvas(document.getElementById("results"),{backgroundColor:"#ffffff",scale:2,useCORS:true}).then(canvas=>{
     const a = document.createElement("a");
     a.download = "uip-vaccine-schedule.png";
     a.href = canvas.toDataURL("image/png");
@@ -667,7 +696,6 @@ function saveImage() {
   });
 }
 
-// Set max date to today
 document.getElementById("dob").max = new Date().toISOString().split("T")[0];
 </script>
 </body>
