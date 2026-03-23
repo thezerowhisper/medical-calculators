@@ -79,12 +79,44 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
 .cu-card{background:white;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 16px rgba(0,0,0,.06);border-left:4px solid #ed8936;scroll-margin-top:20px}
 .cu-card h2{font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:4px}
 .cu-sub{font-size:.82rem;color:#718096;margin-bottom:18px;line-height:1.5}
-.ct{width:100%;border-collapse:collapse;font-size:.8rem}
-.ct th{text-align:left;padding:8px 10px;background:#fffaf0;color:#7b341e;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid #fbd38d}
-.ct td{padding:9px 10px;border-bottom:1px solid #f7fafc;vertical-align:top;line-height:1.55}
-.ct tr:hover td{background:#fffaf0}
-.ct tr.warn-row td{background:#fff5f0}
-.ct td:first-child{font-weight:700;color:#1a202c}
+.ct {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  table-layout: auto; /* IMPORTANT */
+}
+
+.ct th, .ct td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #f7fafc;
+  vertical-align: top;
+  line-height: 1.55;
+  word-break: break-word; /* FIX */
+}
+
+.ct th {
+  text-align: left;
+  background: #fffaf0;
+  color: #7b341e;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid #fbd38d;
+}
+
+.ct td:first-child {
+  font-weight: 700;
+  color: #1a202c;
+  white-space: normal; /* FIX (was nowrap ❌) */
+}
+
+/* Mobile fix */
+@media(max-width:480px){
+  .ct {
+    font-size: 0.72rem;
+  }
+}
 .badge-r{display:inline-block;background:#fff5f5;color:#9b2c2c;border:1px solid #fed7d7;font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:8px;white-space:nowrap;margin-left:2px}
 .badge-g{display:inline-block;background:#f0fff4;color:#276749;border:1px solid #9ae6b4;font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:8px;white-space:nowrap;margin-left:2px}
 .badge-o{display:inline-block;background:#fffaf0;color:#7b341e;border:1px solid #fbd38d;font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:8px;white-space:nowrap;margin-left:2px}
