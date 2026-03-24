@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/</loc><priority>1.0</priority></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/uip-vaccine.html</loc><priority>0.9</priority></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/bmi.html</loc><priority>0.9</priority></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/doses.html</loc><priority>0.9</priority></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/due-date.html</loc><priority>0.9</priority></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/ors.html</loc><priority>0.9</priority></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/paracetamol.html</loc><priority>0.9</priority></url>
-  <url><loc>https://thezerowhisper.github.io/medical-calculators/obs-calc.html</loc><priority>0.9</priority></url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/</loc>
+<priority>1.0</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/rabies-scheduler/</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/uip-vaccine.html</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/bmi.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/doses.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/obs-calc.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/due-date.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/paracetamol.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/ors.html</loc>
+<priority>0.8</priority>
+</url>
+
+<!-- NEW PAGES -->
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/growth-chart.html</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://thezerowhisper.github.io/medical-calculators/milestones.html</loc>
+<priority>0.9</priority>
+</url>
+
 </urlset>
