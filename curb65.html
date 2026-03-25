@@ -292,6 +292,7 @@ function calc(){
 
   const colors={low:'#38a169',mod:'#ed8936',high:'#e53e3e'};
   res.style.display="block";
+  trackCalc('curb65', { score: score, risk: status });
   const hdr=document.getElementById('res-header');
   hdr.style.background=colors[status];
   hdr.textContent=`CURB-65: ${score}/5 — ${group.toUpperCase()} (${status.toUpperCase()} RISK)`;
