@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="egfr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/egfr-calculator" />
   <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
   <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="eGFR Calculator — CKD-EPI, Cockcroft-Gault & MDRD | CKD Staging" />
@@ -939,6 +940,7 @@
 
         singleDiv.style.display = 'none';
         allDiv.style.display = 'block';
+  trackCalc('egfr', { formula: formula, value: ckdepi ? ckdepi.toFixed(1) : null });
         document.getElementById('allCkdepi').textContent = ckdepi.toFixed(1);
         document.getElementById('allCg').textContent = cg ? cg.toFixed(1) : '—';
         document.getElementById('allMdrd').textContent = mdrd.toFixed(1);
