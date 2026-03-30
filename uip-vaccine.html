@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="uip-vaccine">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,6 +11,7 @@
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/uip-vaccine.html"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="en_IN"/>
 <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/uip-vaccine"/>
@@ -205,7 +206,7 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
     <div><label for="dob">Child&#39;s Date of Birth</label><input type="date" id="dob" max=""/></div>
     <button class="btn-g" onclick="calc()">Generate Schedule</button>
     <button class="btn-s" onclick="clearAll()">Clear</button>
-    <button class="btn-p" onclick="window.print()">&#128424; Print / PDF</button>
+    <button class="btn-p" onclick="trackPrint('uip-vaccine'); window.print()">&#128424; Print / PDF</button>
   </div>
   <p style="font-size:.76rem;color:#718096;margin-top:8px">&#10003; Records saved on your device only &mdash; no data sent to any server</p>
 </div>
@@ -555,6 +556,7 @@ function render(dob,today){
   document.getElementById("so").textContent=ov;
   document.getElementById("su").textContent=up;
   document.getElementById("stats").style.display="grid";
+  trackCalc('uip-vaccine', { done: dn, overdue: ov, upcoming: up });
 }
 function tv(n){sr(n,!gr()[n]);const v=document.getElementById("dob").value;if(v)calc();}
 function tf(el){el.closest(".fi").classList.toggle("open");}
