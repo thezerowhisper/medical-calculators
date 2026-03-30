@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="neonatal-jaundice">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,6 +9,7 @@
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/neonatal-jaundice"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Neonatal Jaundice Calculator — Phototherapy Threshold (AAP 2022)"/>
@@ -206,7 +207,7 @@ input:focus,select:focus{border-color:#805ad5}
   </div>
   <div id="res-note" class="interp"></div>
   <div class="btn-row">
-    <button class="btn btn-print" onclick="window.print()">🖨 Print Assessment</button>
+    <button class="btn btn-print" onclick="trackPrint('neonatal-jaundice'); window.print()">🖨 Print Assessment</button>
     <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
   </div>
 </div>
@@ -312,6 +313,7 @@ function calc(){
   const res=document.getElementById('result');
   const hdr=document.getElementById('res-header');
   res.style.display="block";
+  trackCalc('neonatal-jaundice', { bili: bili, threshold: threshold, needs_photo: needsPhoto });
 
   let status,color,note;
   if(bili>=exchThresh){
