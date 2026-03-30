@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="wells-score">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,6 +9,7 @@
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/wells-score"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Wells Score Calculator — DVT &amp; PE Pre-Test Probability"/>
@@ -172,7 +173,7 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
   </div>
   <div id="res-note" class="interp"></div>
   <div class="btn-row">
-    <button class="btn btn-print" onclick="window.print()">🖨 Print Assessment</button>
+    <button class="btn btn-print" onclick="trackPrint('wells-score'); window.print()">🖨 Print Assessment</button>
     <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
   </div>
 </div>
@@ -316,6 +317,7 @@ function updateResult(){
     :( likely ? "Arrange <strong>urgent CTPA</strong>. Consider interim anticoagulation while awaiting imaging." : "Perform <strong>high-sensitivity D-Dimer</strong>. If negative: PE excluded. If positive: arrange CTPA." );
 
   res.style.display="block";
+  trackCalc('wells-score', { mode: mode, score: score, probability: label });
   const hdr=document.getElementById('res-header');
   hdr.style.background=color;
   hdr.textContent=`${mode.toUpperCase()} ${label} — Wells Score: ${score}`;
