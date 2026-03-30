@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="growth-chart">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,6 +9,7 @@
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/growth-chart.html"/>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="en_IN"/>
 <meta property="og:url" content="https://thezerowhisper.github.io/medical-calculators/growth-chart"/>
@@ -411,6 +412,7 @@ function calculate(){
   box.innerHTML = "<strong>Interpretation:</strong> " + c.label + "<br/><strong>Action:</strong> " + c.action;
 
   document.getElementById("result").style.display="block";
+  trackCalc('growth-chart', { type: mtype, z: parseFloat(z.toFixed(2)), result: c.label });
   document.getElementById("result").scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 
