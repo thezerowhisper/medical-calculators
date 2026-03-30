@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="arv-dose">
 <head>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ARV Dose Calculator — Anti-Rabies Vaccine, RIG Dose & Schedule | India NCDC/WHO</title>
@@ -267,6 +269,7 @@
     const rs = document.getElementById('resultSection');
     if (!wt || wt < 3) { rs.style.display='none'; return; }
     rs.style.display = 'block';
+    trackCalc('arv-dose', { category: selectedCat, weight: wt });
     const catColors = ['','#16a34a','#d97706','#dc2626'];
     const catNeed = ['','No PEP needed','ARV only','ARV + RIG'];
     let gridHTML = `<div class="r-box primary"><div class="rb-label">Wound Category</div><div class="rb-val" style="color:${catColors[selectedCat]}">${selectedCat}</div><div class="rb-unit">${catNeed[selectedCat]}</div></div><div class="r-box"><div class="rb-label">Weight</div><div class="rb-val">${wt}</div><div class="rb-unit">kg</div></div>`;
