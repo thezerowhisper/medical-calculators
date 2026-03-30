@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-tool="burn-parkland">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,6 +9,7 @@
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/burn-calculator"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script src="assets/umami-events.js"></script>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Burn TBSA &amp; Parkland Formula Calculator"/>
@@ -190,7 +191,7 @@ body{font-family:"Segoe UI",sans-serif;background:#f0f4f8;padding:20px;color:#2d
     <strong>⏱ Important:</strong> The 8-hour clock runs from the <strong>time of injury</strong>, not hospital arrival. Use <strong>Lactated Ringer's solution</strong>. Titrate to urine output: 0.5 mL/kg/hr (adult) or 1 mL/kg/hr (child).
   </div>
   <div class="btn-row">
-    <button class="btn btn-print" onclick="window.print()">🖨 Print Fluid Plan</button>
+    <button class="btn btn-print" onclick="trackPrint('burn-parkland'); window.print()">🖨 Print Fluid Plan</button>
     <button class="btn btn-wa" id="share-btn">📲 Share via WhatsApp</button>
   </div>
 </div>
@@ -289,6 +290,7 @@ function calc(){
   document.getElementById("res-8h").textContent=Math.round(first8h)+" mL ("+Math.round(first8h/8)+" mL/hr)";
   document.getElementById("res-16h").textContent=Math.round(next16h)+" mL ("+Math.round(next16h/16)+" mL/hr)";
   document.getElementById("result").style.display="block";
+  trackCalc('burn-parkland', { tbsa: parseFloat(totalTBSA.toFixed(1)), fluid_ml: Math.round(totalFluid) });
 
   document.getElementById("share-btn").onclick=()=>{
     const text=`Burn Resuscitation Plan:\nTBSA: ${totalTBSA.toFixed(1)}%\nTotal 24h Fluid: ${Math.round(totalFluid)} mL\nFirst 8h: ${Math.round(first8h)} mL (${Math.round(first8h/8)} mL/hr)\nNext 16h: ${Math.round(next16h)} mL (${Math.round(next16h/16)} mL/hr)\nCalculated at Clinical Calculators India`;
