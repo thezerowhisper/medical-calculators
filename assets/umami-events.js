@@ -1,62 +1,46 @@
 // ============================================================
 // umami-events.js  — Medical Calculators India
 // Place at: /assets/umami-events.js
-//
-// Your Umami script tag already handles page views automatically.
-// This file adds CUSTOM EVENT TRACKING for every calculator.
-//
-// Load this AFTER your Umami script tag:
+// Load AFTER your Umami script tag (already defer):
 //   <script src="assets/umami-events.js"></script>
 // ============================================================
 
-
-// ── SAFE WRAPPER ─────────────────────────────────────────────
-// Waits for Umami to be ready before firing events.
-// Prevents "umami is not defined" errors if script loads slowly.
-function uTrack(eventName, props) {
-  if (typeof window.umami !== 'undefined') {
-    window.umami.track(eventName, props || {});
-  } else {
-    // Queue it — retry once after 1s in case umami loads late
-    setTimeout(function() {
-      if (typeof window.umami !== 'undefined') {
-        window.umami.track(eventName, props || {});
-      }
-    }, 1000);
-  }
+// ── SAFE CORE ─────────────────────────────────────────────────
+// try-catch on every call so a failed track NEVER blocks print
+// or any other onclick action.
+function uTrack(name, props) {
+  try {
+    if (typeof window.umami !== 'undefined' && typeof window.umami.track === 'function') {
+      window.umami.track(name, props || {});
+    } else {
+      // Umami not ready yet (defer timing) — retry after 1.2s
+      setTimeout(function() {
+        try {
+          if (typeof window.umami !== 'undefined') {
+            window.umami.track(name, props || {});
+          }
+        } catch(e) {}
+      }, 1200);
+    }
+  } catch(e) {}
 }
 
-
-// ── CALCULATOR USED ───────────────────────────────────────────
-// Call this inside each calc() function when result is shown.
-// eventName convention: "calc_[toolname]"
-// props: any useful result values (score, risk, etc.)
-function trackCalc(toolName, props) {
-  uTrack('calc_' + toolName, props || {});
+// ── PUBLIC HELPERS ────────────────────────────────────────────
+function trackCalc(tool, props) { uTrack('calc_' + tool, props || {}); }
+function trackPrint(tool)       { uTrack('print', { tool: tool }); }
+function trackShare(tool, method) {
+  uTrack('share_' + (method || 'whatsapp'), { tool: tool });
 }
 
-
-// ── SHARE (WhatsApp) ──────────────────────────────────────────
-function trackShare(toolName) {
-  uTrack('share_whatsapp', { tool: toolName });
-}
-
-
-// ── PRINT ─────────────────────────────────────────────────────
-function trackPrint(toolName) {
-  uTrack('print', { tool: toolName });
-}
-
-
-// ── AUTO-TRACK OUTBOUND WHATSAPP CLICKS ──────────────────────
-// Fires automatically on any wa.me link click — no extra code needed.
+// ── AUTO-TRACK WHATSAPP OUTBOUND CLICKS ──────────────────────
+// Reads data-tool from <html> tag — no per-page code needed.
 document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', function(e) {
-    const a = e.target.closest('a[href]');
+    var a = e.target.closest('a[href]');
     if (!a) return;
     if ((a.href || '').startsWith('https://wa.me')) {
-      const tool = document.body.dataset.tool || document.documentElement.dataset.tool || 'unknown';
-      trackShare(tool);
+      var tool = document.documentElement.dataset.tool || 'unknown';
+      trackShare(tool, 'whatsapp');
     }
   });
 });
