@@ -10,7 +10,21 @@
 <meta name="keywords" content="UIP vaccine catch-up schedule India, missed doses vaccination India, india uip catch-up vaccination schedule, catch up vaccination schedule india uip, UIP vaccine tracker India, IAP 2024 vaccine schedule, BCG catch-up age India, rotavirus catch-up schedule India, DPT booster schedule India UIP, universal immunisation programme India, baby vaccine schedule India, immunization chart India, vaccination schedule India PDF, child immunisation India"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://thezerowhisper.github.io/medical-calculators/uip-vaccine"/>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="502152b9-58c2-49b7-901c-de2a5c06436b">
+function shareUIPWhatsApp() {
+  var dob = document.getElementById('dob') ? document.getElementById('dob').value : '';
+  var sd = document.getElementById('sd') ? document.getElementById('sd').textContent : '?';
+  var rEl=document.querySelector('.sn.r'); var bEl=document.querySelector('.sn.b');
+  var over=rEl?rEl.textContent:'0'; var up=bEl?bEl.textContent:'0';
+  var lines = ['UIP Vaccine Schedule - India',''];
+  if (dob) lines.push('Date of Birth: '+dob);
+  lines.push('Doses given: '+sd,'Overdue: '+over,'Upcoming: '+up);
+  lines.push('','Complete all missed doses as per IAP 2024 catch-up schedule.');
+  lines.push('https://thezerowhisper.github.io/medical-calculators/uip-vaccine');
+  try{uTrack('share_whatsapp',{tool:'uip-vaccine'});}catch(e){}
+  window.open('https://wa.me/?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+}
+</script>
 <script src="assets/umami-events.js"></script>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="en_IN"/>
@@ -177,6 +191,13 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
 
 @media(max-width:480px){.hero{padding:24px 18px}.hero h1{font-size:1.3rem}.dob-row{flex-direction:column}.dob-row input{width:100%}.stats-row{grid-template-columns:1fr 1fr}.vdg{grid-template-columns:1fr}.ct td:first-child{white-space:normal}}
 @media(min-width:900px){body{padding:32px 60px}.pw{max-width:1100px}.fl{grid-template-columns:repeat(4,1fr)}}
+
+    .wa-share-bar{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .wa-share-btn{flex:1;min-width:120px;padding:11px 14px;border:none;border-radius:10px;font-size:.88rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s,transform .1s}
+    .wa-share-btn:hover{opacity:.88;transform:translateY(-1px)}
+    .wa-btn-green{background:#25D366;color:#fff}
+    .wa-btn-copy{background:#edf2f7;color:#2d3748}
+    .wa-copy-confirm{font-size:.78rem;color:#38a169;margin-top:6px;min-height:16px;text-align:center}
 </style>
 </head>
 <body>
@@ -207,6 +228,7 @@ footer{background:white;border-radius:16px;padding:22px 26px;margin-bottom:20px;
     <button class="btn-g" onclick="calc()">Generate Schedule</button>
     <button class="btn-s" onclick="clearAll()">Clear</button>
     <button class="btn-p" onclick="trackPrint('uip-vaccine'); window.print()">&#128424; Print / PDF</button>
+    <button class="btn-p" style="background:#25D366;border-color:#25D366" onclick="shareUIPWhatsApp()">&#128242; Share via WhatsApp</button>
   </div>
   <p style="font-size:.76rem;color:#718096;margin-top:8px">&#10003; Records saved on your device only &mdash; no data sent to any server</p>
 </div>
