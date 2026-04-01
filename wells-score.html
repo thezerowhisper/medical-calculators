@@ -338,7 +338,7 @@ function updateResult(){
 
   document.getElementById('share-btn').onclick=()=>{
     const text=`Wells ${mode.toUpperCase()} Score: ${score}\nPre-test Probability: ${label} (${prob})\nCalculated at Clinical Calculators India`;
-    window.open('https://wa.me/?text='+encodeURIComponent(text));
+    try{uTrack('share_whatsapp',{tool:'wells-score'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
   };
 }
 

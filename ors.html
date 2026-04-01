@@ -436,7 +436,7 @@ function calculate() {
   document.getElementById("results").scrollIntoView({ behavior:"smooth", block:"nearest" });
 }
 
-function shareWhatsApp(){ if(!shareText)return; window.open("https://wa.me/?text="+encodeURIComponent(shareText),"_blank","noopener"); }
+function shareWhatsApp(){ if(!shareText)return; try{uTrack('share_whatsapp',{tool:'ors'});}catch(e){} window.open('https://wa.me/?text="+encodeURIComponent(shareText),"_blank","noopener"); }
 function copyResult(){
   if(!shareText)return;
   navigator.clipboard.writeText(shareText);

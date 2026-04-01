@@ -313,7 +313,7 @@ function calc(){
 
   document.getElementById('share-btn').onclick=()=>{
     const text=`CURB-65 Score: ${score}/5 | 30-day Mortality: ${mort} | ${group} — ${status.toUpperCase()} RISK\nCalculated at Clinical Calculators India`;
-    window.open('https://wa.me/?text='+encodeURIComponent(text));
+    try{uTrack('share_whatsapp',{tool:'curb65'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
   };
 }
 </script>

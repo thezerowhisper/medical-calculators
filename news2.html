@@ -377,7 +377,7 @@ function updateUI(total, singleThree){
 
   document.getElementById('share-btn').onclick=()=>{
     const text=`NEWS2 Score: ${total}${singleThree?" (Red Flag)":""}\nRisk Level: ${risk}\nCalculated at Clinical Calculators India`;
-    window.open('https://wa.me/?text='+encodeURIComponent(text));
+    try{uTrack('share_whatsapp',{tool:'news2'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
   };
 }
 </script>

@@ -549,7 +549,7 @@ function calculate() {
       ``,
       `Calculated at: ${window.location.href}`
     ].filter(Boolean).join('\n');
-    window.open('https://wa.me/?text=' + encodeURIComponent(lines));
+    try{uTrack('share_whatsapp',{tool:'spirometry'});}catch(e){} window.open('https://wa.me/?text=' + encodeURIComponent(lines));
   };
 }
 </script>

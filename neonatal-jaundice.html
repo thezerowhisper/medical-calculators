@@ -349,7 +349,7 @@ function calc(){
 
   document.getElementById('share-btn').onclick=()=>{
     const text=`Neonatal Jaundice Assessment:\nBilirubin: ${bili.toFixed(1)} mg/dL at ${hrs}h\nThreshold: ${threshold} mg/dL | Exchange: ${exchThresh} mg/dL\nResult: ${needsPhoto?"PHOTOTHERAPY REQUIRED":"Monitor Only"}\nCalculated at Clinical Calculators India`;
-    window.open('https://wa.me/?text='+encodeURIComponent(text));
+    try{uTrack('share_whatsapp',{tool:'neonatal-jaundice'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
   };
 }
 </script>

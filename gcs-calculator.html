@@ -363,7 +363,7 @@ function calc(){
 
   document.getElementById("share-btn").onclick=()=>{
     const text=`GCS Assessment: ${totalDisplay} (${comp})\nSeverity: ${label}\nCalculated at Clinical Calculators India`;
-    window.open('https://wa.me/?text='+encodeURIComponent(text));
+    try{uTrack('share_whatsapp',{tool:'gcs-calculator'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
   };
 }
 

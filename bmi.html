@@ -765,7 +765,7 @@ function renderResults(bmi, indianCat, whoCat, weightKg, heightCm, heightM,
 // ── SHARE ─────────────────────────────────────────────────────────
 function shareWhatsApp() {
   if (!shareText) return;
-  window.open("https://wa.me/?text="+encodeURIComponent(shareText), "_blank", "noopener");
+  try{uTrack('share_whatsapp',{tool:'bmi'});}catch(e){} window.open('https://wa.me/?text="+encodeURIComponent(shareText), "_blank", "noopener");
 }
 function copyResult() {
   if (!shareText) return;

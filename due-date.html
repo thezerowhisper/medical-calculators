@@ -800,7 +800,7 @@ function calculate() {
 // ── SHARE ─────────────────────────────────────────────────────────
 function shareWhatsApp() {
   if (!shareText) return;
-  window.open("https://wa.me/?text="+encodeURIComponent(shareText),"_blank","noopener");
+  try{uTrack('share_whatsapp',{tool:'due-date'});}catch(e){} window.open('https://wa.me/?text="+encodeURIComponent(shareText),"_blank","noopener");
 }
 function copyResult() {
   if (!shareText) return;

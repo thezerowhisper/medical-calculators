@@ -303,7 +303,7 @@ function calc(){
 
   document.getElementById("share-btn").onclick=()=>{
     const text=`Burn Resuscitation Plan:\nTBSA: ${totalTBSA.toFixed(1)}%\nTotal 24h Fluid: ${Math.round(totalFluid)} mL\nFirst 8h: ${Math.round(first8h)} mL (${Math.round(first8h/8)} mL/hr)\nNext 16h: ${Math.round(next16h)} mL (${Math.round(next16h/16)} mL/hr)\nCalculated at Clinical Calculators India`;
-    window.open('https://wa.me/?text='+encodeURIComponent(text));
+    try{uTrack('share_whatsapp',{tool:'burn-parkland'});}catch(e){} window.open('https://wa.me/?text='+encodeURIComponent(text));
   };
 }
 </script>

@@ -785,7 +785,7 @@ function formCard(label, value, unit, note, isCustom) {
 // ── SHARE ─────────────────────────────────────────────────────────
 function shareWhatsApp() {
   if (!shareText) { alert("Please calculate a dose first."); return; }
-  window.open("https://wa.me/?text=" + encodeURIComponent(shareText), "_blank", "noopener");
+  try{uTrack('share_whatsapp',{tool:'drug-dose'});}catch(e){} window.open('https://wa.me/?text=" + encodeURIComponent(shareText), "_blank", "noopener");
 }
 function copyDose() {
   if (!shareText) { alert("Please calculate a dose first."); return; }
